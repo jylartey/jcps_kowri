@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Migrations\\20250521193550_AddIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250521193550_AddIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -28,8 +45,56 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250521193550_AddIdentity.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Migrations\\20250521193550_AddIdentity.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250521193550_AddIdentity.cs",
+              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Migrations\\20250521193550_AddIdentity.cs",
+              "RelativeToolTip": "Migrations\\20250521193550_AddIdentity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T19:35:50.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-21T19:23:15.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T18:59:20.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Data\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AuthDbContext.cs",
+              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Data\\AuthDbContext.cs",
+              "RelativeToolTip": "Data\\AuthDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T18:58:57.727Z",
+              "EditorCaption": ""
             }
           ]
         }
