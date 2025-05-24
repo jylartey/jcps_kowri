@@ -19,6 +19,7 @@
   <ItemGroup>
     <Folder Include="Data\Entities\" />
     <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\dist\css\" />
   </ItemGroup>
 
 </Project>

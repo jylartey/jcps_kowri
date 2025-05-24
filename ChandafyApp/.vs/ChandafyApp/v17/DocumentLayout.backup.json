@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -82,11 +86,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250524191739_ChandafyDb.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "RelativeDocumentMoniker": "Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "RelativeToolTip": "Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:17:39.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Zone.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Zone.cs",
               "RelativeDocumentMoniker": "Models\\Zone.cs",
@@ -99,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Wallet.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Wallet.cs",
               "RelativeDocumentMoniker": "Models\\Wallet.cs",
@@ -112,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StatementRequest.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\StatementRequest.cs",
               "RelativeDocumentMoniker": "Models\\StatementRequest.cs",
@@ -125,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Region.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Region.cs",
               "RelativeDocumentMoniker": "Models\\Region.cs",
@@ -138,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ReceiptRequest.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ReceiptRequest.cs",
               "RelativeDocumentMoniker": "Models\\ReceiptRequest.cs",
@@ -155,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PaymentMethod.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\PaymentMethod.cs",
               "RelativeDocumentMoniker": "Models\\PaymentMethod.cs",
@@ -168,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
               "RelativeDocumentMoniker": "Models\\Payment.cs",
@@ -181,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Member.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
               "RelativeDocumentMoniker": "Models\\Member.cs",
@@ -194,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Jamaat.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Jamaat.cs",
               "RelativeDocumentMoniker": "Models\\Jamaat.cs",
@@ -207,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Income.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Income.cs",
               "RelativeDocumentMoniker": "Models\\Income.cs",
@@ -220,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FiscalYear.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\FiscalYear.cs",
               "RelativeDocumentMoniker": "Models\\FiscalYear.cs",
@@ -233,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Expense.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Expense.cs",
               "RelativeDocumentMoniker": "Models\\Expense.cs",
@@ -246,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -259,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Circuit.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Circuit.cs",
               "RelativeDocumentMoniker": "Models\\Circuit.cs",
@@ -272,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ChandaType.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
               "RelativeDocumentMoniker": "Models\\ChandaType.cs",
@@ -285,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Budget.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
               "RelativeDocumentMoniker": "Models\\Budget.cs",
@@ -298,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AnnualNationalBudget.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AnnualNationalBudget.cs",
               "RelativeDocumentMoniker": "Models\\AnnualNationalBudget.cs",
@@ -311,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AccountSummary.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AccountSummary.cs",
               "RelativeDocumentMoniker": "Models\\AccountSummary.cs",
