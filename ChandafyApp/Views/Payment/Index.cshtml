@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Payments Dashboard";
+    var chandaStats = ViewBag.ChandaStats as IEnumerable<dynamic>;
+}
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color:honeydew;">
+    <div class="container mt-4">
+        <h2>Payments Dashboard</h2>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="info-box bg-info">
+                    <span class="info-box-icon"><i class="fas fa-money-bill-wave"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total Paid (Last 1 Year)</span>
+                        <span class="info-box-number">@ViewBag.TotalPaid.ToString("C")</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box bg-success">
+                    <span class="info-box-icon"><i class="fas fa-bullseye"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Budget Completion</span>
+                        <span class="info-box-number">@ViewBag.PercentBudgetCompleted.ToString("F2")%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box bg-warning">
+                    <span class="info-box-icon"><i class="fas fa-chart-pie"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total Budget</span>
+                        <span class="info-box-number">@ViewBag.TotalBudget.ToString("C")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4>Chanda Paid (Last 1 Year)</h4>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Chanda Type</th>
+                    <th>Total Paid</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (chandaStats != null)
+                {
+                    foreach (var stat in chandaStats)
+                    {
+                        <tr>
+                            <td>@stat.ChandaType</td>
+                            <td>@stat.Total.ToString("C")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <h4 class="mt-4">Recent Payments</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Member</th>
+                    <th>Chanda Type</th>
+                    <th>Amount</th>
+                    <th>Receipt</th>
+                </tr>
+            </thead>
+            <tbody>
+                @try{
+                @foreach (var payment in Model)
+                {
+                    <tr>
+                        <td>@payment.PaymentDate.ToShortDateString()</td>
+                        <td>@payment.Member?.FirstName @payment.Member?.LastName</td>
+                        <td>@payment.ChandaType?.Name</td>
+                        <td>@payment.Amount.ToString("C")</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-primary" href="@Url.Action("Receipt", "Payment", new { id = payment.Id })" target="_blank">
+                                <i class="fas fa-print"></i> Print
+                            </a>
+                        </td>
+                    </tr>
+                }
+				}
+				catch (Exception ex)
+				{
+					<tr>
+						<td colspan="5" class="text-danger">Error loading payments: @ex.Message</td>
+					</tr>
+				}
+            </tbody>
+        </table>
+
+        <div class="mt-4">
+            <a class="btn btn-primary" href="@Url.Action("Create", "Payment")">Make a Payment</a>
+            <a class="btn btn-secondary" href="@Url.Action("Calculator", "Payment")">Chanda Calculator</a>
+            <a class="btn btn-info" href="@Url.Action("Budget", "Payment")">Input Budget</a>
+            <a class="btn btn-warning" href="@Url.Action("Contacts", "Payment")">Contact Collector/Qaid</a>
+            <a class="btn btn-success" href="@Url.Action("Statement", "Payment")">Print Statement</a>
+        </div>
+    </div>
+</body>
