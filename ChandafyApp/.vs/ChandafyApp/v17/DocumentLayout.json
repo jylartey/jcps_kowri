@@ -3,84 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\jamaat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\jamaat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\migrations\\chandafydb\\20250524191739_chandafydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:migrations\\chandafydb\\20250524191739_chandafydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\statementrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\statementrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\receiptrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\receiptrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\fiscalyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\fiscalyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\circuit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\circuit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\annualnationalbudget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\annualnationalbudget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\accountsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\accountsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,254 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T19:45:39.168Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250524191739_ChandafyDb.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
-              "RelativeDocumentMoniker": "Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
-              "RelativeToolTip": "Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:17:39.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Zone.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Zone.cs",
-              "RelativeDocumentMoniker": "Models\\Zone.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Zone.cs",
-              "RelativeToolTip": "Models\\Zone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:17:19.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Wallet.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Wallet.cs",
-              "RelativeDocumentMoniker": "Models\\Wallet.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Wallet.cs",
-              "RelativeToolTip": "Models\\Wallet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:17:02.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StatementRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\StatementRequest.cs",
-              "RelativeDocumentMoniker": "Models\\StatementRequest.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\StatementRequest.cs",
-              "RelativeToolTip": "Models\\StatementRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:16:41.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Region.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Region.cs",
-              "RelativeDocumentMoniker": "Models\\Region.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Region.cs",
-              "RelativeToolTip": "Models\\Region.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:16:24.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReceiptRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ReceiptRequest.cs",
-              "RelativeDocumentMoniker": "Models\\ReceiptRequest.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ReceiptRequest.cs",
-              "RelativeToolTip": "Models\\ReceiptRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:55.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PaymentMethod.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\PaymentMethod.cs",
-              "RelativeDocumentMoniker": "Models\\PaymentMethod.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\PaymentMethod.cs",
-              "RelativeToolTip": "Models\\PaymentMethod.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:42.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeToolTip": "Models\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:38.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Member.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "Models\\Member.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
-              "RelativeToolTip": "Models\\Member.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:34.951Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Jamaat.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Jamaat.cs",
-              "RelativeDocumentMoniker": "Models\\Jamaat.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Jamaat.cs",
-              "RelativeToolTip": "Models\\Jamaat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:32.182Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABAAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T12:49:21.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Income.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Income.cs",
-              "RelativeDocumentMoniker": "Models\\Income.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Income.cs",
-              "RelativeToolTip": "Models\\Income.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:06.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FiscalYear.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\FiscalYear.cs",
-              "RelativeDocumentMoniker": "Models\\FiscalYear.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\FiscalYear.cs",
-              "RelativeToolTip": "Models\\FiscalYear.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:01.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Expense.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Expense.cs",
-              "RelativeDocumentMoniker": "Models\\Expense.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Expense.cs",
-              "RelativeToolTip": "Models\\Expense.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:14:33.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:14:27.093Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Circuit.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Circuit.cs",
-              "RelativeDocumentMoniker": "Models\\Circuit.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Circuit.cs",
-              "RelativeToolTip": "Models\\Circuit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:14:05.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ChandaType.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeDocumentMoniker": "Models\\ChandaType.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeToolTip": "Models\\ChandaType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:14:00.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Budget.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeDocumentMoniker": "Models\\Budget.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeToolTip": "Models\\Budget.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:13:51.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AnnualNationalBudget.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AnnualNationalBudget.cs",
-              "RelativeDocumentMoniker": "Models\\AnnualNationalBudget.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AnnualNationalBudget.cs",
-              "RelativeToolTip": "Models\\AnnualNationalBudget.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:13:31.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AccountSummary.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AccountSummary.cs",
-              "RelativeDocumentMoniker": "Models\\AccountSummary.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AccountSummary.cs",
-              "RelativeToolTip": "Models\\AccountSummary.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:13:01.787Z"
+              "WhenOpened": "2025-05-28T12:45:48.341Z",
+              "EditorCaption": ""
             }
           ]
         }
