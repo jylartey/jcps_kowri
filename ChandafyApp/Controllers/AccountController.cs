@@ -1,18 +1,19 @@
 ﻿using System.Threading.Tasks;
 using ChandafyApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChandafyApp.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ChandafyDbContext _dbContext;
 
-        public LoginController(
+        public AccountController(
             SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
             ChandafyDbContext dbContext)
@@ -22,18 +23,18 @@ namespace ChandafyApp.Controllers
             _dbContext = dbContext;
         }
 
+        [AllowAnonymous]
         [HttpGet]
-        public IActionResult Index(string returnUrl = null)
+        public IActionResult Login()
         {
-            ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Index(string email, string password, string returnUrl = null)
+        public async Task<IActionResult> Login(string email, string password)
         {
-            ViewData["ReturnUrl"] = returnUrl;
 
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
@@ -59,9 +60,6 @@ namespace ChandafyApp.Controllers
                         // Example: TempData["MemberId"] = member.Id;
                     }
                 }
-
-                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
-                    return Redirect(returnUrl);
 
                 return RedirectToAction("Index", "Home");
             }

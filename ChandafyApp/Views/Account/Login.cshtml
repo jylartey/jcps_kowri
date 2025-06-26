@@ -24,12 +24,12 @@
                     </div>
                 }
 
-                <form asp-action="Index" method="post" aria-label="Login Form" >
+                <form asp-action="Login" asp-controller="Account" method="post" aria-label="Login Form" >
                     @Html.AntiForgeryToken()
                     <input type="hidden" name="returnUrl" value="@returnUrl" />
 
                     <div class="input-group mb-3">
-                        <input type="username" name="AimsNumber" class="form-control" placeholder="Aims Number" required aria-label="AimsNumber" autocomplete="AimsNumber" />
+                        <input type="username" name="email" class="form-control" placeholder="Aims Number" required aria-label="AimsNumber" autocomplete="AimsNumber" />
                         @* <div class="input-group-append"> *@
                         @*     <div class="input-group-text"> *@
                         @*         <span class="fas fa-envelope"></span> *@
