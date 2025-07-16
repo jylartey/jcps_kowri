@@ -1,0 +1,152 @@
+﻿@* @using System.Security.Claims
+@{
+    var userRole = User.FindFirstValue(ClaimTypes.Role) ?? "Member";
+} *@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary gradient-nav shadow">
+    <div class="container-fluid">
+        <!-- Brand/logo -->
+        <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+            <i class="bi bi-coin me-2"></i>ChandafyApp
+        </a>
+
+        <!-- Mobile toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto">
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                    </a>
+                </li>
+
+                <!-- Payments -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-cash-coin me-1"></i>Payments
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" asp-controller="Payments" asp-action="MakePayment">
+                                <i class="bi bi-plus-circle me-2"></i>Make Payment
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Payments" asp-action="BulkPayment">
+                                <i class="bi bi-collection me-2"></i>Bulk Payment
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Payments" asp-action="Receipts">
+                                <i class="bi bi-receipt me-2"></i>Receipts
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Payments" asp-action="Statements">
+                                <i class="bi bi-file-earmark-text me-2"></i>Statements
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Calculator -->
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Budget" asp-action="Calculator">
+                        <i class="bi bi-calculator me-1"></i>Chanda Calculator
+                    </a>
+                </li>
+
+                <!-- Budget -->
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Budget" asp-action="Index">
+                        <i class="bi bi-wallet2 me-1"></i>My Budget
+                    </a>
+                </li>
+
+                <!-- Admin features for appropriate roles -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-people-fill me-1"></i>Management
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" asp-controller="Member" asp-action="Index">
+                                <i class="bi bi-person-lines-fill me-2"></i>Members
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Budget" asp-action="UploadBudgets">
+                                <i class="bi bi-upload me-2"></i>Upload Budgets
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" asp-controller="Expense" asp-action="Index">
+                                <i class="bi bi-credit-card me-2"></i>Expenses
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="UserManagement" asp-action="Index">
+                                <i class="bi bi-person-plus me-2"></i>User Management
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- User section -->
+            <ul class="navbar-nav ms-auto">
+                <!-- Contacts -->
+                @* <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Contacts">
+                        <i class="bi bi-telephone me-1"></i>Contacts
+                    </a>
+                </li> *@
+
+                <!-- User dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle me-1"></i>
+                        <span class="d-none d-lg-inline">@User.Identity?.Name</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <div class="dropdown-header px-3 py-2">
+                                <div class="fw-bold">@User.Identity?.Name</div>
+                                @* <small class="text-muted">@userRole</small> *@
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bi bi-person me-2"></i>Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bi bi-key me-2"></i>Change Password
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <form asp-controller="Account" asp-action="Logout" method="post">
+                                <button type="submit" class="dropdown-item">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Logout
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

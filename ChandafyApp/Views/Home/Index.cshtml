@@ -1,8 +1,365 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@model ChandafyApp.NewFolder.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <!-- Dashboard Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            <i class="bi bi-speedometer2 me-2"></i>Dashboard
+        </h1>
+        <div class="dropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="fiscalYearDropdown" data-bs-toggle="dropdown">
+                Fiscal Year: @(Model.CurrentFiscalYear?.Year.ToString() ?? "N/A")
+            </button>
+            @if (Model.FiscalYears != null && Model.FiscalYears.Any())
+            {
+                <ul class="dropdown-menu">
+                    @foreach (var year in Model.FiscalYears)
+                    {
+                        <li><a class="dropdown-item" href="?fiscalYearId=@year.Id">@year.Year</a></li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <div class="dropdown-menu p-2 text-muted">No fiscal years available</div>
+            }
+        </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <!-- Total Payments -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total Payments
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                @(Model.AccountSummary != null ? Model.AccountSummary.TotalPayments.ToString("C") : "N/A")
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-cash-coin fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Completion -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Budget Completion
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                        @Model.AccountSummary?.PercentageComplete.ToString("P1") ?? "0%"
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-success" role="progressbar" 
+                                             style="width: @(Model.AccountSummary?.PercentageComplete * 100 ?? 0)%"
+                                             aria-valuenow="@Model.AccountSummary.PercentageComplete" 
+                                             aria-valuemin="0" 
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-clipboard-check fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Balance Left -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Balance Left
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                @Model.AccountSummary?.BalanceLeft.ToString("C") ?? "N/A"
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-wallet2 fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Payments -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Recent Payments
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                @(Model.RecentPayments?.Count ?? 0)
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-receipt fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="row mb-4">
+        <!-- Payments by Chanda Type -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Payments by Chanda Type</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="chandaTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget vs Actual -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Budget vs Actual</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="budgetPieChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-primary"></i> Budget
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-success"></i> Actual
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Payments Table -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Recent Payments</h6>
+            <a asp-controller="Payments" asp-action="Index" class="btn btn-sm btn-primary">View All</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>Date</th>
+                            <th>Chanda Type</th>
+                            <th>Amount</th>
+                            <th>Receipt No.</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.RecentPayments != null && Model.RecentPayments.Any())
+                        {
+                            foreach (var payment in Model.RecentPayments)
+                            {
+                                <tr>
+                                    <td>@payment.PaymentDate.ToString("d")</td>
+                                    <td>@payment.ChandaType?.Name ?? "N/A"</td>
+                                    <td>@payment.Amount.ToString("C")</td>
+                                    <td>@payment.ReceiptNumber</td>
+                                    <td>
+                                        <span class="badge @(payment.Verified ? "bg-success" : "bg-warning")">
+                                            @(payment.Verified ? "Verified" : "Pending")
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr><td colspan="5" class="text-muted">No recent payments found.</td></tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Budget Summary -->
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Budget Summary</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-bar">
+                        <canvas id="budgetBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Payments" asp-action="MakePayment" class="btn btn-primary btn-block py-3">
+                                <i class="bi bi-plus-circle me-2"></i>Make Payment
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Budget" asp-action="Index" class="btn btn-success btn-block py-3">
+                                <i class="bi bi-wallet2 me-2"></i>View Budget
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Payments" asp-action="Receipts" class="btn btn-info btn-block py-3">
+                                <i class="bi bi-receipt me-2"></i>Get Receipt
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Payments" asp-action="Statements" class="btn btn-warning btn-block py-3">
+                                <i class="bi bi-file-earmark-text me-2"></i>Get Statement
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Chanda Type Chart
+        var ctx = document.getElementById('chandaTypeChart').getContext('2d');
+        var chandaTypeChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: @Html.Raw(Json.Serialize(Model.ChandaTypePayments?.Select(x => x.Key) ?? new List<string>())),
+                datasets: [{
+                    label: 'Amount Paid',
+                    data: @Html.Raw(Json.Serialize(Model.ChandaTypePayments?.Select(x => x.Value) ?? new List<decimal>()))
+                    backgroundColor: 'rgba(13, 110, 253, 0.7)',
+                    borderColor: 'rgba(13, 110, 253, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Budget Pie Chart
+        var ctx2 = document.getElementById('budgetPieChart').getContext('2d');
+        var budgetPieChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Budget', 'Actual'],
+                datasets: [{
+                    data: [@(Model.AccountSummary?.TotalExpectedBudget ?? 0), @(Model.AccountSummary?.TotalPayments ?? 0)],
+                    backgroundColor: ['rgba(13, 110, 253, 0.7)', 'rgba(25, 135, 84, 0.7)'],
+                    hoverBackgroundColor: ['rgba(13, 110, 253, 0.9)', 'rgba(25, 135, 84, 0.9)'],
+                    hoverBorderColor: "rgba(234, 236, 244, 1)",
+                }],
+            },
+            options: {
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                cutout: '70%',
+            },
+        });
+
+        // Budget Bar Chart
+        var ctx3 = document.getElementById('budgetBarChart').getContext('2d');
+        var budgetBarChart = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Budget',
+                    data: @Html.Raw(Json.Serialize(Model.MonthlyBudget ?? new List<decimal>(new decimal[12])))
+                    backgroundColor: 'rgba(13, 110, 253, 0.7)',
+                }, {
+                    label: 'Actual',
+                    data: @Html.Raw(Json.Serialize(Model.MonthlyPayments ?? new List<decimal>(new decimal[12])))
+                    backgroundColor: 'rgba(25, 135, 84, 0.7)',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        stacked: false,
+                    },
+                    y: {
+                        stacked: false,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}
