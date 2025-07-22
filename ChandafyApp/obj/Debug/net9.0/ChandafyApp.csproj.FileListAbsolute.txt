@@ -17,9 +17,7 @@ C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\ChandafyApp.Razo
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\scopedcss\bundle\ChandafyApp.styles.css
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\scopedcss\projectbundle\ChandafyApp.bundle.scp.css
-C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-b9sayid5wm.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\g2yka0bd03-61n19gt1b8.gz
-C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-xtxxf3hu2r.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\vqabitnq3w-c2jlpeoesf.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\ogswnbfp8c-aexeepp0ev.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\54sntn1sep-ausgxo2sd3.gz
@@ -1061,3 +1059,16 @@ C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\Microsoft.IO.Recy
 C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
 C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.Interfaces.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-7x6hlu1pk2.gz
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-orhlylyep1.gz
