@@ -1,0 +1,151 @@
+﻿@{
+    ViewData["Title"] = "System Settings";
+}
+
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">System Settings</h1>
+    </div>
+
+    <div class="row">
+        <!-- Chanda Types Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Chanda Types
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Types</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-tags fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="ChandaType" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regions Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Regions
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Regions</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-globe fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="Region" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zones Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Zones
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Zones</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-pin-map fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="Zone" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circuits Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Circuits
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Circuits</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-diagram-3 fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="Circuit" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jamaats Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Jamaats
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Jamaats</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-people fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="Jamaat" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fiscal Years Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Fiscal Years
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Fiscal Years</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-calendar-range fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="FiscalYear" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Methods Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Payment Methods
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Manage Methods</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-credit-card fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                    <a asp-controller="PaymentMethod" asp-action="Index" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

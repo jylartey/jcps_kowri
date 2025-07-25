@@ -1,0 +1,527 @@
+﻿@model IEnumerable<Expense>
+@{
+    ViewData["Title"] = "Expenses";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-white">Expense Management</h6>
+        <button type="button" class="btn btn-main btn-sm" data-bs-toggle="modal" data-bs-target="#createExpenseModal">
+            <i class="bi bi-plus-circle"></i> Add New Expense
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover" id="expenseDataTable" width="100%" cellspacing="0">
+                <thead class="bg-main text-white">
+                    <tr>
+                        <th>Expense Type</th>
+                        <th>Expected Amount</th>
+                        <th>Description</th>
+                        <th>Fiscal Year</th>
+                        <th>Receipt</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ExpenseType</td>
+                            <td>@item.TotalExpectedAmount.ToString("C")</td> @* Format as currency *@
+                            <td>@item.ExpenseDescription</td>
+                            <td>@item.FiscalYear?.Year</td> @* Changed to .Year from .Name *@
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ExpenseReceiptImage))
+                                {
+                                    <a href="~/uploads/receipts/@item.ExpenseReceiptImage" target="_blank">View Receipt</a>
+                                }
+                                else
+                                {
+                                    <span>No Receipt</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-outline-info btn-sm edit-expense-btn"
+                                            data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#editExpenseModal">
+                                        <i class="bi bi-pencil"></i> Edit
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm delete-expense-btn"
+                                            data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#deleteExpenseModal">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="createExpenseModal" tabindex="-1" role="dialog" aria-labelledby="createExpenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-main text-white">
+                <h5 class="modal-title" id="createExpenseModalLabel">Add New Expense</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="createExpenseForm" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ExpenseType" class="control-label">Expense Type</label>
+                                <input id="ExpenseType" name="ExpenseType" class="form-control" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="TotalExpectedAmount" class="control-label">Total Expected Amount</label>
+                                <input type="number" step="0.01" id="TotalExpectedAmount" name="TotalExpectedAmount" class="form-control" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <div class="form-group mb-3">
+                                <label for="FiscalYearId" class="control-label">Fiscal Year</label>
+                                <select id="FiscalYearId" name="FiscalYearId" class="form-control" required>
+                                    <option value="">-- Select Fiscal Year --</option>
+                                    @foreach (var fiscalYear in ViewBag.FiscalYears)
+                                    {
+                                        <option value="@fiscalYear.Id">@fiscalYear.Year</option> @* Changed to .Year from .Name *@
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="ExpenseDescription" class="control-label">Expense Description</label>
+                                <textarea id="ExpenseDescription" name="ExpenseDescription" class="form-control" rows="3" required></textarea> @* Changed to textarea for description *@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="receiptImage" class="control-label">Receipt Image</label>
+                        <input type="file" id="receiptImage" name="receiptImage" class="form-control" accept="image/*" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-main">Create Expense</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="editExpenseModal" tabindex="-1" role="dialog" aria-labelledby="editExpenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-main text-white">
+                <h5 class="modal-title" id="editExpenseModalLabel">Edit Expense</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editExpenseForm" asp-action="Edit" method="post" enctype="multipart/form-data">
+                <input type="hidden" id="editExpenseId" name="Id" />
+                <input type="hidden" id="editExistingReceiptImage" name="ExpenseReceiptImage" /> @* To retain existing image path if no new one is uploaded *@
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="editExpenseType" class="control-label">Expense Type</label>
+                                <input id="editExpenseType" name="ExpenseType" class="form-control" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="editTotalExpectedAmount" class="control-label">Total Expected Amount</label>
+                                <input type="number" step="0.01" id="editTotalExpectedAmount" name="TotalExpectedAmount" class="form-control" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="editExpenseDescription" class="control-label">Expense Description</label>
+                                <textarea id="editExpenseDescription" name="ExpenseDescription" class="form-control" rows="3" required></textarea> @* Changed to textarea for description *@
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="editFiscalYearId" class="control-label">Fiscal Year</label>
+                                <select id="editFiscalYearId" name="FiscalYearId" class="form-control" required>
+                                    <option value="">-- Select Fiscal Year --</option>
+                                    @foreach (var fiscalYear in ViewBag.FiscalYears)
+                                    {
+                                        <option value="@fiscalYear.Id">@fiscalYear.Year</option> @* Changed to .Year from .Name *@
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="editReceiptImage" class="control-label">Receipt Image (Leave blank to keep current)</label>
+                        <input type="file" id="editReceiptImage" name="receiptImage" class="form-control" accept="image/*" />
+                        <small class="form-text text-muted" id="currentReceiptDisplay"></small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-main">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="deleteExpenseModal" tabindex="-1" role="dialog" aria-labelledby="deleteExpenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteExpenseModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="deleteExpenseForm" asp-action="Delete" method="post">
+                <input type="hidden" id="deleteExpenseId" name="id" />
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this expense record? This action cannot be undone.</p>
+                    <div class="alert alert-warning">
+                        <strong>Warning:</strong> This will permanently remove the expense and its associated receipt image.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Delete Expense</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Styles {
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.css" /> *@
+
+
+    <style>
+        :root {
+            --primary-color: #4A90E2; /* A vibrant blue, softer than the default Bootstrap primary */
+            --primary-dark: #357ABD;
+            --secondary-color: #5C7B8E; /* A muted blue-grey */
+            --accent-color: #F5A623; /* A warm orange for highlights */
+            --success-color: #7ED321;
+            --danger-color: #D0021B;
+            --info-color: #50E3C2; /* A refreshing teal */
+            --light-bg: #F9FBFD; /* Very light blue-grey for backgrounds */
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--light-text);
+            border-bottom: none;
+            border-radius: 12px 12px 0 0 !important;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .h6.font-weight-bold {
+            font-weight: 700 !important;
+        }
+
+        /* Main Buttons (e.g., Add New Expense) */
+        .btn-main {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--light-text);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+            .btn-main:hover {
+                background-color: darken(var(--accent-color), 10%);
+                border-color: darken(var(--accent-color), 10%);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 10px rgba(var(--accent-color), 0.4);
+            }
+
+        /* Table Styling */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        #expenseDataTable { /* Changed ID from dataTable to expenseDataTable */
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+            #expenseDataTable th {
+                background-color: var(--primary-color);
+                color: var(--light-text);
+                font-weight: 600;
+                padding: 0.75rem 1rem;
+                border-bottom: 2px solid var(--primary-dark);
+                text-align: left;
+            }
+
+            #expenseDataTable tbody tr:nth-child(even) {
+                background-color: var(--light-bg); /* Lighter shade for even rows */
+            }
+
+            #expenseDataTable tbody tr:nth-child(odd) {
+                background-color: #ffffff; /* White for odd rows */
+            }
+
+            #expenseDataTable tbody tr:hover {
+                background-color: rgba(var(--primary-color), 0.1); /* Slight highlight on hover */
+                cursor: pointer;
+            }
+
+            #expenseDataTable td {
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+        /* Action Buttons in Table */
+        .btn-group .btn {
+            border-radius: 6px;
+            margin-right: 0.35rem;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline-info {
+            color: var(--info-color);
+            border-color: var(--info-color);
+        }
+
+            .btn-outline-info:hover {
+                background-color: var(--info-color);
+                color: var(--light-text);
+            }
+
+        .btn-outline-danger {
+            color: var(--danger-color);
+            border-color: var(--danger-color);
+        }
+
+            .btn-outline-danger:hover {
+                background-color: var(--danger-color);
+                color: var(--light-text);
+            }
+
+        /* Modal Styling */
+        .modal-content {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--light-text);
+            border-bottom: none;
+            border-radius: 12px 12px 0 0;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .modal-title {
+            font-weight: 600;
+            color: var(--light-text);
+        }
+
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .form-control:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 0.25rem rgba(var(--primary-color), 0.25);
+            }
+
+        .modal-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: var(--light-text);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+            .btn-secondary:hover {
+                background-color: darken(#6c757d, 10%);
+                border-color: darken(#6c757d, 10%);
+            }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            border-color: var(--danger-color);
+            color: var(--light-text);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+            .btn-danger:hover {
+                background-color: darken(var(--danger-color), 10%);
+                border-color: darken(var(--danger-color), 10%);
+            }
+
+        .alert-warning {
+            background-color: rgba(var(--accent-color), 0.1);
+            border-color: rgba(var(--accent-color), 0.2);
+            color: #856404; /* Darker text for warning */
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+}
+
+
+
+
+
+@section Scripts {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#expenseDataTable').DataTable({
+                
+            });
+
+            // Handle edit button click to populate the modal
+            $(document).on('click', '.edit-expense-btn', function() {
+                var expenseId = $(this).data('id');
+                $.get('@Url.Action("Edit", "Expense")/' + expenseId, function(data) {
+                    $('#editExpenseId').val(data.id);
+                    $('#editDescription').val(data.description);
+                    $('#editAmount').val(data.amount);
+                    $('#editExpenseDate').val(data.expenseDate.split('T')[0]); // Format date for input type="date"
+                    $('#editFiscalYearId').val(data.fiscalYearId);
+                    $('#editExistingReceiptImage').val(data.expenseReceiptImage); // Store current image name
+                    if (data.expenseReceiptImage) {
+                        $('#currentReceiptDisplay').html('Current Receipt: <a href="/uploads/receipts/' + data.expenseReceiptImage + '" target="_blank">' + data.expenseReceiptImage + '</a>');
+                    } else {
+                        $('#currentReceiptDisplay').html('No current receipt.');
+                    }
+                }).fail(function() {
+                    alert('Error loading expense data');
+                });
+            });
+
+            // Handle delete button click to populate the modal
+            $(document).on('click', '.delete-expense-btn', function() {
+                var expenseId = $(this).data('id');
+                $('#deleteExpenseId').val(expenseId);
+            });
+
+            // Function to handle form submissions via AJAX
+            function submitExpenseForm(form, modalId) {
+                var formData = new FormData(form); // Use FormData for file uploads
+
+                $.ajax({
+                    url: $(form).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    processData: false, // Don't process the data
+                    contentType: false, // Don't set content type (let jQuery do it for FormData)
+                    success: function(response) {
+                        if (response.success) { // Assuming your controller returns { success: true } on success
+                            $(modalId).modal('hide');
+                            window.location.reload(); // Reload page to show updated data
+                        } else {
+                            // Handle validation errors or other server-side errors
+                            if (response.errors) {
+                                let errorHtml = '<ul>';
+                                for (let i = 0; i < response.errors.length; i++) {
+                                    errorHtml += '<li>' + response.errors[i] + '</li>';
+                                }
+                                errorHtml += '</ul>';
+                                $(modalId + ' .text-danger').html(errorHtml); // Display errors in the validation summary
+                            } else {
+                                alert('An error occurred during submission.');
+                            }
+                        }
+                    },
+                    error: function() {
+                        alert('An unexpected error occurred. Please try again.');
+                    }
+                });
+            }
+
+            // Form submission handlers
+            $('#createExpenseForm').submit(function(e) {
+                e.preventDefault();
+                submitExpenseForm(this, '#createExpenseModal');
+            });
+
+            $('#editExpenseForm').submit(function(e) {
+                e.preventDefault();
+                submitExpenseForm(this, '#editExpenseModal');
+            });
+
+            $('#deleteExpenseForm').submit(function(e) {
+                e.preventDefault();
+                submitExpenseForm(this, '#deleteExpenseModal');
+            });
+        });
+    </script>
+}

@@ -41,7 +41,7 @@ namespace ChandafyApp.Controllers
         }
 
         // GET: Budget/Upload
-        [Authorize(Roles = "Admin,Regional,Muhtamim")]
+        [Authorize(Roles = "ItAdmin,Admin,Regional,Muhtamim")]
         public async Task<IActionResult> Upload()
         {
             ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
@@ -51,7 +51,7 @@ namespace ChandafyApp.Controllers
 
         // POST: Budget/Upload
         [HttpPost]
-        [Authorize(Roles = "Admin,Regional,Muhtamim")]
+        [Authorize(Roles = "ItAdmin,Admin,Regional,Muhtamim")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Upload(IFormFile file, int fiscalYearId, int chandaTypeId)
         {
