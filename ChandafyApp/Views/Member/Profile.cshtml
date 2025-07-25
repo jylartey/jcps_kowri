@@ -1,0 +1,133 @@
+﻿@model Member
+
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-primary">My Profile</h6>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-sm">
+                <i class="bi bi-pencil"></i> Edit Profile
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center mb-4">
+                        <div class="profile-image-container">
+                            <i class="bi bi-person-circle profile-image-icon"></i>
+                        </div>
+                        <h4 class="mt-3">@Model.FirstName @Model.LastName</h4>
+                        <p class="text-muted">@Model.AIMS</p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-card mb-4">
+                                <h6 class="info-card-header">Personal Information</h6>
+                                <div class="info-card-body">
+                                    <div class="info-item">
+                                        <span class="info-label">First Name:</span>
+                                        <span class="info-value">@Model.FirstName</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Last Name:</span>
+                                        <span class="info-value">@Model.LastName</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Date of Birth:</span>
+                                        <span class="info-value">@Model.DateOfBirth.ToString("d")</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Contact:</span>
+                                        <span class="info-value">@Model.ContactNumber</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card mb-4">
+                                <h6 class="info-card-header">Organization Information</h6>
+                                <div class="info-card-body">
+                                    <div class="info-item">
+                                        <span class="info-label">Jamaat:</span>
+                                        <span class="info-value">@Model.Jamaat?.Name</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Circuit:</span>
+                                        <span class="info-value">@Model.Jamaat?.Circuit?.Name</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Zone:</span>
+                                        <span class="info-value">@Model.Jamaat?.Circuit?.Zone?.Name</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Region:</span>
+                                        <span class="info-value">@Model.Jamaat?.Circuit?.Zone?.Region?.Name</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .profile-image-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid #e9ecef;
+        }
+
+        .profile-image-icon {
+            font-size: 5rem;
+            color: #6c757d;
+        }
+
+        .info-card {
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            overflow: hidden;
+        }
+
+        .info-card-header {
+            background-color: #f8f9fa;
+            padding: 12px 15px;
+            margin: 0;
+            font-weight: 600;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .info-card-body {
+            padding: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            min-width: 120px;
+            color: #495057;
+        }
+
+        .info-value {
+            color: #212529;
+        }
+    </style>
+}

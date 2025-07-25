@@ -1,18 +1,114 @@
-/* Navbar gradient effect */
+:root {
+    --dark-gray: #212529; /* Black/Dark Gray */
+    --blue-gray: #6C757D; /* Blue Gray */
+    --light-gray: #F8F9FA; /* White/Light Gray for background */
+    --medium-gray: #E9ECEF; /* For hover states on light backgrounds */
+    --white: #FFFFFF; /* Pure White */
+    --primary-blue: #0D6EFD; /* Re-introducing a vibrant blue for primary elements like some card borders */
+    --success-green: #198754; /* Standard success green */
+    --info-cyan: #0DCADD; /* Standard info cyan */
+    --warning-yellow: #FFC107; /* Standard warning yellow */
+    --layout-bg-color: #E2E8F0; /* A soft, light grey-blue */
+}
+
+/* Main content area (as defined in _Layout) */
+main {
+    padding-top: 2rem; /* Consistent padding at the top */
+    padding-bottom: 2rem; /* Add padding at the bottom */
+    flex-grow: 1; /* Ensure it takes available space in flex layout */
+    background-color: var(--layout-bg-color);
+}
+
+/* General Body and Container Styling */
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: var(--layout-bg-color);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh; /* Ensure wrapper takes full viewport height */
+}
+
+/* Sidebar Styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 15rem;
+    transition: margin .25s ease-out;
+    background-color: #212529; /* Dark background for sidebar */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    /* By default, it's visible on large screens */
+    margin-left: 0;
+}
+
+    #sidebar-wrapper .sidebar-heading {
+        padding: 1.08rem 1.25rem;
+        font-size: 1.2rem;
+        background-color: #212529; /* Dark background for heading */
+        color: #F8F9FA;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #sidebar-wrapper .list-group {
+        width: 15rem;
+    }
+
+    #sidebar-wrapper .list-group-item {
+        border: none;
+        padding: 1rem 1.25rem;
+        color: #DEE2E6; /* Light gray text for sidebar items */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        #sidebar-wrapper .list-group-item:hover {
+            background-color: #343A40; /* Slightly lighter dark on hover */
+            color: white;
+        }
+
+        #sidebar-wrapper .list-group-item.active {
+            background-color: #6C757D; /* Blue-gray for active sidebar item */
+            color: white;
+            font-weight: bold;
+        }
+
+/* Page Content Wrapper */
+#page-content-wrapper {
+    min-width: calc(100vw - 15rem); /* Adjust width to account for sidebar */
+    transition: margin .25s ease-out;
+    margin-left: 0; /* No margin initially */
+    padding-left: 0; /* Remove default padding for wider content */
+    flex-grow: 1; /* Allow content to grow and take remaining space */
+}
+
+/* Toggled State for Sidebar (when active/hidden) */
+/* This is for when we *hide* the sidebar on large screens, or for mobile */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem; /* Hides the sidebar */
+}
+
+#wrapper.toggled #page-content-wrapper {
+    min-width: 100vw; /* Content takes full width when sidebar is hidden */
+}
+
+/* Navbar gradient effect - Changed to solid black */
 .gradient-nav {
-    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #212529 !important; /* Solid dark background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Navbar hover effects */
 .navbar-nav .nav-link {
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem; /* Slightly more vertical padding */
     transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.8); /* Lighter text for contrast */
+    font-weight: 500;
 }
 
     .navbar-nav .nav-link:hover {
-        color: rgba(255, 255, 255, 0.9);
+        color: white;
         transform: translateY(-2px);
     }
 
@@ -23,7 +119,7 @@
         left: 50%;
         width: 0;
         height: 2px;
-        background-color: white;
+        background-color: #6C757D; /* Blue-gray highlight */
         transition: all 0.3s ease;
         transform: translateX(-50%);
     }
@@ -35,18 +131,21 @@
 /* Dropdown styling */
 .dropdown-menu {
     border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
     border-radius: 0.5rem;
     margin-top: 0.5rem;
+    background-color: white; /* White dropdown background */
 }
 
 .dropdown-item {
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem; /* Increased padding */
     transition: all 0.2s;
+    color: #212529; /* Dark text for dropdown items */
 }
 
     .dropdown-item:hover {
-        background-color: #f8f9fa;
+        background-color: #E9ECEF; /* Light gray on hover */
+        color: #212529;
         padding-left: 1.75rem;
     }
 
@@ -58,10 +157,79 @@
 
     .navbar-nav .nav-item .active::after {
         width: 70%;
+        background-color: #6C757D; /* Consistent blue-gray highlight */
+    }
+
+/* Main content area */
+main {
+    padding-top: 20px; /* Adjust as needed */
+    min-height: calc(100vh - 120px); /* Adjust based on your footer height */
+    background-color: white; /* Main content area white */
+    margin-left: 0; /* No specific left margin here, handled by #page-content-wrapper */
+    padding: 2rem; /* Add padding inside the main content */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Subtle inner shadow */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #F8F9FA !important; /* Light gray footer */
+    border-top: 1px solid #E9ECEF;
+    color: #6C757D; /* Blue-gray text */
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 10; /* Ensure footer is above other elements if needed */
+}
+
+    .footer .text-muted {
+        color: #868E96 !important; /* Slightly darker muted text */
     }
 
 /* Responsive adjustments */
-@media (max-width: 991.98px) {
+@media (min-width: 992px) { /* For large devices and up */
+    #wrapper #sidebar-wrapper {
+        margin-left: 0; /* Ensure sidebar is visible */
+        position: sticky; /* Keeps sidebar in view when scrolling */
+        top: 0; /* Aligns to the top */
+        height: 100vh; /* Takes full viewport height */
+    }
+
+    #wrapper #page-content-wrapper {
+        min-width: calc(100vw - 15rem); /* Content takes remaining space */
+        margin-left: 0; /* No margin on content itself, flex handles spacing */
+    }
+
+    /* Hide the mobile sidebar toggle button on larger screens */
+    .navbar .btn-outline-light.d-lg-none {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 991.98px) { /* For small devices and down (mobile) */
+    #sidebar-wrapper {
+        margin-left: -15rem; /* Hidden by default on mobile */
+        position: fixed; /* Fixed position for off-canvas effect */
+        height: 100vh; /* Take full height */
+        top: 0;
+        left: 0;
+        z-index: 1030; /* Bring above content */
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0; /* Show sidebar when toggled */
+    }
+
+    #page-content-wrapper {
+        min-width: 100vw; /* Content takes full width */
+        margin-left: 0 !important; /* No margin on content on mobile */
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        margin-left: 15rem; /* Push content on mobile when sidebar is open */
+    }
+
     .navbar-collapse {
         padding: 1rem 0;
     }
@@ -74,10 +242,290 @@
         box-shadow: none;
         border-radius: 0;
     }
+
+    /* Adjust main content for mobile */
+    main {
+        margin-left: 0; /* No left margin for main content on mobile */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
 }
 
-/* Main content area */
-main {
-    margin-top: 80px; /* Give space below fixed navbar */
-    min-height: calc(100vh - 120px); /* Adjust based on your footer height */
+/* Optional: Scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6C757D;
+    border-radius: 4px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #5A6268;
+    }
+
+.container-fluid {
+    padding-left: 1.5rem; /* Standard Bootstrap container padding */
+    padding-right: 1.5rem; /* Standard Bootstrap container padding */
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background-color: var(--white); /* White background for the header area */
+    padding: 1.5rem 2rem; /* More padding */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    margin-bottom: 1.5rem; /* Space below the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .dashboard-header h1 {
+        color: var(--dark-gray); /* Dark text for heading */
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .dashboard-header .dropdown-toggle {
+        border-color: var(--blue-gray); /* Blue-gray border */
+        color: var(--blue-gray); /* Blue-gray text */
+        background-color: var(--white);
+        transition: all 0.2s ease;
+    }
+
+        .dashboard-header .dropdown-toggle:hover {
+            background-color: var(--blue-gray);
+            color: var(--white);
+            border-color: var(--blue-gray);
+        }
+
+    .dashboard-header .dropdown-menu {
+        border: 1px solid var(--medium-gray); /* Lighter border for dropdown */
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-header .dropdown-item {
+        color: var(--dark-gray);
+        transition: background-color 0.2s ease;
+    }
+
+        .dashboard-header .dropdown-item:hover {
+            background-color: var(--medium-gray); /* Light gray hover */
+            color: var(--dark-gray);
+        }
+
+
+/* Summary Cards */
+.card {
+    border: none; /* Remove default card border */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Consistent card shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden; /* Ensure content respects border-radius */
+}
+
+    .card:hover {
+        transform: translateY(-3px); /* Slight lift effect on hover */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+    }
+
+    .card .card-body {
+        padding: 1.5rem; /* Consistent padding inside cards */
+    }
+
+    .card.border-left-primary {
+        border-left: 5px solid var(--primary-blue) !important;
+    }
+
+    .card.border-left-success {
+        border-left: 5px solid var(--success-green) !important;
+    }
+
+    .card.border-left-info {
+        border-left: 5px solid var(--info-cyan) !important;
+    }
+
+    .card.border-left-warning {
+        border-left: 5px solid var(--warning-yellow) !important;
+    }
+
+.text-xs {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em; /* A bit more space for uppercase text */
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.text-success {
+    color: var(--success-green) !important;
+}
+
+.text-info {
+    color: var(--info-cyan) !important;
+}
+
+.text-warning {
+    color: var(--warning-yellow) !important;
+}
+
+.text-gray-800 {
+    color: var(--dark-gray) !important;
+}
+
+.text-gray-300 {
+    color: #DEE2E6 !important; /* Lighter shade for icons */
+}
+
+.h5.mb-0 {
+    font-size: 1.75rem; /* Larger numbers */
+    color: var(--dark-gray);
+}
+
+.progress {
+    height: 0.75rem; /* Thicker progress bar */
+    border-radius: 0.375rem; /* Rounded progress bar */
+}
+
+/* Card Headers for Charts and Tables */
+.card-header {
+    background-color: var(--white); /* White background for headers */
+    border-bottom: 1px solid var(--medium-gray); /* Subtle border */
+    padding: 1.25rem 1.5rem; /* More generous padding */
+    border-top-left-radius: 12px; /* Match card border radius */
+    border-top-right-radius: 12px; /* Match card border radius */
+}
+
+    .card-header h6 {
+        color: var(--dark-gray); /* Dark text for header titles */
+        font-weight: 600;
+    }
+
+.chart-area, .chart-pie, .chart-bar {
+    position: relative;
+    height: 18rem; /* Consistent height for charts */
+}
+
+/* Recent Payments Table */
+.table {
+    margin-bottom: 0; /* Remove extra margin below table */
+}
+
+    .table thead {
+        background-color: var(--blue-gray); /* Blue-gray header for tables */
+        color: var(--white);
+        font-weight: 600;
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.03); /* Lighter stripe */
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.06); /* More visible hover */
+}
+
+.table td, .table th {
+    padding: 1rem; /* More padding in table cells */
+    vertical-align: middle; /* Center content vertically */
+    border-top: 1px solid var(--medium-gray); /* Lighter table borders */
+}
+
+.badge {
+    padding: 0.5em 0.8em;
+    border-radius: 0.375rem;
+    font-weight: 600;
+}
+
+    .badge.bg-success {
+        background-color: var(--success-green) !important;
+    }
+
+    .badge.bg-warning {
+        background-color: var(--warning-yellow) !important;
+        color: var(--dark-gray);
+    }
+/* Darker text for warning badge */
+
+
+/* Quick Actions Buttons */
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue); /* Use a vibrant primary blue for main actions */
+    border-color: var(--primary-blue);
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-radius: 8px; /* Rounded buttons */
+}
+
+    .btn-primary:hover {
+        background-color: #0B5ED7; /* Darker blue on hover */
+        border-color: #0B5ED7;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+    }
+
+.btn-success {
+    background-color: var(--success-green);
+    border-color: var(--success-green);
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+    .btn-success:hover {
+        background-color: #157347;
+        border-color: #157347;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(25, 135, 84, 0.2);
+    }
+
+.btn-info {
+    background-color: var(--info-cyan);
+    border-color: var(--info-cyan);
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+    .btn-info:hover {
+        background-color: #0A98A7;
+        border-color: #0A98A7;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(13, 202, 221, 0.2);
+    }
+
+.btn-warning {
+    background-color: var(--warning-yellow);
+    border-color: var(--warning-yellow);
+    color: var(--dark-gray); /* Darker text for visibility on yellow */
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+    .btn-warning:hover {
+        background-color: #FFCD39;
+        border-color: #FFCD39;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(255, 193, 7, 0.2);
+    }
+
+.btn-block i {
+    font-size: 1.2rem;
 }

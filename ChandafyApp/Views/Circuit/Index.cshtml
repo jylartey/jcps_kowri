@@ -1,0 +1,210 @@
+﻿@model IEnumerable<Circuit>
+
+@{
+    ViewData["Title"] = "Circuits";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">Circuit Management</h6>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createModal">
+            <i class="bi bi-plus-circle"></i> Add New Circuit
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover" id="dataTable" width="100%" cellspacing="0">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>Name</th>
+                        <th>Zone</th>
+                        <th>Region</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Zone?.Name</td>
+                            <td>@item.Zone?.Region?.Name</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary edit-btn"
+                                            data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#editModal">
+                                        <i class="bi bi-pencil"></i> Edit
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger delete-btn"
+                                            data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Create Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="createModalLabel">Add New Circuit</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Create">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Name" class="control-label">Circuit Name</label>
+                        <input id="Name" name="Name" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ZoneId" class="control-label">Zone</label>
+                        <select id="ZoneId" name="ZoneId" class="form-control" required>
+                            <option value="">-- Select Zone --</option>
+                            @foreach (var zone in ViewBag.Zones)
+                            {
+                                <option value="@zone.Id">@zone.Name (@zone.Region?.Name)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create Circuit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="editModalLabel">Edit Circuit</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editForm" asp-action="Edit">
+                <input type="hidden" id="editId" name="Id" />
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="editName" class="control-label">Circuit Name</label>
+                        <input id="editName" name="Name" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editZoneId" class="control-label">Zone</label>
+                        <select id="editZoneId" name="ZoneId" class="form-control" required>
+                            <option value="">-- Select Zone --</option>
+                            @foreach (var zone in ViewBag.Zones)
+                            {
+                                <option value="@zone.Id">@zone.Name (@zone.Region?.Name)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="deleteForm" asp-action="Delete">
+                <input type="hidden" id="deleteId" name="id" />
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this circuit? This action cannot be undone.</p>
+                    <div class="alert alert-warning">
+                        <strong>Warning:</strong> This will also delete all associated Jamaats.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Delete Circuit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Styles {
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+}
+@section Scripts {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#dataTable').DataTable({
+                
+            });
+
+            // Edit button click handler
+            $('.edit-btn').click(function() {
+                var circuitId = $(this).data('id');
+                $.get('@Url.Action("Edit", "Circuit")/' + circuitId, function(data) {
+                    $('#editId').val(data.id);
+                    $('#editName').val(data.name);
+                    $('#editZoneId').val(data.zoneId);
+                }).fail(function() {
+                    alert('Error loading circuit data');
+                });
+            });
+
+            // Delete button click handler
+            $('.delete-btn').click(function() {
+                var circuitId = $(this).data('id');
+                $('#deleteId').val(circuitId);
+            });
+
+            // Form submission handlers
+            $('#editForm').submit(function(e) {
+                e.preventDefault();
+                submitForm(this, '#editModal');
+            });
+
+            $('#deleteForm').submit(function(e) {
+                e.preventDefault();
+                submitForm(this, '#deleteModal');
+            });
+
+            function submitForm(form, modalId) {
+                $.ajax({
+                    url: $(form).attr('action'),
+                    type: 'POST',
+                    data: $(form).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            $(modalId).modal('hide');
+                            window.location.reload();
+                        } else {
+                            // Handle validation errors
+                            $(modalId + ' .modal-body').html(response);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred');
+                    }
+                });
+            }
+        });
+    </script>
+}

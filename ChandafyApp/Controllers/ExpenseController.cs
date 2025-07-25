@@ -1,7 +1,13 @@
-﻿using ChandafyApp.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting; // Make sure this is included
+using Microsoft.AspNetCore.Http; // Make sure this is included
+using ChandafyApp.Data; // Assuming your DbContext is here
+using ChandafyApp.Models; // Assuming your Expense and FiscalYear models are here
 
 namespace ChandafyApp.Controllers
 {
@@ -23,6 +29,10 @@ namespace ChandafyApp.Controllers
             var expenses = await _context.Expenses
                 .Include(e => e.FiscalYear)
                 .ToListAsync();
+
+            // FIX: Populate ViewBag.FiscalYears in the Index action
+            ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
+
             return View(expenses);
         }
 
@@ -43,6 +53,11 @@ namespace ChandafyApp.Controllers
                 if (receiptImage != null && receiptImage.Length > 0)
                 {
                     var uploads = Path.Combine(_env.WebRootPath, "uploads/receipts");
+                    // Ensure the directory exists
+                    if (!Directory.Exists(uploads))
+                    {
+                        Directory.CreateDirectory(uploads);
+                    }
                     var fileName = Guid.NewGuid().ToString() + Path.GetExtension(receiptImage.FileName);
                     var filePath = Path.Combine(uploads, fileName);
 
@@ -56,10 +71,12 @@ namespace ChandafyApp.Controllers
 
                 _context.Add(expense);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                // Return a JSON response for AJAX success
+                return Json(new { success = true });
             }
-            ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
-            return View(expense);
+            // If ModelState is not valid, return JSON with errors
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+            return Json(new { success = false, errors = errors });
         }
 
         // GET: Expense/Edit/5
@@ -71,7 +88,16 @@ namespace ChandafyApp.Controllers
             if (expense == null) return NotFound();
 
             ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
-            return View(expense);
+            // For AJAX call, return JSON of the expense data
+            return Json(new
+            {
+                id = expense.Id,
+                expenseType = expense.ExpenseType,
+                totalExpectedAmount = expense.TotalExpectedAmount,
+                expenseDescription = expense.ExpenseDescription,
+                fiscalYearId = expense.FiscalYearId,
+                expenseReceiptImage = expense.ExpenseReceiptImage
+            });
         }
 
         // POST: Expense/Edit/5
@@ -79,7 +105,11 @@ namespace ChandafyApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Expense expense, IFormFile receiptImage)
         {
-            if (id != expense.Id) return NotFound();
+            if (id != expense.Id) return Json(new { success = false, errors = new List<string> { "Expense ID mismatch." } });
+
+            // Retrieve the existing entity to handle image deletion correctly
+            var existingExpense = await _context.Expenses.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
+            if (existingExpense == null) return Json(new { success = false, errors = new List<string> { "Expense not found." } });
 
             if (ModelState.IsValid)
             {
@@ -88,6 +118,12 @@ namespace ChandafyApp.Controllers
                     if (receiptImage != null && receiptImage.Length > 0)
                     {
                         var uploads = Path.Combine(_env.WebRootPath, "uploads/receipts");
+                        // Ensure the directory exists
+                        if (!Directory.Exists(uploads))
+                        {
+                            Directory.CreateDirectory(uploads);
+                        }
+
                         var fileName = Guid.NewGuid().ToString() + Path.GetExtension(receiptImage.FileName);
                         var filePath = Path.Combine(uploads, fileName);
 
@@ -97,32 +133,38 @@ namespace ChandafyApp.Controllers
                         }
 
                         // Delete old image if exists
-                        if (!string.IsNullOrEmpty(expense.ExpenseReceiptImage))
+                        if (!string.IsNullOrEmpty(existingExpense.ExpenseReceiptImage))
                         {
-                            var oldFilePath = Path.Combine(uploads, expense.ExpenseReceiptImage);
+                            var oldFilePath = Path.Combine(uploads, existingExpense.ExpenseReceiptImage);
                             if (System.IO.File.Exists(oldFilePath))
                             {
                                 System.IO.File.Delete(oldFilePath);
                             }
                         }
-
                         expense.ExpenseReceiptImage = fileName;
+                    }
+                    else // If no new image is uploaded, retain the existing one
+                    {
+                        expense.ExpenseReceiptImage = existingExpense.ExpenseReceiptImage;
                     }
 
                     _context.Update(expense);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ExpenseExists(expense.Id))
-                        return NotFound();
-                    throw;
+                    {
+                        return Json(new { success = false, errors = new List<string> { "Expense not found." } });
+                    }
+                    throw; // Re-throw if it's a real concurrency issue not related to not found
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
-            return View(expense);
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+            return Json(new { success = false, errors = errors });
         }
+
 
         // GET: Expense/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -135,8 +177,11 @@ namespace ChandafyApp.Controllers
 
             if (expense == null) return NotFound();
 
-            return View(expense);
+            // For AJAX, return view with the expense or just success for the modal to confirm
+            // For now, we'll assume the client-side Delete button just needs the ID for the modal
+            return Json(new { success = true });
         }
+
 
         // POST: Expense/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -144,6 +189,11 @@ namespace ChandafyApp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var expense = await _context.Expenses.FindAsync(id);
+
+            if (expense == null)
+            {
+                return Json(new { success = false, errors = new List<string> { "Expense not found." } });
+            }
 
             // Delete receipt image if exists
             if (!string.IsNullOrEmpty(expense.ExpenseReceiptImage))
@@ -159,7 +209,7 @@ namespace ChandafyApp.Controllers
             _context.Expenses.Remove(expense);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true });
         }
 
         private bool ExpenseExists(int id) => _context.Expenses.Any(e => e.Id == id);

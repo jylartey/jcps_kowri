@@ -1,25 +1,25 @@
-﻿
-@model ChandafyApp.NewFolder.DashboardViewModel
+﻿@model ChandafyApp.NewFolder.DashboardViewModel
 @{
     ViewData["Title"] = "Dashboard";
 }
 
 <div class="container-fluid">
-    <!-- Dashboard Header -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="h3 mb-0 text-gray-800">
+    <div class="dashboard-header mb-4">
+        @* Added custom class 'dashboard-header' *@
+        <h1 class="h3 mb-0">
+            @* Removed text-gray-800 from here as it's handled by dashboard-header h1 *@
             <i class="bi bi-speedometer2 me-2"></i>Dashboard
         </h1>
         <div class="dropdown">
-            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="fiscalYearDropdown" data-bs-toggle="dropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="fiscalYearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 Fiscal Year: @(Model.CurrentFiscalYear?.Year.ToString() ?? "N/A")
             </button>
             @if (Model.FiscalYears != null && Model.FiscalYears.Any())
             {
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" aria-labelledby="fiscalYearDropdown">
                     @foreach (var year in Model.FiscalYears)
                     {
-                        <li><a class="dropdown-item" href="?fiscalYearId=@year.Id">@year.Year</a></li>
+                        <li><a class="dropdown-item @(Model.CurrentFiscalYear?.Id == year.Id ? "active" : "")" href="?fiscalYearId=@year.Id">@year.Year</a></li>
                     }
                 </ul>
             }
@@ -30,9 +30,7 @@
         </div>
     </div>
 
-    <!-- Summary Cards -->
     <div class="row mb-4">
-        <!-- Total Payments -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -53,7 +51,6 @@
             </div>
         </div>
 
-        <!-- Budget Completion -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
@@ -70,10 +67,10 @@
                                 </div>
                                 <div class="col">
                                     <div class="progress progress-sm mr-2">
-                                        <div class="progress-bar bg-success" role="progressbar" 
+                                        <div class="progress-bar bg-success" role="progressbar"
                                              style="width: @(Model.AccountSummary?.PercentageComplete * 100 ?? 0)%"
-                                             aria-valuenow="@Model.AccountSummary.PercentageComplete" 
-                                             aria-valuemin="0" 
+                                             aria-valuenow="@(Model.AccountSummary?.PercentageComplete * 100 ?? 0)" @* aria-valuenow should be percentage, not fraction *@
+                                             aria-valuemin="0"
                                              aria-valuemax="100"></div>
                                     </div>
                                 </div>
@@ -87,7 +84,6 @@
             </div>
         </div>
 
-        <!-- Balance Left -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
@@ -108,7 +104,6 @@
             </div>
         </div>
 
-        <!-- Recent Payments -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
@@ -118,8 +113,8 @@
                                 Recent Payments
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                @(Model.RecentPayments?.Count ?? 0)
-                            </div>
+                                @(Model.RecentPayments?.Count ?? 0) payments
+                            </div> @* Added "payments" for clarity *@
                         </div>
                         <div class="col-auto">
                             <i class="bi bi-receipt fa-2x text-gray-300"></i>
@@ -130,38 +125,47 @@
         </div>
     </div>
 
-    <!-- Charts Row -->
     <div class="row mb-4">
-        <!-- Payments by Chanda Type -->
-        <div class="col-xl-8 col-lg-7">
-            <div class="card shadow mb-4">
+        <div class="col-xl-8 col-lg-7 mb-4">
+            @* Added mb-4 for consistent spacing *@
+            <div class="card shadow">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Payments by Chanda Type</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Payments by Chanda Type (Current Fiscal Year)</h6> @* More descriptive title *@
                 </div>
                 <div class="card-body">
                     <div class="chart-area">
                         <canvas id="chandaTypeChart"></canvas>
                     </div>
+                    @if (Model.ChandaTypePayments == null || !Model.ChandaTypePayments.Any())
+                    {
+                        <div class="text-center text-muted mt-3">No chanda type payment data available for this fiscal year.</div>
+                    }
                 </div>
             </div>
         </div>
 
-        <!-- Budget vs Actual -->
-        <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
+        <div class="col-xl-4 col-lg-5 mb-4">
+            @* Added mb-4 for consistent spacing *@
+            <div class="card shadow">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Budget vs Actual</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Budget vs Actual (Fiscal Year)</h6> @* More descriptive title *@
                 </div>
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2">
                         <canvas id="budgetPieChart"></canvas>
                     </div>
+                    @if (Model.AccountSummary == null || (Model.AccountSummary.TotalExpectedBudget == 0 && Model.AccountSummary.TotalPayments == 0))
+                    {
+                        <div class="text-center text-muted mt-3">No budget or payment data available for the pie chart.</div>
+                    }
                     <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-primary"></i> Budget
+                        <span class="me-3">
+                            @* Using me-3 for right margin *@
+                            <i class="fas fa-circle text-primary me-1"></i> Budget
                         </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> Actual
+                        <span>
+                            @* No margin needed for the last one *@
+                            <i class="fas fa-circle text-success me-1"></i> Actual
                         </span>
                     </div>
                 </div>
@@ -169,16 +173,16 @@
         </div>
     </div>
 
-    <!-- Recent Payments Table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">Recent Payments</h6>
-            <a asp-controller="Payments" asp-action="Index" class="btn btn-sm btn-primary">View All</a>
+            <a asp-controller="Payments" asp-action="Index" class="btn btn-sm btn-primary">View All <i class="bi bi-arrow-right-short ms-1"></i></a> @* Added icon *@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover datatable">
                     <thead class="bg-primary text-white">
+
                         <tr>
                             <th>Date</th>
                             <th>Chanda Type</th>
@@ -193,9 +197,9 @@
                             foreach (var payment in Model.RecentPayments)
                             {
                                 <tr>
-                                    <td>@payment.PaymentDate.ToString("d")</td>
+                                    <td>@payment.PaymentDate.ToString("MMM dd, yyyy")</td> @* Improved date format *@
                                     <td>@payment.ChandaType?.Name ?? "N/A"</td>
-                                    <td>@payment.Amount.ToString("C")</td>
+                                    <td>@payment.Amount.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</td> @* Explicit currency format *@
                                     <td>@payment.ReceiptNumber</td>
                                     <td>
                                         <span class="badge @(payment.Verified ? "bg-success" : "bg-warning")">
@@ -207,26 +211,28 @@
                         }
                         else
                         {
-                            <tr><td colspan="5" class="text-muted">No recent payments found.</td></tr>
+                            <tr><td colspan="5" class="text-muted text-center py-3">No recent payments found.</td></tr> @* Centered and added padding *@
                         }
-
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- Budget Summary -->
     <div class="row">
         <div class="col-lg-6 mb-4">
             <div class="card shadow">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Budget Summary</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monthly Budget vs Payments</h6> @* More descriptive title *@
                 </div>
                 <div class="card-body">
                     <div class="chart-bar">
                         <canvas id="budgetBarChart"></canvas>
                     </div>
+                    @if (Model.MonthlyBudget == null || !Model.MonthlyBudget.Any() && Model.MonthlyPayments == null || !Model.MonthlyPayments.Any())
+                    {
+                        <div class="text-center text-muted mt-3">No monthly budget or payment data available.</div>
+                    }
                 </div>
             </div>
         </div>
@@ -264,102 +270,247 @@
         </div>
     </div>
 </div>
+@section styles{
+    <link rel="stylesheet" href="~/lib/datatable/datatables.min.css" />
 
+}
 @section Scripts {
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/lib/datatable/datatables.js"></script>
 
     <script>
-        // Chanda Type Chart
-        var ctx = document.getElementById('chandaTypeChart').getContext('2d');
-        var chandaTypeChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: @Html.Raw(Json.Serialize(Model.ChandaTypePayments?.Select(x => x.Key) ?? new List<string>())),
-                datasets: [{
-                    label: 'Amount Paid',
-                    data: @Html.Raw(Json.Serialize(Model.ChandaTypePayments?.Select(x => x.Value) ?? new List<decimal>()))
-                    backgroundColor: 'rgba(13, 110, 253, 0.7)',
-                    borderColor: 'rgba(13, 110, 253, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
+        // Register the datalabels plugin globally (optional)
+        Chart.register(ChartDataLabels);
+
+        // Utility function for consistent currency formatting
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD', // Change to GHS for Ghanaian Cedi, or your desired currency
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(value);
+        }
+
+        // --- Chanda Type Chart (Bar Chart) ---
+        var ctxChandaType = document.getElementById('chandaTypeChart');
+        if (ctxChandaType) {
+            new Chart(ctxChandaType, {
+                type: 'bar',
+                data: {
+                    labels: @Html.Raw(Json.Serialize(Model.ChandaTypePayments?.Select(x => x.Key) ?? new List<string>())),
+                    datasets: [{
+                        label: 'Amount Paid',
+                        data: @Html.Raw(Json.Serialize(Model.ChandaTypePayments?.Select(x => x.Value) ?? new List<decimal>())),
+                        backgroundColor: 'rgba(108, 117, 125, 0.8)', // Blue-gray for bars
+                        borderColor: 'rgba(108, 117, 125, 1)',
+                        borderWidth: 1,
+                        borderRadius: 5, // Rounded corners for bars
+                    }]
                 },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value) {
-                                return '$' + value;
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false, // Allow custom height
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: false // Title handled by card header
+                        },
+                        datalabels: { // Data labels configuration
+                            anchor: 'end',
+                            align: 'top',
+                            formatter: function(value, context) {
+                                return formatCurrency(value);
+                            },
+                            color: '#212529', // Dark gray for label text
+                            font: {
+                                weight: 'bold',
+                                size: 10
                             }
                         }
-                    }
-                }
-            }
-        });
-
-        // Budget Pie Chart
-        var ctx2 = document.getElementById('budgetPieChart').getContext('2d');
-        var budgetPieChart = new Chart(ctx2, {
-            type: 'doughnut',
-            data: {
-                labels: ['Budget', 'Actual'],
-                datasets: [{
-                    data: [@(Model.AccountSummary?.TotalExpectedBudget ?? 0), @(Model.AccountSummary?.TotalPayments ?? 0)],
-                    backgroundColor: ['rgba(13, 110, 253, 0.7)', 'rgba(25, 135, 84, 0.7)'],
-                    hoverBackgroundColor: ['rgba(13, 110, 253, 0.9)', 'rgba(25, 135, 84, 0.9)'],
-                    hoverBorderColor: "rgba(234, 236, 244, 1)",
-                }],
-            },
-            options: {
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                },
-                cutout: '70%',
-            },
-        });
-
-        // Budget Bar Chart
-        var ctx3 = document.getElementById('budgetBarChart').getContext('2d');
-        var budgetBarChart = new Chart(ctx3, {
-            type: 'bar',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                datasets: [{
-                    label: 'Budget',
-                    data: @Html.Raw(Json.Serialize(Model.MonthlyBudget ?? new List<decimal>(new decimal[12])))
-                    backgroundColor: 'rgba(13, 110, 253, 0.7)',
-                }, {
-                    label: 'Actual',
-                    data: @Html.Raw(Json.Serialize(Model.MonthlyPayments ?? new List<decimal>(new decimal[12])))
-                    backgroundColor: 'rgba(25, 135, 84, 0.7)',
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        stacked: false,
                     },
-                    y: {
-                        stacked: false,
-                        ticks: {
-                            callback: function(value) {
-                                return '$' + value;
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Remove vertical grid lines
+                            },
+                            ticks: {
+                                color: '#6C757D' // Blue-gray for X-axis labels
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)' // Light grid lines
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return formatCurrency(value);
+                                },
+                                color: '#6C757D' // Blue-gray for Y-axis labels
                             }
                         }
                     }
                 }
-            }
-        });
+            });
+        }
+
+
+        // --- Budget vs Actual (Doughnut Chart) ---
+        var ctxBudgetPie = document.getElementById('budgetPieChart');
+        if (ctxBudgetPie) {
+            new Chart(ctxBudgetPie, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Budget', 'Actual'],
+                    datasets: [{
+                        data: [@(Model.AccountSummary?.TotalExpectedBudget ?? 0), @(Model.AccountSummary?.TotalPayments ?? 0)],
+                        backgroundColor: ['#6C757D', '#212529'], // Blue-gray and Dark Gray
+                        hoverBackgroundColor: ['#7A828A', '#343A40'], // Slightly darker on hover
+                        borderWidth: 2, // Thicker border for slices
+                        borderColor: '#FFFFFF', // White border to separate slices
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += formatCurrency(context.parsed);
+                                    }
+                                    return label;
+                                }
+                            }
+                        },
+                        datalabels: { // Data labels for percentage
+                            color: '#FFFFFF', // White text for labels
+                            formatter: (value, context) => {
+                                const total = context.chart.data.datasets[0].data.reduce((sum, val) => sum + val, 0);
+                                const percentage = total > 0 ? (value / total * 100).toFixed(1) + '%' : '0%';
+                                return percentage;
+                            },
+                            font: {
+                                weight: 'bold',
+                                size: 12
+                            }
+                        }
+                    },
+                    cutout: '75%', // Thinner doughnut ring
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    },
+                    layout: {
+                        padding: {
+                            top: 0,
+                            bottom: 0,
+                            left: 0,
+                            right: 0
+                        }
+                    }
+                },
+            });
+        }
+
+
+        // --- Monthly Budget vs Payments (Bar Chart) ---
+        var ctxBudgetBar = document.getElementById('budgetBarChart');
+        if (ctxBudgetBar) {
+            new Chart(ctxBudgetBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Budget',
+                        data: @Html.Raw(Json.Serialize(Model.MonthlyBudget ?? new List<decimal>(new decimal[12]))),
+                        backgroundColor: 'rgba(108, 117, 125, 0.7)', // Blue-gray
+                        borderColor: 'rgba(108, 117, 125, 1)',
+                        borderWidth: 1,
+                        borderRadius: 3,
+                    }, {
+                        label: 'Actual',
+                        data: @Html.Raw(Json.Serialize(Model.MonthlyPayments ?? new List<decimal>(new decimal[12]))),
+                        backgroundColor: 'rgba(33, 37, 41, 0.7)', // Dark Gray
+                        borderColor: 'rgba(33, 37, 41, 1)',
+                        borderWidth: 1,
+                        borderRadius: 3,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                color: '#212529', // Dark gray legend text
+                                font: {
+                                    size: 11,
+                                    weight: 'bold'
+                                },
+                                boxWidth: 15 // Smaller legend boxes
+                            }
+                        },
+                        title: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += formatCurrency(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: false,
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#6C757D' // Blue-gray for X-axis labels
+                            }
+                        },
+                        y: {
+                            stacked: false,
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return formatCurrency(value);
+                                },
+                                color: '#6C757D' // Blue-gray for Y-axis labels
+                            }
+                        }
+                    }
+                }
+            });
+        }
     </script>
 }

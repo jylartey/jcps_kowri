@@ -70,7 +70,7 @@ namespace ChandafyApp.Controllers
             return View(member);
         }
 
-        // GET: Member/Edit/5
+        
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -136,7 +136,29 @@ namespace ChandafyApp.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+        
+        public async Task<IActionResult> Profile()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
+            var member = await _context.Members
+                .Include(m => m.Jamaat)
+                .ThenInclude(j => j.Circuit)
+                .ThenInclude(c => c.Zone)
+                .ThenInclude(z => z.Region)
+                .FirstOrDefaultAsync(m => m.IdentityUserId == currentUser.Id);
+
+            if (member == null)
+            {
+                return NotFound();
+            }
+
+            return View(member);
+        }
         private bool MemberExists(int id) => _context.Members.Any(e => e.Id == id);
     }
 }

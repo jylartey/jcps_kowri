@@ -9,20 +9,20 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Chanda Calculator</h6>
+        <h6 class="m-0 font-weight-bold text-white">Chanda Calculator</h6>
     </div>
     <div class="card-body">
         <form asp-action="Calculator" method="post">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="income">Monthly Income</label>
                         <input type="number" step="0.01" class="form-control" id="income" name="income"
                                value="@income" required>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="chandaTypeId">Chanda Type</label>
                         <select class="form-control" id="chandaTypeId" name="chandaTypeId" required>
                             <option value="">-- Select Chanda Type --</option>
@@ -36,17 +36,17 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary mt-3">
+            <button type="submit" class="btn btn-main mt-3">
                 <i class="bi bi-calculator"></i> Calculate
             </button>
         </form>
 
         @if (calculatedAmount.HasValue)
         {
-            <div class="alert alert-success mt-4">
+            <div class="alert alert-success-custom mt-4">
                 <h4 class="alert-heading">Calculation Result</h4>
-                <p>For @selectedChandaType with income of @income?.ToString("C"), your Chanda amount is:</p>
-                <h3 class="text-center">@calculatedAmount.Value.ToString("C")</h3>
+                <p>For <strong>@selectedChandaType</strong> with income of <strong>@income?.ToString("C")</strong>, your Chanda amount is:</p>
+                <h3 class="text-center display-5 fw-bold mt-3">@calculatedAmount.Value.ToString("C")</h3>
             </div>
         }
     </div>
@@ -55,40 +55,121 @@
 @section Styles {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        :root {
+            --primary-color: #4A90E2; /* A vibrant blue, softer than the default Bootstrap primary */
+            --primary-dark: #357ABD;
+            --secondary-color: #5C7B8E; /* A muted blue-grey */
+            --accent-color: #F5A623; /* A warm orange for highlights */
+            --success-color: #7ED321;
+            --danger-color: #D0021B;
+            --info-color: #50E3C2; /* A refreshing teal */
+            --light-bg: #F9FBFD; /* Very light blue-grey for backgrounds */
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --border-color: #e0e0e0;
+            --success-light-bg: rgba(126, 211, 33, 0.1); /* Light green for success alert */
+            --success-border: rgba(126, 211, 33, 0.3);
+            --success-text: #4a8a0e;
         }
 
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            }
+
         .card-header {
-            border-radius: 10px 10px 0 0 !important;
-            background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--light-text);
+            border-bottom: none;
+            border-radius: 12px 12px 0 0 !important;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .h6.font-weight-bold {
+            font-weight: 700 !important;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
         }
 
         .form-control {
             border-radius: 8px;
-            padding: 10px 15px;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-            .btn-primary:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+            .form-control:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 0.25rem rgba(var(--primary-color), 0.25);
             }
 
-        .alert-success {
+        .btn-main {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 0.75rem 1.5rem;
             border-radius: 8px;
-            background-color: rgba(25, 135, 84, 0.1);
-            border-color: rgba(25, 135, 84, 0.2);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(var(--primary-color), 0.2);
+        }
+
+            .btn-main:hover {
+                background-color: var(--primary-dark);
+                border-color: var(--primary-dark);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(var(--primary-color), 0.3);
+            }
+
+        .alert-success-custom {
+            border-radius: 10px;
+            background-color: var(--success-light-bg);
+            border: 1px solid var(--success-border);
+            color: var(--success-text);
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .alert-heading {
+            color: var(--success-color);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .alert-success-custom p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-success-custom strong {
+            color: var(--dark-text);
+        }
+
+        .display-5 {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .fw-bold {
+            font-weight: 700 !important;
         }
     </style>
 }

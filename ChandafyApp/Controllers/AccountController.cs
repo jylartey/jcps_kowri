@@ -1,9 +1,11 @@
-﻿using System.Threading.Tasks;
-using ChandafyApp.Models;
+﻿using ChandafyApp.Models;
+using ChandafyApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 
 namespace ChandafyApp.Controllers
 {
@@ -75,5 +77,45 @@ namespace ChandafyApp.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        [Authorize]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                await _signInManager.RefreshSignInAsync(user);
+                ViewData["SuccessMessage"] = "Your password has been changed successfully.";
+                return View();
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
+        }
+
+       
     }
 }

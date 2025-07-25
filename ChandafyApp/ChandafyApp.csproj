@@ -21,6 +21,9 @@
     <Folder Include="Data\Entities\" />
     <Folder Include="Migrations\" />
     <Folder Include="wwwroot\dist\css\" />
+    <Folder Include="wwwroot\lib\datatable\" />
+    <Folder Include="wwwroot\lib\bootstrap-icons\" />
+    <Folder Include="wwwroot\lib\font-awesome\" />
   </ItemGroup>
 
 </Project>
