@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj": {}
   },
   "projects": {
@@ -13,29 +12,12 @@
         "projectPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
         "packagesPath": "C:\\Users\\mo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\obj\\",
-=======
-    "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-        "projectName": "ChandafyApp",
-        "projectPath": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-        "packagesPath": "C:\\Users\\Hassan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\obj\\",
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\mo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\Hassan\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -111,11 +93,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
         }
       }
     }
