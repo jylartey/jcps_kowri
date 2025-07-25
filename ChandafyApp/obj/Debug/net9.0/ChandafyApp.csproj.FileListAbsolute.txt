@@ -17,9 +17,7 @@ C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\ChandafyApp.Razo
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\scopedcss\bundle\ChandafyApp.styles.css
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\scopedcss\projectbundle\ChandafyApp.bundle.scp.css
-C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-b9sayid5wm.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\g2yka0bd03-61n19gt1b8.gz
-C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-xtxxf3hu2r.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\vqabitnq3w-c2jlpeoesf.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\ogswnbfp8c-aexeepp0ev.gz
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\54sntn1sep-ausgxo2sd3.gz
@@ -359,13 +357,11 @@ C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Composition
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Drawing.Common.dll
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Formats.Asn1.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Runtime.Caching.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Permissions.dll
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Windows.Extensions.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -519,9 +515,7 @@ C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\a3ygkwa
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-b9sayid5wm.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\g2yka0bd03-61n19gt1b8.gz
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-xtxxf3hu2r.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\qgg1sw72aw-t1cqhe9u97.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\vqabitnq3w-c2jlpeoesf.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\xspbu85dgd-sejl45xvog.gz
@@ -586,12 +580,6 @@ C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\qmdibi2
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets\msbuild.ChandafyApp.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets\msbuild.ChandafyApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets\msbuild.build.ChandafyApp.props
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ChandafyApp.props
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ChandafyApp.props
-C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.pack.json
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\Chandafy.C020B9F4.Up2Date
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\ChandafyApp.dll
@@ -1060,6 +1048,7 @@ C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\Microsoft.IO.Recy
 C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
 C:\Users\user\Documents`\chandafy\ChandafyApp\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+<<<<<<< HEAD
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-b1eb16a5zr.gz
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\l1x85evs9q-ga08497dsu.gz
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\92ajw81rr8-9txgq6x3gt.gz
@@ -6721,3 +6710,39 @@ C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\wczh9e
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\8favhcmqlc-htxh2dea5c.gz
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\iqe1bfjzqq-jup6p5rzc6.gz
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\qyxzdk44w4-we4ae8v0iz.gz
+=======
+<<<<<<< HEAD
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.Interfaces.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-7x6hlu1pk2.gz
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-orhlylyep1.gz
+C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.build.json.cache
+=======
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.Interfaces.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-7x6hlu1pk2.gz
+C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-orhlylyep1.gz
+>>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
+>>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
