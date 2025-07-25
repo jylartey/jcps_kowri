@@ -1,6 +1,7 @@
 {
   "Version": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
   "Documents": [
     {
@@ -457,6 +458,10 @@
 >>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
+  "Documents": [],
+>>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -464,6 +469,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
 <<<<<<< HEAD
           "SelectedChildIndex": 9,
 =======
@@ -563,17 +569,28 @@
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-07-16T21:10:21.998Z"
+=======
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.Jamaats.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:07:52.608Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+>>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ExpenseController.cs",
@@ -1550,6 +1567,22 @@
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
 >>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
+=======
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+>>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
             }
           ]
         },
@@ -1560,6 +1593,7 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+<<<<<<< HEAD
 =======
               "$type": "Document",
               "DocumentIndex": 0,
@@ -1960,6 +1994,8 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-26T21:19:42.673Z"
 >>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
+=======
+>>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
             }
           ]
         }
