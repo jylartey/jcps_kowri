@@ -1,10 +1,17 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\chandafyapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:chandafyapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\fiscalyear\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -227,18 +234,10 @@
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
-=======
-  "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
-  "Documents": [],
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -246,12 +245,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 8,
-=======
-          "SelectedChildIndex": -1,
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChandafyApp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ChandafyApp.csproj",
+              "RelativeDocumentMoniker": "ChandafyApp.csproj",
+              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ChandafyApp.csproj",
+              "RelativeToolTip": "ChandafyApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-26T10:39:07.782Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -283,36 +291,23 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-<<<<<<< HEAD
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "ViewState": "AgIAAJcCAAAAAAAAAIAwwKYCAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets*",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets*",
+              "ViewState": "AgIAAJsCAAAAAAAAAAAwwLACAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-07-25T17:25:56.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\ChandaType\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ChandaType\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\ChandaType\\Index.cshtml",
-              "RelativeToolTip": "Views\\ChandaType\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAMIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:55:12.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\FiscalYear\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\FiscalYear\\Index.cshtml",
@@ -320,12 +315,11 @@
               "RelativeToolTip": "Views\\FiscalYear\\Index.cshtml",
               "ViewState": "AgIAAHUAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:29:23.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T16:29:23.258Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Region\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Region\\Index.cshtml",
@@ -337,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "JamaatController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\JamaatController.cs",
               "RelativeDocumentMoniker": "Controllers\\JamaatController.cs",
@@ -349,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ChandafyDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Data\\ChandafyDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ChandafyDbContext.cs",
@@ -361,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ChandaTypeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ChandaTypeController.cs",
               "RelativeDocumentMoniker": "Controllers\\ChandaTypeController.cs",
@@ -373,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ChandaType.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\ChandaType.cs",
               "RelativeDocumentMoniker": "Models\\ChandaType.cs",
@@ -385,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RegionController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\RegionController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegionController.cs",
@@ -397,7 +391,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-14T19:09:32.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\ChandaType\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ChandaType\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\ChandaType\\Index.cshtml",
+              "RelativeToolTip": "Views\\ChandaType\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAMIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T16:55:12.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FiscalYearController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\FiscalYearController.cs",
               "RelativeDocumentMoniker": "Controllers\\FiscalYearController.cs",
@@ -409,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Zone\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Zone\\Index.cshtml",
@@ -421,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\PaymentMethod\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\PaymentMethod\\Index.cshtml",
@@ -433,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Jamaat\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Jamaat\\Index.cshtml",
@@ -445,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Circuit\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Circuit\\Index.cshtml",
@@ -457,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "CircuitController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\CircuitController.cs",
               "RelativeDocumentMoniker": "Controllers\\CircuitController.cs",
@@ -469,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ZoneController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ZoneController.cs",
               "RelativeDocumentMoniker": "Controllers\\ZoneController.cs",
@@ -481,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\UserManagement\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\UserManagement\\Index.cshtml",
@@ -493,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "PaymentMethodController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PaymentMethodController.cs",
               "RelativeDocumentMoniker": "Controllers\\PaymentMethodController.cs",
@@ -505,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Budget\\Index.cshtml",
@@ -517,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Member\\Profile.cshtml",
               "RelativeDocumentMoniker": "Views\\Member\\Profile.cshtml",
@@ -529,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "MemberController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "Controllers\\MemberController.cs",
@@ -541,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "_Sidebar.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Sidebar.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Sidebar.cshtml",
@@ -553,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "_Navbar.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Navbar.cshtml",
@@ -565,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Member\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Member\\Index.cshtml",
@@ -577,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "EditRoles.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\UserManagement\\EditRoles.cshtml",
               "RelativeDocumentMoniker": "Views\\UserManagement\\EditRoles.cshtml",
@@ -589,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Upload.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Upload.cshtml",
               "RelativeDocumentMoniker": "Views\\Budget\\Upload.cshtml",
@@ -601,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -613,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ChangePasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\ChangePasswordViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ChangePasswordViewModel.cs",
@@ -625,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Account\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\ChangePassword.cshtml",
@@ -637,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -649,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "SettingsController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\SettingsController.cs",
               "RelativeDocumentMoniker": "Controllers\\SettingsController.cs",
@@ -661,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Settings\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Settings\\Index.cshtml",
@@ -673,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Budget.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Budget.cs",
               "RelativeDocumentMoniker": "Models\\Budget.cs",
@@ -685,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -697,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
@@ -709,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "BudgetController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\BudgetController.cs",
               "RelativeDocumentMoniker": "Controllers\\BudgetController.cs",
@@ -721,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "PayeeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PayeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\PayeeController.cs",
@@ -733,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "ExpenseController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ExpenseController.cs",
               "RelativeDocumentMoniker": "Controllers\\ExpenseController.cs",
@@ -745,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "Member.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Member.cs",
               "RelativeDocumentMoniker": "Models\\Member.cs",
@@ -757,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -769,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Footer.cshtml",
@@ -781,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Expense\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Expense\\Index.cshtml",
@@ -793,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "UserManagementController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\UserManagementController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserManagementController.cs",
@@ -805,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "UserRolesViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\UserRolesViewModel.cs",
@@ -817,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -829,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "Calculator.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
               "RelativeDocumentMoniker": "Views\\Budget\\Calculator.cshtml",
@@ -841,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Payment\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Payment\\Index.cshtml",
@@ -853,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -865,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "dbo.Jamaats.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
@@ -874,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "dbo.Zones.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
@@ -883,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "dbo.Regions.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
@@ -892,7 +911,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "dbo.Circuits.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
@@ -901,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -913,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "AuthSeeder.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\SeedData\\AuthSeeder.cs",
               "RelativeDocumentMoniker": "SeedData\\AuthSeeder.cs",
@@ -925,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Payment.cs",
               "RelativeDocumentMoniker": "Models\\Payment.cs",
@@ -937,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "DashboardViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
@@ -949,19 +968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-14T19:09:32.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "LICENSE",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
               "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\LICENSE",
@@ -973,7 +980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -982,8 +989,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-15T20:09:11.566Z"
-=======
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
             }
           ]
         },

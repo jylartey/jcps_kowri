@@ -8,6 +8,14 @@ out/
 *.suo
 *.userosscache
 *.sln.docstates
+*.VC.db
+*.VC.opendb
+*.cache
+*.db
+*.bak
+*.backup.json
+_ReSharper*/
+*.DotSettings.user
 
 # Visual Studio working folder
 .vs/
