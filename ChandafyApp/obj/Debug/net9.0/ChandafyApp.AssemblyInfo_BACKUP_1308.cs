@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChandafyApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c847c543f0a835a4fc85144e8f7f03f1e982168")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0121a6853a85eb4929f487d893ad554ac8369f22")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChandafyApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChandafyApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
