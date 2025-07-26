@@ -40,7 +40,7 @@ namespace ChandafyApp.Controllers
 
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                ModelState.AddModelError(string.Empty, "Email and password are required.");
+                ModelState.AddModelError(string.Empty, "Aims Number and password are required.");
                 return View();
             }
 

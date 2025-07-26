@@ -9,6 +9,7 @@ public class Payment
     public int ChandaTypeId { get; set; }
     public int PaymentMethodId { get; set; }
     public DateTime PaymentDate { get; set; }
+    public int FiscalYearId { get; set; }
     public decimal Amount { get; set; }
     public string TransactionReference { get; set; }
     public string ReceiptNumber { get; set; }
@@ -20,4 +21,5 @@ public class Payment
     public Member Member { get; set; }
     public ChandaType ChandaType { get; set; }
     public PaymentMethod PaymentMethod { get; set; }
+    public FiscalYear FiscalYear { get; internal set; }
 }

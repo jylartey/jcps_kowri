@@ -1,7 +1,11 @@
 ﻿using ChandafyApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections;
+using System.Collections.Immutable;
+using System.Collections.Specialized;
 
 namespace ChandafyApp.Controllers
 {
@@ -9,11 +13,76 @@ namespace ChandafyApp.Controllers
     public class CircuitController : Controller
     {
         private readonly ChandafyDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public CircuitController(ChandafyDbContext context)
+        public class MemberViewModel
+        {
+            public decimal TotalProjectedAmount { get; set; }
+            public double PercentageComplete { get; set; }
+            public List<Member> MembersYetToPay { get; set; }
+        }
+
+
+        public CircuitController(ChandafyDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
+        // GET Circuit Collector
+        public async Task<IActionResult> Collector() 
+        {
+            var userId = _userManager.GetUserId(User); // Get logged-in user's Identity ID
+
+            // Get the Member associated with this user
+            var member = await _context.Members
+                .Include(m => m.Jamaat)
+                .ThenInclude(j => j.Circuit)
+                .FirstOrDefaultAsync(m => m.IdentityUserId == userId);
+
+            if (member == null)
+            {
+                return NotFound("Member not found.");
+            }
+
+            var collectorCircuitId = member.Jamaat.CircuitId;
+            var totalCollected = await _context.Budgets
+                .Where(b => _context.Members
+                .Any(m => m.Id == b.MemberId && m.Jamaat.CircuitId == collectorCircuitId))
+                .SumAsync(b => (decimal?)b.AmountPaid) ?? 0;
+
+            var totalProjectedAmount = await _context.Budgets
+                .Where(b => _context.Members
+                .Any(m => m.Id == b.MemberId && m.Jamaat.CircuitId == collectorCircuitId))
+                .SumAsync(b => (decimal?)b.TotalProjectedAmount) ?? 0;
+
+            var activeFiscalYear = await _context.FiscalYears
+                .FirstOrDefaultAsync(fy => fy.IsActive == true);
+            
+            List<Member> membersYetToPay = new();
+
+
+            if (activeFiscalYear != null)
+            {
+                membersYetToPay = await _context.Members
+                    .Where(m => !_context.Budgets
+                        .Any(b => b.MemberId == m.Id && b.FiscalYearId == activeFiscalYear.Id))
+                    .ToListAsync();
+            }
+
+
+            var viewModel = new MemberViewModel
+            {
+                TotalProjectedAmount = totalProjectedAmount,
+                PercentageComplete = totalProjectedAmount > 0
+                    ? (double)(totalCollected / totalProjectedAmount)
+                    : 0,
+                MembersYetToPay = membersYetToPay
+            };
+
+            return View(viewModel);
+
+        }
+
 
         // GET: Circuit
         public async Task<IActionResult> Index()
@@ -102,4 +171,5 @@ namespace ChandafyApp.Controllers
 
         private bool CircuitExists(int id) => _context.Circuits.Any(e => e.Id == id);
     }
+
 }
