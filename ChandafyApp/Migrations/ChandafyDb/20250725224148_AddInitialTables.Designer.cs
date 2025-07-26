@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChandafyApp.Migrations.ChandafyDb
 {
     [DbContext(typeof(ChandafyDbContext))]
-    partial class ChandafyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250725224148_AddInitialTables")]
+    partial class AddInitialTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -205,9 +208,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("IsActive")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
@@ -319,9 +319,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.Property<int>("ChandaTypeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("FiscalYearId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MemberId")
                         .HasColumnType("int");
 
@@ -346,8 +343,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.HasKey("Id");
 
                     b.HasIndex("ChandaTypeId");
-
-                    b.HasIndex("FiscalYearId");
 
                     b.HasIndex("MemberId");
 
@@ -636,12 +631,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ChandafyApp.Models.FiscalYear", "FiscalYear")
-                        .WithMany()
-                        .HasForeignKey("FiscalYearId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ChandafyApp.Models.Member", "Member")
                         .WithMany()
                         .HasForeignKey("MemberId")
@@ -655,8 +644,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .IsRequired();
 
                     b.Navigation("ChandaType");
-
-                    b.Navigation("FiscalYear");
 
                     b.Navigation("Member");
 

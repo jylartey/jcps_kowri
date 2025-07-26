@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace ChandafyApp.Models;
+
 public class Circuit
 {
     [Key]
@@ -11,3 +12,4 @@ public class Circuit
     public Zone Zone { get; set; }
     public ICollection<Jamaat> Jamaats { get; set; }
 }
+
