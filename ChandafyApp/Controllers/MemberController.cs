@@ -29,57 +29,45 @@ namespace ChandafyApp.Controllers
             return View(members);
         }
 
-        // GET: Member/Create
-        public IActionResult Create()
-        {
-            ViewBag.Jamaats = _context.Jamaats.ToList();
-            return View();
-        }
+
 
         // POST: Member/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Member member, string password)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = member.AIMS, Email = $"{member.AIMS}@chandafy.org" };
-                var result = await _userManager.CreateAsync(user, password);
-
-                if (result.Succeeded)
-                {
-                    var createdUser = await _userManager.FindByNameAsync(user.UserName);
-                    if (createdUser == null)
-                    {
-                        ModelState.AddModelError(string.Empty, "Failed to retrieve the created user.");
-                        ViewBag.Jamaats = _context.Jamaats.ToList();
-                        return View(member);
-                    }
-                    member.IdentityUserId = user.Id;
-                    _context.Add(member);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                return Json(new { success = false, errors });
             }
-            ViewBag.Jamaats = _context.Jamaats.ToList();
-            return View(member);
+
+            var user = new IdentityUser { UserName = member.AIMS, Email = $"{member.AIMS}@yourdomain.com" };
+            var result = await _userManager.CreateAsync(user, password);
+
+            if (!result.Succeeded)
+            {
+                var identityErrors = result.Errors.Select(e => e.Description).ToList();
+                return Json(new { success = false, errors = identityErrors });
+            }
+
+            member.IdentityUserId = user.Id;
+            _context.Members.Add(member);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true });
         }
 
-        
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
 
             var member = await _context.Members.FindAsync(id);
-            if (member == null) return NotFound();
+            if (member == null)
+                return Json(new { success = false, error = "Member not found" });
 
-            ViewBag.Jamaats = _context.Jamaats.ToList();
-            return View(member);
+            return Json(new { success = true, data = member });
         }
 
         // POST: Member/Edit/5
@@ -109,6 +97,7 @@ namespace ChandafyApp.Controllers
         }
 
         // GET: Member/Delete/5
+        [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -119,24 +108,16 @@ namespace ChandafyApp.Controllers
 
             if (member == null) return NotFound();
 
-            return View(member);
-        }
-
-        // POST: Member/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var member = await _context.Members.FindAsync(id);
             var user = await _userManager.FindByIdAsync(member.IdentityUserId);
 
             await _userManager.DeleteAsync(user);
             _context.Members.Remove(member);
             await _context.SaveChangesAsync();
-
             return RedirectToAction(nameof(Index));
         }
-        
+
+
+        ////[Authorize]
         public async Task<IActionResult> Profile()
         {
             var currentUser = await _userManager.GetUserAsync(User);

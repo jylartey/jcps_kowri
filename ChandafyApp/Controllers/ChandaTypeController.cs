@@ -15,58 +15,44 @@ namespace ChandafyApp.Controllers
             _context = context;
         }
 
-        // GET: ChandaType
         public async Task<IActionResult> Index()
         {
             var chandaType = await _context.ChandaTypes.ToListAsync();
             return View(chandaType);
         }
 
-        // GET: ChandaType/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: ChandaType/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description")] ChandaType chandaType)
+        public async Task<IActionResult> Create(ChandaType chandaType)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(chandaType);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
             }
-            return View(chandaType);
+
+            return Json(new { success = false });
         }
 
-        // GET: ChandaType/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var chandaType = await _context.ChandaTypes.FindAsync(id);
             if (chandaType == null)
-            {
                 return NotFound();
-            }
-            return View(chandaType);
+
+            return Json(chandaType); 
         }
 
-        // POST: ChandaType/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] ChandaType chandaType)
+        public async Task<IActionResult> Edit(int id, ChandaType chandaType)
         {
             if (id != chandaType.Id)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -74,47 +60,35 @@ namespace ChandafyApp.Controllers
                 {
                     _context.Update(chandaType);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ChandaTypeExists(chandaType.Id))
-                    {
                         return NotFound();
-                    }
+
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(chandaType);
+
+            return Json(new { success = false });
         }
 
-        // GET: ChandaType/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var chandaType = await _context.ChandaTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (chandaType == null)
-            {
-                return NotFound();
-            }
-
-            return View(chandaType);
-        }
-
-        // POST: ChandaType/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
             var chandaType = await _context.ChandaTypes.FindAsync(id);
+            if (chandaType == null)
+                return NotFound();
+
             _context.ChandaTypes.Remove(chandaType);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return Json(new { success = true });
         }
 
         private bool ChandaTypeExists(int id)

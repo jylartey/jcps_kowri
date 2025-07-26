@@ -56,7 +56,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 
             </div>
-            <form asp-action="Create">
+            <form asp-action="Create" id="createForm">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="Name" class="control-label">Name</label>
@@ -157,7 +157,10 @@
                 var paymentMethodId = $(this).data('id');
                 $('#deleteId').val(paymentMethodId);
             });
-
+            $('#createForm').submit(function(e) {
+                e.preventDefault();
+                submitForm(this, '#createModal');
+            });
             // Form submission handlers
             $('#editForm').submit(function(e) {
                 e.preventDefault();

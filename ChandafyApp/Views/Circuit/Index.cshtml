@@ -57,7 +57,7 @@
                 <h5 class="modal-title" id="createModalLabel">Add New Circuit</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form asp-action="Create">
+            <form asp-action="Create" id="createForm">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="Name" class="control-label">Circuit Name</label>
@@ -180,7 +180,10 @@
                 e.preventDefault();
                 submitForm(this, '#editModal');
             });
-
+            $('#createForm').submit(function(e) {
+                e.preventDefault();
+                submitForm(this, '#createModal');
+            });
             $('#deleteForm').submit(function(e) {
                 e.preventDefault();
                 submitForm(this, '#deleteModal');

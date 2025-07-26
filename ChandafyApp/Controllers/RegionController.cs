@@ -22,23 +22,19 @@ namespace ChandafyApp.Controllers
             return View(regions);
         }
 
-        // GET: Region/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+        
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Region region)
+        public async Task<IActionResult> Create(Region region)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(region);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
             }
-            return View(region);
+            return Json(new { success = false });
         }
 
         // GET: Region/Edit/5
@@ -49,12 +45,12 @@ namespace ChandafyApp.Controllers
             var region = await _context.Regions.FindAsync(id);
             if (region == null) return NotFound();
 
-            return View(region);
+            return Json(region);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Region region)
+        public async Task<IActionResult> Edit(int id, Region region)
         {
             if (id != region.Id) return NotFound();
 
@@ -64,18 +60,20 @@ namespace ChandafyApp.Controllers
                 {
                     _context.Update(region);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!RegionExists(region.Id)) return NotFound();
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(region);
+            return Json(new { success = false });
         }
 
         // GET: Region/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -85,18 +83,12 @@ namespace ChandafyApp.Controllers
 
             if (region == null) return NotFound();
 
-            return View(region);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var region = await _context.Regions.FindAsync(id);
             _context.Regions.Remove(region);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true });
         }
+
+        
 
         private bool RegionExists(int id) => _context.Regions.Any(e => e.Id == id);
     }

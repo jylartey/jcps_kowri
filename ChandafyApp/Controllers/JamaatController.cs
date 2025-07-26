@@ -28,16 +28,10 @@ namespace ChandafyApp.Controllers
             return View(jamaats);
         }
 
-        // GET: Jamaat/Create
-        public async Task<IActionResult> Create()
-        {
-            ViewBag.Circuits = await _context.Circuits.Include(c => c.Zone).ToListAsync();
-            return View();
-        }
+        
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CircuitId")] Jamaat jamaat)
+        public async Task<IActionResult> Create( Jamaat jamaat)
         {
             if (ModelState.IsValid)
             {
@@ -62,8 +56,8 @@ namespace ChandafyApp.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CircuitId")] Jamaat jamaat)
+        
+        public async Task<IActionResult> Edit(int id, Jamaat jamaat)
         {
             if (id != jamaat.Id) return NotFound();
 
@@ -86,6 +80,7 @@ namespace ChandafyApp.Controllers
         }
 
         // GET: Jamaat/Delete/5
+        [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -97,18 +92,12 @@ namespace ChandafyApp.Controllers
 
             if (jamaat == null) return NotFound();
 
-            return View(jamaat);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var jamaat = await _context.Jamaats.FindAsync(id);
             _context.Jamaats.Remove(jamaat);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        
 
         private bool JamaatExists(int id) => _context.Jamaats.Any(e => e.Id == id);
     }

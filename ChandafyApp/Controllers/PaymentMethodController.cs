@@ -22,23 +22,21 @@ namespace ChandafyApp.Controllers
             return View(paymentMethods);
         }
 
-        // GET: PaymentMethod/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
+        
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Rule")] PaymentMethod paymentMethod)
+        public async Task<IActionResult> Create(PaymentMethod paymentMethod)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(paymentMethod);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
+
             }
-            return View(paymentMethod);
+            return Json(new { success = false });
+
         }
 
         // GET: PaymentMethod/Edit/5
@@ -49,12 +47,12 @@ namespace ChandafyApp.Controllers
             var paymentMethod = await _context.PaymentMethods.FindAsync(id);
             if (paymentMethod == null) return NotFound();
 
-            return View(paymentMethod);
+            return Json(paymentMethod);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Rule")] PaymentMethod paymentMethod)
+        public async Task<IActionResult> Edit(int id,PaymentMethod paymentMethod)
         {
             if (id != paymentMethod.Id) return NotFound();
 
@@ -64,18 +62,21 @@ namespace ChandafyApp.Controllers
                 {
                     _context.Update(paymentMethod);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!PaymentMethodExists(paymentMethod.Id)) return NotFound();
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
-            return View(paymentMethod);
+            return Json(new { success = false });
         }
 
         // GET: PaymentMethod/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -85,18 +86,12 @@ namespace ChandafyApp.Controllers
 
             if (paymentMethod == null) return NotFound();
 
-            return View(paymentMethod);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var paymentMethod = await _context.PaymentMethods.FindAsync(id);
             _context.PaymentMethods.Remove(paymentMethod);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true });
         }
+
+        
 
         private bool PaymentMethodExists(int id) => _context.PaymentMethods.Any(e => e.Id == id);
     }

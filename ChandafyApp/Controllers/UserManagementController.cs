@@ -74,7 +74,6 @@ namespace ChandafyApp.Controllers
 
         // POST: UserManagement/EditRoles/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditRoles(string id, EditRolesViewModel model)
         {
             if (id != model.UserId) return NotFound();

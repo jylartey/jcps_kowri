@@ -25,25 +25,19 @@ namespace ChandafyApp.Controllers
             return View(zones);
         }
 
-        // GET: Zone/Create
-        public async Task<IActionResult> Create()
-        {
-            ViewBag.Regions = await _context.Regions.ToListAsync();
-            return View();
-        }
+        
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,RegionId")] Zone zone)
+        public async Task<IActionResult> Create( Zone zone)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(zone);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
             }
-            ViewBag.Regions = await _context.Regions.ToListAsync();
-            return View(zone);
+            return Json(new { success = false });
         }
 
         // GET: Zone/Edit/5
@@ -54,13 +48,12 @@ namespace ChandafyApp.Controllers
             var zone = await _context.Zones.FindAsync(id);
             if (zone == null) return NotFound();
 
-            ViewBag.Regions = await _context.Regions.ToListAsync();
-            return View(zone);
+            return Json(zone);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,RegionId")] Zone zone)
+        public async Task<IActionResult> Edit(int id, Zone zone)
         {
             if (id != zone.Id) return NotFound();
 
@@ -70,19 +63,20 @@ namespace ChandafyApp.Controllers
                 {
                     _context.Update(zone);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ZoneExists(zone.Id)) return NotFound();
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
             }
-            ViewBag.Regions = await _context.Regions.ToListAsync();
-            return View(zone);
+            return Json(new { success = false });
         }
 
         // GET: Zone/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -93,18 +87,12 @@ namespace ChandafyApp.Controllers
 
             if (zone == null) return NotFound();
 
-            return View(zone);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var zone = await _context.Zones.FindAsync(id);
             _context.Zones.Remove(zone);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true });
         }
+
+        
 
         private bool ZoneExists(int id) => _context.Zones.Any(e => e.Id == id);
     }

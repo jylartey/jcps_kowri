@@ -23,22 +23,18 @@ namespace ChandafyApp.Controllers
         }
 
         // GET: FiscalYear/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Year,StartDate,EndDate")] FiscalYear fiscalYear)
+        public async Task<IActionResult> Create(FiscalYear fiscalYear)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(fiscalYear);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
             }
-            return View(fiscalYear);
+            return Json(new { success = false });
         }
 
         // GET: FiscalYear/Edit/5
@@ -49,12 +45,12 @@ namespace ChandafyApp.Controllers
             var fiscalYear = await _context.FiscalYears.FindAsync(id);
             if (fiscalYear == null) return NotFound();
 
-            return View(fiscalYear);
+            return Json(fiscalYear);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Year,StartDate,EndDate")] FiscalYear fiscalYear)
+        public async Task<IActionResult> Edit(int id, FiscalYear fiscalYear)
         {
             if (id != fiscalYear.Id) return NotFound();
 
@@ -64,18 +60,19 @@ namespace ChandafyApp.Controllers
                 {
                     _context.Update(fiscalYear);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!FiscalYearExists(fiscalYear.Id)) return NotFound();
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(fiscalYear);
+            return Json(new { success = false });
         }
 
-        // GET: FiscalYear/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -85,18 +82,12 @@ namespace ChandafyApp.Controllers
 
             if (fiscalYear == null) return NotFound();
 
-            return View(fiscalYear);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var fiscalYear = await _context.FiscalYears.FindAsync(id);
             _context.FiscalYears.Remove(fiscalYear);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true });
         }
+
+        
 
         private bool FiscalYearExists(int id) => _context.FiscalYears.Any(e => e.Id == id);
     }

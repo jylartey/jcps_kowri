@@ -36,12 +36,7 @@ namespace ChandafyApp.Controllers
             return View(expenses);
         }
 
-        // GET: Expense/Create
-        public async Task<IActionResult> Create()
-        {
-            ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
-            return View();
-        }
+        
 
         // POST: Expense/Create
         [HttpPost]
@@ -175,27 +170,11 @@ namespace ChandafyApp.Controllers
                 .Include(e => e.FiscalYear)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (expense == null) return NotFound();
-
-            // For AJAX, return view with the expense or just success for the modal to confirm
-            // For now, we'll assume the client-side Delete button just needs the ID for the modal
-            return Json(new { success = true });
-        }
-
-
-        // POST: Expense/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var expense = await _context.Expenses.FindAsync(id);
-
             if (expense == null)
             {
                 return Json(new { success = false, errors = new List<string> { "Expense not found." } });
             }
 
-            // Delete receipt image if exists
             if (!string.IsNullOrEmpty(expense.ExpenseReceiptImage))
             {
                 var uploads = Path.Combine(_env.WebRootPath, "uploads/receipts");
@@ -211,6 +190,9 @@ namespace ChandafyApp.Controllers
 
             return Json(new { success = true });
         }
+
+
+       
 
         private bool ExpenseExists(int id) => _context.Expenses.Any(e => e.Id == id);
     }

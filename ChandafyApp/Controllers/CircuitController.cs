@@ -26,25 +26,21 @@ namespace ChandafyApp.Controllers
             return View(circuits);
         }
 
-        // GET: Circuit/Create
-        public async Task<IActionResult> Create()
-        {
-            ViewBag.Zones = await _context.Zones.Include(z => z.Region).ToListAsync();
-            return View();
-        }
+        
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ZoneId")] Circuit circuit)
+        public async Task<IActionResult> Create(Circuit circuit)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(circuit);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
+
             }
-            ViewBag.Zones = await _context.Zones.Include(z => z.Region).ToListAsync();
-            return View(circuit);
+            return Json(new { success = false });
+
         }
 
         // GET: Circuit/Edit/5
@@ -55,13 +51,13 @@ namespace ChandafyApp.Controllers
             var circuit = await _context.Circuits.FindAsync(id);
             if (circuit == null) return NotFound();
 
-            ViewBag.Zones = await _context.Zones.Include(z => z.Region).ToListAsync();
-            return View(circuit);
+            return Json(circuit);
+
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ZoneId")] Circuit circuit)
+        public async Task<IActionResult> Edit(int id, Circuit circuit)
         {
             if (id != circuit.Id) return NotFound();
 
@@ -71,19 +67,21 @@ namespace ChandafyApp.Controllers
                 {
                     _context.Update(circuit);
                     await _context.SaveChangesAsync();
+                    return Json(new { success = true });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!CircuitExists(circuit.Id)) return NotFound();
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
-            ViewBag.Zones = await _context.Zones.Include(z => z.Region).ToListAsync();
-            return View(circuit);
+            return Json(new {success = false});
         }
 
         // GET: Circuit/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -95,18 +93,12 @@ namespace ChandafyApp.Controllers
 
             if (circuit == null) return NotFound();
 
-            return View(circuit);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var circuit = await _context.Circuits.FindAsync(id);
             _context.Circuits.Remove(circuit);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true });
         }
+
+       
 
         private bool CircuitExists(int id) => _context.Circuits.Any(e => e.Id == id);
     }
