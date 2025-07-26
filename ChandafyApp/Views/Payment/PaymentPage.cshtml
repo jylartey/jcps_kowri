@@ -1,0 +1,49 @@
+﻿@model ChandafyApp.ViewModels.PaymentSummaryDto
+
+<h2>Payment Summary</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Chanda Type</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            double total = 0.0;
+        }
+        @foreach (var item in Model.SummaryItems)
+        {
+            total += item.Amount;
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Amount.ToString("F2")</td>
+            </tr>
+        }
+        <tr>
+            <td><strong>Total</strong></td>
+            <td style="font-size:20px"><strong>@total.ToString("F2")</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="row align-items-end mt-4">
+    <div class="col-md-9">
+        <label for="paymentMethod" class="form-label">Payment Method</label>
+        <select id="paymentMethod" name="paymentMethod" class="form-select" required>
+            <option value="">-- Select Method --</option>
+            @foreach (var method in Model.PaymentMethods)
+            {
+                <option value="@method.Id">@method.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-3 text-end">
+        <button type="submit" class="btn btn-primary w-100">
+            Pay @total.ToString("F2")
+        </button>
+    </div>
+</div>
+
