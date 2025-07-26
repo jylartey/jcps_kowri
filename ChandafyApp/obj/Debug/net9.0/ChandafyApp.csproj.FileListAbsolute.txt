@@ -6711,7 +6711,6 @@ C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\8favhc
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\iqe1bfjzqq-jup6p5rzc6.gz
 C:\Users\user\Documents`\chandafy\ChandafyApp\obj\Debug\net9.0\compressed\qyxzdk44w4-we4ae8v0iz.gz
 =======
-<<<<<<< HEAD
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.Interfaces.dll
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
@@ -6730,7 +6729,6 @@ C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\rjsmcshtml.dswa.ca
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\cbh6pduvyo-7x6hlu1pk2.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\compressed\s7c0a8jh7n-orhlylyep1.gz
 C:\Users\mo\Documents\jcps_kowri\ChandafyApp\obj\Debug\net9.0\staticwebassets.build.json.cache
-=======
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.dll
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\EPPlus.Interfaces.dll
 C:\Users\Hassan\Desktop\jcps_kowri\ChandafyApp\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll

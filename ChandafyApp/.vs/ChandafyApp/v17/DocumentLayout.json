@@ -1,6 +1,5 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\",
   "Documents": [
     {
@@ -235,10 +234,6 @@
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
-=======
-  "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
-  "Documents": [],
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -246,11 +241,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
           "SelectedChildIndex": 8,
-=======
-          "SelectedChildIndex": -1,
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
           "Children": [
             {
               "$type": "Bookmark",
@@ -283,7 +274,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-<<<<<<< HEAD
             },
             {
               "$type": "Document",
@@ -320,8 +310,7 @@
               "RelativeToolTip": "Views\\FiscalYear\\Index.cshtml",
               "ViewState": "AgIAAHUAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:29:23.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T16:29:23.258Z"
             },
             {
               "$type": "Document",
@@ -982,8 +971,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-15T20:09:11.566Z"
-=======
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
             }
           ]
         },

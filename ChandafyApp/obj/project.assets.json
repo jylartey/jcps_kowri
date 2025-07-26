@@ -5681,39 +5681,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\user\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\mo\\.nuget\\packages\\": {},
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\user\\Documents`\\chandafy\\ChandafyApp\\ChandafyApp.csproj",
       "projectName": "ChandafyApp",
       "projectPath": "C:\\Users\\user\\Documents`\\chandafy\\ChandafyApp\\ChandafyApp.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\Documents`\\chandafy\\ChandafyApp\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-      "projectName": "ChandafyApp",
-      "projectPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-      "packagesPath": "C:\\Users\\mo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\obj\\",
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\mo\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5788,11 +5772,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
       }
     }
   },
@@ -5801,11 +5781,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Problem reading the cache file C:\\Users\\user\\Documents`\\chandafy\\ChandafyApp\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-=======
-      "message": "Problem reading the cache file C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
     }
   ]
 }
