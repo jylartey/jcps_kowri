@@ -1,467 +1,135 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\fiscalyear\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\fiscalyear\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\region\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\region\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\fiscalyearcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\fiscalyearcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\member\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-=======
-  "WorkspaceRootPath": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\payment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\payment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\member\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\member\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\regioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\regioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\chandatype\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\chandatype\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\jamaat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\jamaat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\paymentmethod\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\paymentmethod\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\chandatypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\chandatypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\jamaatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\jamaatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\data\\chandafydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:data\\chandafydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\zone\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\zone\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\circuit\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\circuit\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\circuitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\circuitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\paymentmethodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\paymentmethodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\zonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\zonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\budget\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\budget\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-=======
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\budgetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\budgetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\member\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\member\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\member\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\member\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\budget\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\budget\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\usermanagement\\editroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\usermanagement\\editroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\budget\\calculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\budget\\calculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\viewmodels\\userrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\userrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\settings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\settings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\budgetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\budgetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\payeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\payeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\viewmodels\\userrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\userrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\expense\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\expense\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250726111401_AddIsActiveToFiscalYear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\ChandafyDb\\20250726111401_AddIsActiveToFiscalYear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\chandafyapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:chandafyapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\circuit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\circuit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\data\\chandafydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:data\\chandafydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\fiscalyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\fiscalyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\circuitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\circuitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\circuit\\collector.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\circuit\\collector.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\budget\\calculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\budget\\calculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\data\\identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:data\\identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\user\\documents\u0060\\chandafy\\chandafyapp\\wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}"
-=======
       "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-=======
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\budgetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\budgetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\budget\\calculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\budget\\calculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\viewmodels\\userrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\userrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\chandatype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyAuthDb/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:seeddata\\authseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\receiptrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\receiptrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\chandafyapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:chandafyapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\statementrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\statementrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\data\\chandafydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:data\\chandafydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\migrations\\chandafydb\\20250524191739_chandafydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:migrations\\chandafydb\\20250524191739_chandafydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\jamaat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\jamaat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\annualnationalbudget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\annualnationalbudget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\hassan\\desktop\\jcps_kowri\\chandafyapp\\wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\license||{8B382828-6202-11D1-8870-0000F87579D2}"
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
+      "AbsoluteMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|c:\\users\\mo\\documents\\jcps_kowri\\chandafyapp\\models\\accountsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56FE9DC4-4C70-4110-A922-142A2D8ABDC1}|ChandafyApp.csproj|solutionrelative:models\\accountsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
-=======
-  "WorkspaceRootPath": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\",
-  "Documents": [],
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -469,108 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "SelectedChildIndex": 9,
-=======
-<<<<<<< HEAD
-          "SelectedChildIndex": 6,
-=======
-          "SelectedChildIndex": 4,
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-<<<<<<< HEAD
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\ChandaType\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ChandaType\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\ChandaType\\Index.cshtml",
-              "RelativeToolTip": "Views\\ChandaType\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAMIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:55:12.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\FiscalYear\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\FiscalYear\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\FiscalYear\\Index.cshtml",
-              "RelativeToolTip": "Views\\FiscalYear\\Index.cshtml",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:29:23.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Region\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Region\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Region\\Index.cshtml",
-              "RelativeToolTip": "Views\\Region\\Index.cshtml",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:25:15.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "JamaatController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\JamaatController.cs",
-              "RelativeDocumentMoniker": "Controllers\\JamaatController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\JamaatController.cs",
-              "RelativeToolTip": "Controllers\\JamaatController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:26:42.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ChandafyDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Data\\ChandafyDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ChandafyDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Data\\ChandafyDbContext.cs",
-              "RelativeToolTip": "Data\\ChandafyDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:58:08.978Z",
-              "EditorCaption": ""
-=======
-              "Title": "dbo.Circuits.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:39.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Regions.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:32.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dbo.Zones.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:21.998Z"
-=======
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -583,1419 +150,439 @@
             {
               "$type": "Bookmark",
               "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
             },
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-<<<<<<< HEAD
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExpenseController.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\ExpenseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ExpenseController.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\ExpenseController.cs",
-              "RelativeToolTip": "Controllers\\ExpenseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:15:30.719Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 8,
-<<<<<<< HEAD
-              "Title": "ChandaTypeController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ChandaTypeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ChandaTypeController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ChandaTypeController.cs",
-              "RelativeToolTip": "Controllers\\ChandaTypeController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:17:30.888Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ChandaType.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeDocumentMoniker": "Models\\ChandaType.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeToolTip": "Models\\ChandaType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-=======
-              "Title": "Member.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "Models\\Member.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
-              "RelativeToolTip": "Models\\Member.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:59:49.414Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MemberController.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "Controllers\\MemberController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACgAAAAiAAAAAAAAAA==",
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
+              "Title": "20250726111401_AddIsActiveToFiscalYear.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250726111401_AddIsActiveToFiscalYear.cs",
+              "RelativeDocumentMoniker": "Migrations\\ChandafyDb\\20250726111401_AddIsActiveToFiscalYear.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250726111401_AddIsActiveToFiscalYear.cs",
+              "RelativeToolTip": "Migrations\\ChandafyDb\\20250726111401_AddIsActiveToFiscalYear.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:52:17.111Z",
+              "WhenOpened": "2025-07-26T11:14:03.254Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 3,
-              "Title": "RegionController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\RegionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RegionController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\RegionController.cs",
-              "RelativeToolTip": "Controllers\\RegionController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:25:15.86Z",
-              "EditorCaption": ""
-=======
-              "DocumentIndex": 10,
-              "Title": "_Navbar.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Navbar.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Navbar.cshtml",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAADsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:51:09.241Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FiscalYearController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\FiscalYearController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FiscalYearController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\FiscalYearController.cs",
-              "RelativeToolTip": "Controllers\\FiscalYearController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Title": "Circuit.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Circuit.cs",
+              "RelativeDocumentMoniker": "Models\\Circuit.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Circuit.cs",
+              "RelativeToolTip": "Models\\Circuit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:25:42.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-<<<<<<< HEAD
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Zone\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Zone\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Zone\\Index.cshtml",
-              "RelativeToolTip": "Views\\Zone\\Index.cshtml",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:21:09.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\PaymentMethod\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\PaymentMethod\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\PaymentMethod\\Index.cshtml",
-              "RelativeToolTip": "Views\\PaymentMethod\\Index.cshtml",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAUwMAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:30:32.443Z",
+              "WhenOpened": "2025-05-24T19:14:05.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Jamaat\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Jamaat\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Jamaat\\Index.cshtml",
-              "RelativeToolTip": "Views\\Jamaat\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T16:49:57.391Z",
-              "EditorCaption": ""
-=======
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Member\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Member\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Member\\Index.cshtml",
-              "RelativeToolTip": "Views\\Member\\Index.cshtml",
-              "ViewState": "AgIAACcBAAAAAAAAAAAmwEABAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T20:22:19.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BudgetController.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\BudgetController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BudgetController.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\BudgetController.cs",
-              "RelativeToolTip": "Controllers\\BudgetController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "Models\\PaymentMethod.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\PaymentMethod.cs",
+              "RelativeToolTip": "Models\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:16:45.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAABkAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:08:38.471Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-<<<<<<< HEAD
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Circuit\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Circuit\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Circuit\\Index.cshtml",
-              "RelativeToolTip": "Views\\Circuit\\Index.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T15:35:20.451Z",
+              "WhenOpened": "2025-05-24T19:15:42.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CircuitController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\CircuitController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CircuitController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\CircuitController.cs",
-              "RelativeToolTip": "Controllers\\CircuitController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:24:13.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ZoneController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ZoneController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ZoneController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ZoneController.cs",
-              "RelativeToolTip": "Controllers\\ZoneController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:24:46.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\UserManagement\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\UserManagement\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\UserManagement\\Index.cshtml",
-              "RelativeToolTip": "Views\\UserManagement\\Index.cshtml",
-              "ViewState": "AgIAAAwBAAAAAAAAAAAlwBgBAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T13:06:25.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PaymentMethodController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PaymentMethodController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentMethodController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PaymentMethodController.cs",
-              "RelativeToolTip": "Controllers\\PaymentMethodController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:33:05.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Budget\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Index.cshtml",
-              "RelativeToolTip": "Views\\Budget\\Index.cshtml",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T13:12:36.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Profile.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Member\\Profile.cshtml",
-              "RelativeDocumentMoniker": "Views\\Member\\Profile.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Member\\Profile.cshtml",
-              "RelativeToolTip": "Views\\Member\\Profile.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T15:07:44.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MemberController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "Controllers\\MemberController.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAAAJMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:12:52.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "_Sidebar.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Sidebar.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Sidebar.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T10:41:13.602Z",
-              "EditorCaption": ""
-=======
-              "Title": "AuthSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\SeedData\\AuthSeeder.cs",
-              "RelativeDocumentMoniker": "SeedData\\AuthSeeder.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\SeedData\\AuthSeeder.cs",
-              "RelativeToolTip": "SeedData\\AuthSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:51:08.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAACgAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:44:47.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserManagementController.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\UserManagementController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserManagementController.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\UserManagementController.cs",
-              "RelativeToolTip": "Controllers\\UserManagementController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:18:45.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserRolesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\UserRolesViewModel.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
-              "RelativeToolTip": "ViewModels\\UserRolesViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:19:21.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Calculator.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
-              "RelativeDocumentMoniker": "Views\\Budget\\Calculator.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
-              "RelativeToolTip": "Views\\Budget\\Calculator.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T20:23:39.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ChandaType.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeDocumentMoniker": "Models\\ChandaType.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeToolTip": "Models\\ChandaType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:52:17.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeToolTip": "Models\\Payment.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAArwBQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:48:55.793Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "_Navbar.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Navbar.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Navbar.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAACAAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:51:09.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-<<<<<<< HEAD
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Member\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Member\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Member\\Index.cshtml",
-              "RelativeToolTip": "Views\\Member\\Index.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADkAAAB8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T20:22:19.649Z",
-              "EditorCaption": ""
-=======
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAGEBAAAAAAAAAAAAAFYBAABwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T20:41:05.149Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-<<<<<<< HEAD
-              "Title": "EditRoles.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\UserManagement\\EditRoles.cshtml",
-              "RelativeDocumentMoniker": "Views\\UserManagement\\EditRoles.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\UserManagement\\EditRoles.cshtml",
-              "RelativeToolTip": "Views\\UserManagement\\EditRoles.cshtml",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAlwHAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T13:07:39.393Z",
-              "EditorCaption": ""
-=======
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAxwCwAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:40:25.132Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Upload.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Upload.cshtml",
-              "RelativeDocumentMoniker": "Views\\Budget\\Upload.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Upload.cshtml",
-              "RelativeToolTip": "Views\\Budget\\Upload.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAD0AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T13:13:30.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAWwFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:15:29.426Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 31,
-              "Title": "ChangePasswordViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\ChangePasswordViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ChangePasswordViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\ChangePasswordViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ChangePasswordViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:10:52.727Z",
+              "WhenOpened": "2025-07-26T10:26:08.453Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Account\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ChangePassword.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Account\\ChangePassword.cshtml",
-              "RelativeToolTip": "Views\\Account\\ChangePassword.cshtml",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T15:09:33.786Z",
-              "EditorCaption": ""
-=======
-              "DocumentIndex": 23,
-              "Title": "ChandafyDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Data\\ChandafyDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ChandafyDbContext.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Data\\ChandafyDbContext.cs",
-              "RelativeToolTip": "Data\\ChandafyDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIA8wAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:58:08.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Budget.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeDocumentMoniker": "Models\\Budget.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeToolTip": "Models\\Budget.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:58:50.273Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFkAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:09:44.522Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 28,
-              "Title": "SettingsController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\SettingsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SettingsController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\SettingsController.cs",
-              "RelativeToolTip": "Controllers\\SettingsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:13:14.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Settings\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Settings\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Settings\\Index.cshtml",
-              "RelativeToolTip": "Views\\Settings\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T15:14:06.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Budget.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeDocumentMoniker": "Models\\Budget.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeToolTip": "Models\\Budget.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:58:50.273Z",
-              "EditorCaption": ""
-=======
-              "DocumentIndex": 21,
-              "Title": "ChandafyApp.csproj",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-              "RelativeDocumentMoniker": "ChandafyApp.csproj",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-              "RelativeToolTip": "ChandafyApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-16T19:31:11.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "_Footer.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Footer.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:52:49.609Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAACIAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:44:47.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T15:50:49.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "BudgetController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\BudgetController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BudgetController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\BudgetController.cs",
-              "RelativeToolTip": "Controllers\\BudgetController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAACwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:16:45.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "PayeeController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PayeeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PayeeController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\PayeeController.cs",
-              "RelativeToolTip": "Controllers\\PayeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T13:09:12.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ExpenseController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ExpenseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ExpenseController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\ExpenseController.cs",
-              "RelativeToolTip": "Controllers\\ExpenseController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowCMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:15:30.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Member.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "Models\\Member.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Member.cs",
-              "RelativeToolTip": "Models\\Member.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:59:49.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-14T18:53:29.75Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 44,
-              "Title": "_Footer.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Footer.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:52:49.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Expense\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Expense\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Expense\\Index.cshtml",
-              "RelativeToolTip": "Views\\Expense\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAGYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T12:36:06.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "UserManagementController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\UserManagementController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserManagementController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Controllers\\UserManagementController.cs",
-              "RelativeToolTip": "Controllers\\UserManagementController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAE0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:18:45.851Z",
-              "EditorCaption": ""
-=======
-              "DocumentIndex": 29,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-14T19:09:32.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LICENSE",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
-              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\LICENSE",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
-              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\LICENSE",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-14T19:17:02.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-15T20:09:11.566Z"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "UserRolesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\UserRolesViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
-              "RelativeToolTip": "ViewModels\\UserRolesViewModel.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwBgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:19:21.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAmwB0BAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T21:19:42.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Calculator.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
-              "RelativeDocumentMoniker": "Views\\Budget\\Calculator.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
-              "RelativeToolTip": "Views\\Budget\\Calculator.cshtml",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAK4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T20:23:39.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Payment\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Payment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Payment\\Index.cshtml",
-              "RelativeToolTip": "Views\\Payment\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T16:43:39.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 40,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAcBAAAAAAAAAAAAABYBAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T20:41:05.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "dbo.Jamaats.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:07:52.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "dbo.Zones.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:21.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "dbo.Regions.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:32.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "dbo.Circuits.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:39.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAABkAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:08:38.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "AuthSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\SeedData\\AuthSeeder.cs",
-              "RelativeDocumentMoniker": "SeedData\\AuthSeeder.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\SeedData\\AuthSeeder.cs",
-              "RelativeToolTip": "SeedData\\AuthSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:51:08.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeToolTip": "Models\\Payment.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAArwBQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:48:55.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAxwCwAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:40:25.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-14T19:09:32.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "LICENSE",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
-              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\LICENSE",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
-              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\LICENSE",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-14T19:17:02.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\user\\Documents\u0060\\chandafy\\ChandafyApp\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-15T20:09:11.566Z",
-              "EditorCaption": ""
-=======
-              "DocumentIndex": 31,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T15:50:49.18Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-<<<<<<< HEAD
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
->>>>>>> e509e417d1eebe4406d55621d5c12563c71d3522
-=======
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
-            }
-          ]
-        },
-        {
-          "DockedWidth": 71,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-<<<<<<< HEAD
-=======
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Payment\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Payment\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Payment\\Create.cshtml",
-              "RelativeToolTip": "Views\\Payment\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T17:58:00.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Jamaats.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Jamaats.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:07:52.608Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ExpenseController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\ExpenseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ExpenseController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\ExpenseController.cs",
-              "RelativeToolTip": "Controllers\\ExpenseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
+              "RelativeToolTip": "Models\\Payment.cs",
+              "ViewState": "AgIAAAkAAADAzMzMzMw/wBQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:15:30.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Member.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "Models\\Member.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
-              "RelativeToolTip": "Models\\Member.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:59:49.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAswJEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T15:50:49.18Z",
+              "WhenOpened": "2025-05-24T19:15:38.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Payment\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Payment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Payment\\Index.cshtml",
-              "RelativeToolTip": "Views\\Payment\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T16:43:39.155Z",
+              "DocumentIndex": 3,
+              "Title": "ChandaType.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
+              "RelativeDocumentMoniker": "Models\\ChandaType.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
+              "RelativeToolTip": "Models\\ChandaType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:14:00.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "dbo.Zones.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Zones.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:21.998Z"
+              "Title": "FiscalYear.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\FiscalYear.cs",
+              "RelativeDocumentMoniker": "Models\\FiscalYear.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\FiscalYear.cs",
+              "RelativeToolTip": "Models\\FiscalYear.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:15:01.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChandafyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Data\\ChandafyDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ChandafyDbContext.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Data\\ChandafyDbContext.cs",
+              "RelativeToolTip": "Data\\ChandafyDbContext.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAkwH8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:49:20.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "Models\\Member.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Member.cs",
+              "RelativeToolTip": "Models\\Member.cs",
+              "ViewState": "AgIAAAcAAACgmZmZmZkhwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:15:34.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Budget.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
+              "RelativeDocumentMoniker": "Models\\Budget.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
+              "RelativeToolTip": "Models\\Budget.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:13:51.592Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "dbo.Regions.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Regions.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:32.088Z"
+              "Title": "CircuitController.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\CircuitController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CircuitController.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\CircuitController.cs",
+              "RelativeToolTip": "Controllers\\CircuitController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T23:39:09.597Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MemberController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "Controllers\\MemberController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Collector.cshtml",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Circuit\\Collector.cshtml",
+              "RelativeDocumentMoniker": "Views\\Circuit\\Collector.cshtml",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Circuit\\Collector.cshtml",
+              "RelativeToolTip": "Views\\Circuit\\Collector.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T23:26:45.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IdentityDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Data\\IdentityDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\IdentityDbContext.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Data\\IdentityDbContext.cs",
+              "RelativeToolTip": "Data\\IdentityDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:12:52.3Z",
+              "WhenOpened": "2025-07-25T21:50:18.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "_Navbar.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Navbar.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Navbar.cshtml",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAADsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:51:09.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Member\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Member\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Member\\Index.cshtml",
-              "RelativeToolTip": "Views\\Member\\Index.cshtml",
-              "ViewState": "AgIAACcBAAAAAAAAAAAmwEABAAABAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAOcBAAAAAAAAAAAuwAMCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T20:22:19.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BudgetController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\BudgetController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BudgetController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\BudgetController.cs",
-              "RelativeToolTip": "Controllers\\BudgetController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:16:45.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAABkAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:08:38.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "dbo.Circuits.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyDb/True/SqlTable/dbo.Circuits.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-16T21:10:39.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AuthSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\SeedData\\AuthSeeder.cs",
-              "RelativeDocumentMoniker": "SeedData\\AuthSeeder.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\SeedData\\AuthSeeder.cs",
-              "RelativeToolTip": "SeedData\\AuthSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:51:08.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAACgAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:44:47.24Z"
+              "WhenOpened": "2025-07-25T22:50:18.745Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "UserManagementController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\UserManagementController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserManagementController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\UserManagementController.cs",
-              "RelativeToolTip": "Controllers\\UserManagementController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwDEAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T22:57:25.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:18:45.851Z"
+              "WhenOpened": "2025-07-25T22:16:59.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-25T22:17:19.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "UserRolesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\UserRolesViewModel.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ViewModels\\UserRolesViewModel.cs",
-              "RelativeToolTip": "ViewModels\\UserRolesViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDgAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:19:21.473Z"
+              "WhenOpened": "2025-07-25T21:44:32.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Calculator.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
-              "RelativeDocumentMoniker": "Views\\Budget\\Calculator.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Budget\\Calculator.cshtml",
-              "RelativeToolTip": "Views\\Budget\\Calculator.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T20:23:39.248Z"
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:14:27.093Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "ChandaType.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeDocumentMoniker": "Models\\ChandaType.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\ChandaType.cs",
-              "RelativeToolTip": "Models\\ChandaType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Title": "AuthSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\SeedData\\AuthSeeder.cs",
+              "RelativeDocumentMoniker": "SeedData\\AuthSeeder.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\SeedData\\AuthSeeder.cs",
+              "RelativeToolTip": "SeedData\\AuthSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:52:17.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\Payment.cs",
-              "RelativeToolTip": "Models\\Payment.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAArwBQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:48:55.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAGEBAAAAAAAAAAAAAFYBAABwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T20:41:05.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAxwCwAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:40:25.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAEQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:15:29.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ChandafyDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Data\\ChandafyDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ChandafyDbContext.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Data\\ChandafyDbContext.cs",
-              "RelativeToolTip": "Data\\ChandafyDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIA8wAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:58:08.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Budget.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeDocumentMoniker": "Models\\Budget.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Models\\Budget.cs",
-              "RelativeToolTip": "Models\\Budget.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T20:58:50.273Z"
+              "WhenOpened": "2025-07-25T21:43:29.73Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:09:44.522Z"
+              "Title": "dbo.AspNetUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ChandafyAuthDb/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "dbo.AspNetUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-25T21:39:32.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "ChandafyApp.csproj",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-              "RelativeDocumentMoniker": "ChandafyApp.csproj",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\ChandafyApp.csproj",
-              "RelativeToolTip": "ChandafyApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-16T19:31:11.023Z"
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Wallet.cs",
+              "RelativeDocumentMoniker": "Models\\Wallet.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Wallet.cs",
+              "RelativeToolTip": "Models\\Wallet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:17:02.369Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "_Footer.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Footer.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-14T18:52:49.609Z"
+              "DocumentIndex": 23,
+              "Title": "StatementRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\StatementRequest.cs",
+              "RelativeDocumentMoniker": "Models\\StatementRequest.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\StatementRequest.cs",
+              "RelativeToolTip": "Models\\StatementRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:16:41.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwEsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-14T18:53:29.75Z"
+              "DocumentIndex": 22,
+              "Title": "Region.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Region.cs",
+              "RelativeDocumentMoniker": "Models\\Region.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Region.cs",
+              "RelativeToolTip": "Models\\Region.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:16:24.457Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-14T19:09:32.901Z"
+              "DocumentIndex": 21,
+              "Title": "ReceiptRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ReceiptRequest.cs",
+              "RelativeDocumentMoniker": "Models\\ReceiptRequest.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\ReceiptRequest.cs",
+              "RelativeToolTip": "Models\\ReceiptRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:15:55.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "LICENSE",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
-              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\LICENSE",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\wwwroot\\lib\\bootstrap\\LICENSE",
-              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\LICENSE",
+              "DocumentIndex": 25,
+              "Title": "20250524191739_ChandafyDb.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "RelativeDocumentMoniker": "Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "RelativeToolTip": "Migrations\\ChandafyDb\\20250524191739_ChandafyDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:17:39.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Zone.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Zone.cs",
+              "RelativeDocumentMoniker": "Models\\Zone.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Zone.cs",
+              "RelativeToolTip": "Models\\Zone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:17:19.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Jamaat.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Jamaat.cs",
+              "RelativeDocumentMoniker": "Models\\Jamaat.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Jamaat.cs",
+              "RelativeToolTip": "Models\\Jamaat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-14T19:17:02.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-15T20:09:11.566Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:15:32.182Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Hassan\\Desktop\\jcps_kowri\\ChandafyApp\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T21:19:42.673Z"
->>>>>>> 6e00467d8c336a90066cb221ae0d5795b4c892ac
-=======
->>>>>>> 0269567eb43606a4281fd8c7f30514f04a1afaae
+              "Title": "Income.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Income.cs",
+              "RelativeDocumentMoniker": "Models\\Income.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Income.cs",
+              "RelativeToolTip": "Models\\Income.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:15:06.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\Expense.cs",
+              "RelativeToolTip": "Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:14:33.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AnnualNationalBudget.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AnnualNationalBudget.cs",
+              "RelativeDocumentMoniker": "Models\\AnnualNationalBudget.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AnnualNationalBudget.cs",
+              "RelativeToolTip": "Models\\AnnualNationalBudget.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:13:31.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountSummary.cs",
+              "DocumentMoniker": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AccountSummary.cs",
+              "RelativeDocumentMoniker": "Models\\AccountSummary.cs",
+              "ToolTip": "C:\\Users\\mo\\Documents\\jcps_kowri\\ChandafyApp\\Models\\AccountSummary.cs",
+              "RelativeToolTip": "Models\\AccountSummary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:13:01.787Z",
+              "EditorCaption": ""
             }
           ]
         }

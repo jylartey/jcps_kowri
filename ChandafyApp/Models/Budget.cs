@@ -3,6 +3,8 @@
 namespace ChandafyApp.Models;
 public class Budget
 {
+    internal decimal? TotalProjectedAmount;
+
     [Key]
     public int Id { get; set; }
     public int MemberId { get; set; }
@@ -12,6 +14,7 @@ public class Budget
     public int FiscalYearId { get; set; }
     public int Year { get; set; }
     public int Month { get; set; }
+
 
     // Navigation Properties
     public Member Member { get; set; }

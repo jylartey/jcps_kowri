@@ -66,7 +66,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TotalBudgetType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TotalCollectedAmount")
@@ -131,7 +130,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -154,7 +152,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ZoneId")
@@ -176,15 +173,12 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ExpenseDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExpenseReceiptImage")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExpenseType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("FiscalYearId")
@@ -210,6 +204,9 @@ namespace ChandafyApp.Migrations.ChandafyDb
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -237,7 +234,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("int");
 
                     b.Property<string>("IncomeType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -259,7 +255,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -278,29 +273,24 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AIMS")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdentityUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("JamaatId")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -324,17 +314,18 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ApprovedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ChandaTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FiscalYearId")
                         .HasColumnType("int");
 
                     b.Property<int>("MemberId")
                         .HasColumnType("int");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PaymentDate")
@@ -344,11 +335,9 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("int");
 
                     b.Property<string>("ReceiptNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TransactionReference")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Verified")
@@ -357,6 +346,8 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.HasKey("Id");
 
                     b.HasIndex("ChandaTypeId");
+
+                    b.HasIndex("FiscalYearId");
 
                     b.HasIndex("MemberId");
 
@@ -374,11 +365,9 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Rule")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -404,14 +393,12 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("int");
 
                     b.Property<string>("ReceiptImage")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RequestById")
                         .HasColumnType("int");
 
                     b.Property<string>("RequestStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -434,7 +421,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -467,7 +453,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RegionId")
@@ -630,8 +615,7 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
                         .HasForeignKey("IdentityUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ChandafyApp.Models.Jamaat", "Jamaat")
                         .WithMany("Members")
@@ -652,6 +636,12 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ChandafyApp.Models.FiscalYear", "FiscalYear")
+                        .WithMany()
+                        .HasForeignKey("FiscalYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ChandafyApp.Models.Member", "Member")
                         .WithMany()
                         .HasForeignKey("MemberId")
@@ -665,6 +655,8 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .IsRequired();
 
                     b.Navigation("ChandaType");
+
+                    b.Navigation("FiscalYear");
 
                     b.Navigation("Member");
 
