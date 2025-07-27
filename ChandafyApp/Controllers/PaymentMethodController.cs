@@ -1,4 +1,5 @@
 ﻿using ChandafyApp.Models;
+using ChandafyApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,12 @@ namespace ChandafyApp.Controllers
         // GET: PaymentMethod
         public async Task<IActionResult> Index()
         {
-            var paymentMethods = await _context.PaymentMethods.ToListAsync();
+            List<PaymentMethodDto> paymentMethods = await _context.PaymentMethods.Select(p => new PaymentMethodDto
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Rate = p.Rate,
+            }).ToListAsync();
             return View(paymentMethods);
         }
 

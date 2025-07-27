@@ -1,4 +1,5 @@
-﻿@model IEnumerable<PaymentMethod>
+﻿@using ChandafyApp.ViewModels
+@model IEnumerable<PaymentMethodDto>
 
 @{
     ViewData["Title"] = "Payment Methods";
@@ -17,7 +18,7 @@
                 <thead class="bg-primary text-white">
                     <tr>
                         <th>Name</th>
-                        <th>Rule</th>
+                        <th>Rate (%)</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -26,7 +27,7 @@
                     {
                         <tr>
                             <td>@item.Name</td>
-                            <td>@item.Rule</td>
+                            <td>@item.Rate</td>
                             <td>
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn btn-sm btn-outline-primary edit-btn"
@@ -63,8 +64,8 @@
                         <input id="Name" name="Name" class="form-control" required />
                     </div>
                     <div class="form-group">
-                        <label for="Rule" class="control-label">Rule</label>
-                        <textarea id="Rule" name="Rule" class="form-control" rows="3"></textarea>
+                        <label for="Rate" class="control-label">Rate (%)</label>
+                        <input type="number" id="Rate" name="Rate" step="0.01" class="form-control"/>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -93,8 +94,8 @@
                         <input id="editName" name="Name" class="form-control" required />
                     </div>
                     <div class="form-group">
-                        <label for="editRule" class="control-label">Rule</label>
-                        <textarea id="editRule" name="Rule" class="form-control" rows="3"></textarea>
+                        <label for="editRate" class="control-label">Rate (%)</label>
+                        <input type="number" id="editRate" name="Rate" step="0.01" class="form-control" />
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -146,7 +147,7 @@
                 $.get('@Url.Action("Edit", "PaymentMethod")/' + paymentMethodId, function(data) {
                     $('#editId').val(data.id);
                     $('#editName').val(data.name);
-                    $('#editRule').val(data.rule);
+                    $('#editRate').val(data.rate);
                 }).fail(function() {
                     alert('Error loading payment method data');
                 });

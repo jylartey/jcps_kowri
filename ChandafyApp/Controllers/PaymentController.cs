@@ -173,6 +173,7 @@ namespace ChandafyApp.Controllers
                     amount => amount.ChandaTypeId,
                     (type, amount) => new ChandaSummaryItem
                     {
+                        ChandaTypeId = type.Id,
                         Name = type.Name,
                         Amount = amount.Amount
                     }).ToList();
@@ -182,28 +183,42 @@ namespace ChandafyApp.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Rule = x.Rule
+                Rate = x.Rate
 
             }).ToList();
 
             return View(viewModel);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create()
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        payment.PaymentDate = DateTime.Now;
-        //        _dbContext.Payments.Add(payment);
-        //        await _dbContext.SaveChangesAsync();
-        //        return RedirectToAction("Index");
-        //    }
-        //    ViewData["Members"] = _dbContext.Members.ToList();
-        //    ViewData["ChandaTypes"] = _dbContext.ChandaTypes.ToList();
-        //    ViewData["PaymentMethods"] = _dbContext.PaymentMethods.ToList();
-        //    return View(payment);
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddPayments(AddPaymentsDto payments)
+        {
+            try
+            {
+                foreach (var item in payments.ChandaAmounts)
+                {
+                    var payment = new Payment();
+                    payment.MemberId = 1234; // get logged in user's aims
+                    payment.ChandaTypeId = item.ChandaTypeId;
+                    payment.PaymentMethodId = payments.PaymentMethodId;
+                    payment.PaymentDate = DateTime.Now;
+                    payment.Amount = item.Amount;
+                    payment.TransactionReference = "dummyRef1234";
+                    payment.ReceiptNumber = "dummyRecNo";
+                    payment.Verified = true;
+                    payment.ApprovedBy = "Default";
+                    payment.FiscalYearId = 1; // get current fiscal year id
+
+                    _dbContext.Payments.Add(payment);
+                }
+                _dbContext.SaveChanges();
+            }
+            catch (Exception ex) { 
+            
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }
