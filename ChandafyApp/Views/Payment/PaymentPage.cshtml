@@ -1,0 +1,105 @@
+﻿@model ChandafyApp.ViewModels.PaymentSummaryDto
+
+<form asp-action="AddPayments" method="post">
+    @Html.AntiForgeryToken()
+
+    <h2>Payment Summary</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Chanda Type</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                decimal total = 0;
+                int index = 0;
+            }
+
+            @foreach (var item in Model.SummaryItems)
+            {
+                total += item.Amount;
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Amount.ToString("F2")</td>
+                </tr>
+
+                <!-- Hidden inputs for each ChandaAmount -->
+                <input type="hidden" name="ChandaAmounts[@index].ChandaTypeId" value="@item.ChandaTypeId" />
+                <input type="hidden" name="ChandaAmounts[@index].Amount" value="@item.Amount.ToString("F2")" />
+                index++;
+            }
+
+            <tr>
+                <td><strong>Total</strong></td>
+                <td style="font-size:20px"><strong id="baseTotal">@total.ToString("F2")</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Hidden input for total-->
+    <input type="hidden" id="finalAmount" value="@total.ToString("F2")" />
+
+    <div class="row align-items-end mt-4">
+
+        <!-- Phone number input -->
+        <div class="col-md-9 mb-3" id="phoneField" style="display: none;">
+            <label for="PhoneNumber" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Enter your phone number" required />
+        </div>
+
+        <!-- Payment Method Dropdown -->
+        <div class="col-md-9">
+            <label for="paymentMethod" class="form-label">Payment Method</label>
+            <select id="paymentMethod" class="form-select" name="PaymentMethodId" required>
+                <option value="">-- Select Method --</option>
+                @foreach (var method in Model.PaymentMethods)
+                {
+                    <option value="@method.Id" data-rate="@method.Rate">@method.Name +(@method.Rate) </option>
+                }
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-md-3 text-end">
+            <button id="payButton" type="submit" class="btn btn-primary w-100" disabled>
+                Pay @total.ToString("F2")
+            </button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+@section Scripts {
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const paymentSelect = document.getElementById('paymentMethod');
+        const payButton = document.getElementById('payButton');
+        const baseTotal = parseFloat(document.getElementById('baseTotal').innerText);
+        const phoneField = document.getElementById('phoneField');
+        const amountField = document.getElementById('finalAmount');
+
+        paymentSelect.addEventListener('change', function () {
+            const selected = paymentSelect.options[paymentSelect.selectedIndex];
+            const rate = parseFloat(selected.getAttribute('data-rate')) || 0;
+
+            if (paymentSelect.value) {
+                const newTotal = (baseTotal + rate).toFixed(2);
+                payButton.innerText = `Pay ${newTotal}`;
+                payButton.disabled = false;
+                phoneField.style.display = 'block';
+                amountField.value = newTotal;
+            } else {
+                payButton.innerText = `Pay ${baseTotal.toFixed(2)}`;
+                payButton.disabled = true;
+                phoneField.style.display = 'none';
+                amountField.value = baseTotal.toFixed(2);
+            }
+        });
+    });
+</script>
+}

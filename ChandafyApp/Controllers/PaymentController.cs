@@ -1,9 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using ChandafyApp.Models;
+﻿using ChandafyApp.Models;
+using ChandafyApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 
 
@@ -140,27 +141,84 @@ namespace ChandafyApp.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewData["Members"] = _dbContext.Members.ToList();
-            ViewData["ChandaTypes"] = _dbContext.ChandaTypes.ToList();
-            ViewData["PaymentMethods"] = _dbContext.PaymentMethods.ToList();
-            return View();
+            var viewModel = new CreatePaymentDto();
+
+            viewModel.ChandaTypes = _dbContext.ChandaTypes.AsNoTracking().Select(x => new ChandaTypeDto
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Description = x.Description,
+            }).ToList();
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult PaymentPage(CreatePaymentDto model)
+        {
+            var viewModel = new PaymentSummaryDto();
+
+            var chandaTypes = _dbContext.ChandaTypes.Select(x => new
+            {
+                x.Id,
+                x.Name,
+            }).ToList();
+
+            var nonZeroPayments = model.ChandaAmounts.Where(x => x.Amount > 0);
+
+            viewModel.SummaryItems = chandaTypes
+                .Join(
+                    nonZeroPayments,
+                    type => type.Id,
+                    amount => amount.ChandaTypeId,
+                    (type, amount) => new ChandaSummaryItem
+                    {
+                        ChandaTypeId = type.Id,
+                        Name = type.Name,
+                        Amount = amount.Amount
+                    }).ToList();
+
+
+            viewModel.PaymentMethods = _dbContext.PaymentMethods.Select(x => new PaymentMethodDto
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Rate = x.Rate
+
+            }).ToList();
+
+            return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Payment payment)
+        public async Task<IActionResult> AddPayments(AddPaymentsDto payments)
         {
-            if (ModelState.IsValid)
+            try
             {
-                payment.PaymentDate = DateTime.Now;
-                _dbContext.Payments.Add(payment);
-                await _dbContext.SaveChangesAsync();
-                return RedirectToAction("Index");
+                foreach (var item in payments.ChandaAmounts)
+                {
+                    var payment = new Payment();
+                    payment.MemberId = 1234; // get logged in user's aims
+                    payment.ChandaTypeId = item.ChandaTypeId;
+                    payment.PaymentMethodId = payments.PaymentMethodId;
+                    payment.PaymentDate = DateTime.Now;
+                    payment.Amount = item.Amount;
+                    payment.TransactionReference = "dummyRef1234";
+                    payment.ReceiptNumber = "dummyRecNo";
+                    payment.Verified = true;
+                    payment.ApprovedBy = "Default";
+                    payment.FiscalYearId = 1; // get current fiscal year id
+
+                    _dbContext.Payments.Add(payment);
+                }
+                _dbContext.SaveChanges();
             }
-            ViewData["Members"] = _dbContext.Members.ToList();
-            ViewData["ChandaTypes"] = _dbContext.ChandaTypes.ToList();
-            ViewData["PaymentMethods"] = _dbContext.PaymentMethods.ToList();
-            return View(payment);
+            catch (Exception ex) { 
+            
+            }
+            return RedirectToAction("Index");
         }
+
     }
 }
