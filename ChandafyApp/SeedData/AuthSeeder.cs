@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ChandafyApp.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace ChandafyApp.SeedData;
 public static class AuthSeeder
 {
     public static async Task SeedUsersAndRoles(IServiceProvider serviceProvider)
     {
-        var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+        var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
         var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
         string adminEmail = "itAdmin@chandafy.com";
@@ -26,11 +27,12 @@ public static class AuthSeeder
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
         if (adminUser == null)
         {
-            adminUser = new IdentityUser
+            adminUser = new ApplicationUser
             {
                 UserName = adminEmail,
                 Email = adminEmail,
-                EmailConfirmed = true
+                EmailConfirmed = true,
+
             };
 
             var result = await userManager.CreateAsync(adminUser, adminPassword);

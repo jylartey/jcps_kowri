@@ -1,23 +1,25 @@
-﻿using ChandafyApp.Models;
+﻿using ChandafyApp.Controllers;
+using ChandafyApp.Data;
+using ChandafyApp.Models;
 using ChandafyApp.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-
-
-
 namespace ChandafyApp.Controllers
 {
     public class PaymentController : Controller
     {
         private readonly ChandafyDbContext _dbContext;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public PaymentController(ChandafyDbContext dbContext)
+        public PaymentController(ChandafyDbContext dbContext, UserManager<ApplicationUser> userManager)
         {
             _dbContext = dbContext;
+            _userManager = userManager;
         }
 
         // Dashboard: Payments, budget completion, Chanda stats
@@ -27,7 +29,6 @@ namespace ChandafyApp.Controllers
             {
                 var oneYearAgo = DateTime.Now.AddYears(-1);
                 var payments = await _dbContext.Payments
-                    .Include(p => p.Member)
                     .Include(p => p.ChandaType)
                     .Where(p => p.PaymentDate >= oneYearAgo)
                     .ToListAsync();
@@ -112,7 +113,6 @@ namespace ChandafyApp.Controllers
         public async Task<IActionResult> Receipt(int id)
         {
             var payment = await _dbContext.Payments
-                .Include(p => p.Member)
                 .Include(p => p.ChandaType)
                 .FirstOrDefaultAsync(p => p.Id == id);
             if (payment == null) return NotFound();
@@ -130,7 +130,6 @@ namespace ChandafyApp.Controllers
         public async Task<IActionResult> Statement(DateTime from, DateTime to)
         {
             var payments = await _dbContext.Payments
-                .Include(p => p.Member)
                 .Include(p => p.ChandaType)
                 .Where(p => p.PaymentDate >= from && p.PaymentDate <= to)
                 .ToListAsync();
@@ -194,12 +193,19 @@ namespace ChandafyApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddPayments(AddPaymentsDto payments)
         {
+            // Get the currently logged-in user
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
             try
             {
                 foreach (var item in payments.ChandaAmounts)
                 {
                     var payment = new Payment();
-                    payment.MemberId = 1234; // get logged in user's aims
+                    payment.UserId = user.Id; // get logged in user id
+                    payment.AIMS = user.AIMS; // get logged in user's aims
                     payment.ChandaTypeId = item.ChandaTypeId;
                     payment.PaymentMethodId = payments.PaymentMethodId;
                     payment.PaymentDate = DateTime.Now;

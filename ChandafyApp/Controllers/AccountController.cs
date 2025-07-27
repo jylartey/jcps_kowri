@@ -1,4 +1,5 @@
-﻿using ChandafyApp.Models;
+﻿using ChandafyApp.Data;
+using ChandafyApp.Models;
 using ChandafyApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -11,13 +12,13 @@ namespace ChandafyApp.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ChandafyDbContext _dbContext;
 
         public AccountController(
-            SignInManager<IdentityUser> signInManager,
-            UserManager<IdentityUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            UserManager<ApplicationUser> userManager,
             ChandafyDbContext dbContext)
         {
             _signInManager = signInManager;

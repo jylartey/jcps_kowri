@@ -1,4 +1,5 @@
-﻿using ChandafyApp.Models;
+﻿using ChandafyApp.Data;
+using ChandafyApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,9 @@ namespace ChandafyApp.Controllers
     public class BudgetController : Controller
     {
         private readonly ChandafyDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public BudgetController(ChandafyDbContext context, UserManager<IdentityUser> userManager)
+        public BudgetController(ChandafyDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;

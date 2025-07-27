@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ChandafyApp.Data;
 using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace ChandafyApp.Models;
 
@@ -21,7 +22,7 @@ public class Member
     public string IdentityUserId { get; set; }
 
     // Navigation Properties
-    public IdentityUser IdentityUser { get; set; }
+    public ApplicationUser IdentityUser { get; set; }
     public Jamaat Jamaat { get; set; }
 }
 
