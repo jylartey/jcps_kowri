@@ -67,6 +67,8 @@
             --border-color: #e0e0e0;
             --secondary-dark: #566c75; /* Manually calculated darker shade of #6c757d */
             --danger-dark: #B90017;
+            --header-dark-bg-start: #2C3E50; /* Deep Navy Blue */
+            --header-dark-bg-end: #1F2C3A;
         }
 
         body {
@@ -86,7 +88,7 @@
             }
 
         .card-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--header-dark-bg-start) 0%, var(--header-dark-bg-end) 100%); /* Use new darker gradient */
             color: var(--light-text);
             border-bottom: none;
             border-radius: 12px 12px 0 0 !important;
@@ -130,11 +132,11 @@
         }
 
             #userManagementDataTable th {
-                background-color: var(--primary-color);
+                background-color: var(--header-dark-bg-start);
                 color: var(--light-text);
                 font-weight: 600;
                 padding: 0.75rem 1rem;
-                border-bottom: 2px solid var(--primary-dark);
+                border-bottom: 2px solid var(--header-dark-bg-end);
                 text-align: left;
             }
 
@@ -194,7 +196,7 @@
         }
 
         .modal-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--header-dark-bg-start) 0%, var(--header-dark-bg-end) 100%);
             color: var(--light-text);
             border-bottom: none;
             border-radius: 12px 12px 0 0;

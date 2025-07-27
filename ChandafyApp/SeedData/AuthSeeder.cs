@@ -11,7 +11,7 @@ public static class AuthSeeder
         string adminEmail = "itAdmin@chandafy.com";
         string adminPassword = "Test123!";
 
-        var roles = new[] { "ItAdmin" }; // Add to list
+        var roles = new[] { "ItAdmin", "NationalAdmin", "LocalAdmin", "Collector", "Member" };
 
         // Create roles if they don't exist
         foreach (var role in roles)

@@ -225,6 +225,9 @@
             --dark-text: #333333;
             --light-text: #ffffff;
             --border-color: #e0e0e0;
+            --danger-dark: #B90017;
+            --header-dark-bg-start: #2C3E50; /* Deep Navy Blue */
+            --header-dark-bg-end: #1F2C3A; /* Even darker for gradient effect */
         }
 
         body {
@@ -244,7 +247,7 @@
             }
 
         .card-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--header-dark-bg-start) 0%, var(--header-dark-bg-end) 100%);
             color: var(--light-text);
             border-bottom: none;
             border-radius: 12px 12px 0 0 !important;
@@ -288,11 +291,11 @@
         }
 
             #expenseDataTable th {
-                background-color: var(--primary-color);
+                background-color: var(--header-dark-bg-start);
                 color: var(--light-text);
                 font-weight: 600;
                 padding: 0.75rem 1rem;
-                border-bottom: 2px solid var(--primary-dark);
+                border-bottom: 2px solid var(--header-dark-bg-end);
                 text-align: left;
             }
 
@@ -351,13 +354,16 @@
         }
 
         .modal-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--header-dark-bg-start) 0%, var(--header-dark-bg-end) 100%); /* Use new darker gradient */
             color: var(--light-text);
             border-bottom: none;
             border-radius: 12px 12px 0 0;
             padding: 1.2rem 1.5rem;
         }
 
+            .modal-header.bg-danger {
+                background: linear-gradient(135deg, var(--danger-color) 0%, var(--danger-dark) 100%) !important;
+            }
         .modal-title {
             font-weight: 600;
             color: var(--light-text);
