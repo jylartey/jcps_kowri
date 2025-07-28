@@ -1,10 +1,6 @@
 ﻿@model ChandafyApp.NewFolder.DashboardViewModel
 @{
     ViewData["Title"] = "Dashboard";
-    var isMember = User.IsInRole("Member");
-    var isCollector = User.IsInRole("Collector");
-    var isLocalAdmin = User.IsInRole("LocalAdmin");
-    var isNationalAdmin = User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin");
 }
 
 <div class="container-fluid">
@@ -13,16 +9,8 @@
         <h1 class="h3 mb-0">
             @* Removed text-gray-800 from here as it's handled by dashboard-header h1 *@
             <i class="bi bi-speedometer2 me-2"></i>Dashboard
-            @if (isCollector || isLocalAdmin)
-            {
-                <span class="badge bg-info ms-2">Collector View</span>
-            }
-            @if (isNationalAdmin)
-            {
-                <span class="badge bg-danger ms-2">Admin View</span>
-            }
         </h1>
-      @*   <div class="dropdown">
+        <div class="dropdown">
             <button class="btn btn-outline-primary dropdown-toggle" type="button" id="fiscalYearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 Fiscal Year: @(Model.CurrentFiscalYear?.Year.ToString() ?? "N/A")
             </button>
@@ -39,7 +27,7 @@
             {
                 <div class="dropdown-menu p-2 text-muted">No fiscal years available</div>
             }
-        </div> *@
+        </div>
     </div>
 
     <div class="row mb-4">
@@ -49,7 +37,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                @(isMember ? "My Payments" : "Total Payments")
+                                Total Payments
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                 @(Model.AccountSummary != null ? Model.AccountSummary.TotalPayments.ToString("C") : "N/A")
@@ -62,64 +50,59 @@
                 </div>
             </div>
         </div>
-        @if (isMember || isNationalAdmin)
-        {
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    Budget Completion
-                                </div>
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                                            @Model.AccountSummary?.PercentageComplete.ToString("P1") ?? "0%"
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-success" role="progressbar"
-                                                 style="width: @(Model.AccountSummary?.PercentageComplete * 100 ?? 0)%"
-                                                 aria-valuenow="@(Model.AccountSummary?.PercentageComplete * 100 ?? 0)"
-                                                 aria-valuemin="0"
-                                                 aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="bi bi-clipboard-check fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-        @if (isMember || isCollector || isNationalAdmin)
-        {
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                    @(isMember ? "My Balance" : "Total Balance")
-                                </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    @Model.AccountSummary?.BalanceLeft.ToString("C") ?? "N/A"
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="bi bi-wallet2 fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
 
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Budget Completion
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                        @Model.AccountSummary?.PercentageComplete.ToString("P1") ?? "0%"
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-success" role="progressbar"
+                                             style="width: @(Model.AccountSummary?.PercentageComplete * 100 ?? 0)%"
+                                             aria-valuenow="@(Model.AccountSummary?.PercentageComplete * 100 ?? 0)" @* aria-valuenow should be percentage, not fraction *@
+                                             aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-clipboard-check fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Balance Left
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                @Model.AccountSummary?.BalanceLeft.ToString("C") ?? "N/A"
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-wallet2 fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
@@ -127,7 +110,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Recent @(isMember ? "My " : "")Payments
+                                Recent Payments
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                 @(Model.RecentPayments?.Count ?? 0) payments
@@ -147,7 +130,7 @@
             @* Added mb-4 for consistent spacing *@
             <div class="card shadow">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">@(isMember ? "My " : "")Payments by Chanda Type (Current Fiscal Year)</h6> @* More descriptive title *@
+                    <h6 class="m-0 font-weight-bold text-primary">Payments by Chanda Type (Current Fiscal Year)</h6> @* More descriptive title *@
                 </div>
                 <div class="card-body">
                     <div class="chart-area">
@@ -192,11 +175,8 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Recent @(isMember ? "My " : "") Payments</h6>
-            @if (isCollector || isLocalAdmin || isNationalAdmin)
-            {
-                <a asp-controller="Payments" asp-action="Index" class="btn btn-sm btn-primary">View All <i class="bi bi-arrow-right-short ms-1"></i></a>
-            }
+            <h6 class="m-0 font-weight-bold text-primary">Recent Payments</h6>
+            <a asp-controller="Payments" asp-action="Index" class="btn btn-sm btn-primary">View All <i class="bi bi-arrow-right-short ms-1"></i></a> @* Added icon *@
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -204,10 +184,6 @@
                     <thead class="bg-primary text-white">
 
                         <tr>
-                            @if (!isMember)
-                            {
-                                <th>Member</th>
-                            }
                             <th>Date</th>
                             <th>Chanda Type</th>
                             <th>Amount</th>
@@ -221,10 +197,6 @@
                             foreach (var payment in Model.RecentPayments)
                             {
                                 <tr>
-                                    @if (!isMember)
-                                    {
-                                        <td>@payment.Member?.FirstName @payment.Member?.LastName</td>
-                                    }
                                     <td>@payment.PaymentDate.ToString("MMM dd, yyyy")</td> @* Improved date format *@
                                     <td>@payment.ChandaType?.Name ?? "N/A"</td>
                                     <td>@payment.Amount.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</td> @* Explicit currency format *@
@@ -246,15 +218,15 @@
             </div>
         </div>
     </div>
-    @if (isMember)
-    {
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card shadow">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">My Monthly Budget vs Payments</h6>
-                    </div>
-                    <div class="card-body">
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Monthly Budget vs Payments</h6> @* More descriptive title *@
+                </div>
+                <div class="card-body">
+                    <div class="chart-bar">
                         <canvas id="budgetBarChart"></canvas>
                     </div>
                     @if (Model.MonthlyBudget == null || !Model.MonthlyBudget.Any() && Model.MonthlyPayments == null || !Model.MonthlyPayments.Any())
@@ -263,142 +235,42 @@
                     }
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-6 mb-4">
-                <div class="card shadow">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <a asp-controller="Payments" asp-action="MakePayment" class="btn btn-primary btn-block py-3">
-                                    <i class="bi bi-plus-circle me-2"></i>Make Payment
-                                </a>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <a asp-controller="Budget" asp-action="Index" class="btn btn-success btn-block py-3">
-                                    <i class="bi bi-wallet2 me-2"></i>View Budget
-                                </a>
-                            </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Payments" asp-action="MakePayment" class="btn btn-primary btn-block py-3">
+                                <i class="bi bi-plus-circle me-2"></i>Make Payment
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Budget" asp-action="Index" class="btn btn-success btn-block py-3">
+                                <i class="bi bi-wallet2 me-2"></i>View Budget
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Payments" asp-action="Receipts" class="btn btn-info btn-block py-3">
+                                <i class="bi bi-receipt me-2"></i>Get Receipt
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a asp-controller="Payments" asp-action="Statements" class="btn btn-warning btn-block py-3">
+                                <i class="bi bi-file-earmark-text me-2"></i>Get Statement
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    }
-    @if (isCollector || isLocalAdmin)
-    {
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Collection Tools</h6>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <a asp-controller="Payments" asp-action="Create" class="btn btn-primary btn-block py-3">
-                            <i class="bi bi-plus-circle me-2"></i>Record Payment
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a asp-controller="Payments" asp-action="BulkUpload" class="btn btn-info btn-block py-3">
-                            <i class="bi bi-upload me-2"></i>Bulk Upload
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a asp-controller="Reports" asp-action="Collection" class="btn btn-warning btn-block py-3">
-                            <i class="bi bi-file-earmark-text me-2"></i>Collection Report
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
-    @if (isNationalAdmin)
-    {
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Administration</h6>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-3 mb-3">
-                        <a asp-controller="Member" asp-action="Index" class="btn btn-primary btn-block py-3">
-                            <i class="bi bi-people me-2"></i>Manage Members
-                        </a>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <a asp-controller="Budget" asp-action="Upload" class="btn btn-success btn-block py-3">
-                            <i class="bi bi-upload me-2"></i>Upload Budgets
-                        </a>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <a asp-controller="Reports" asp-action="National" class="btn btn-info btn-block py-3">
-                            <i class="bi bi-file-earmark-bar-graph me-2"></i>National Report
-                        </a>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <a asp-controller="Settings" asp-action="Index" class="btn btn-warning btn-block py-3">
-                            <i class="bi bi-gear me-2"></i>System Settings
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
+    </div>
 </div>
-@* <div class="row">
-    <div class="col-lg-6 mb-4">
-        <div class="card shadow">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Monthly Budget vs Payments</h6> 
-            </div>
-            <div class="card-body">
-                <div class="chart-bar">
-                    <canvas id="budgetBarChart"></canvas>
-                </div>
-                @if (Model.MonthlyBudget == null || !Model.MonthlyBudget.Any() && Model.MonthlyPayments == null || !Model.MonthlyPayments.Any())
-                {
-                    <div class="text-center text-muted mt-3">No monthly budget or payment data available.</div>
-                }
-            </div>
-        </div>
-    </div>
-
-    <div class="col-lg-6 mb-4">
-        <div class="card shadow">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <a asp-controller="Payments" asp-action="MakePayment" class="btn btn-primary btn-block py-3">
-                            <i class="bi bi-plus-circle me-2"></i>Make Payment
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <a asp-controller="Budget" asp-action="Index" class="btn btn-success btn-block py-3">
-                            <i class="bi bi-wallet2 me-2"></i>View Budget
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <a asp-controller="Payments" asp-action="Receipts" class="btn btn-info btn-block py-3">
-                            <i class="bi bi-receipt me-2"></i>Get Receipt
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <a asp-controller="Payments" asp-action="Statements" class="btn btn-warning btn-block py-3">
-                            <i class="bi bi-file-earmark-text me-2"></i>Get Statement
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> *@
-
-@section styles {
+@section styles{
     <link rel="stylesheet" href="~/lib/datatable/datatables.min.css" />
 
 }

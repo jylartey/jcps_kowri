@@ -91,20 +91,12 @@ public class ChandafyDbContext : DbContext
             .HasForeignKey(b => b.FiscalYearId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // Payment -> Member (One-to-Many)
-        modelBuilder.Entity<Payment>()
-            .HasOne(p => p.Member)
-            .WithMany()
-            .HasForeignKey(p => p.MemberId)
-            .OnDelete(DeleteBehavior.Cascade);
-
         // Payment -> FiscalYear (Many-to-One)
         modelBuilder.Entity<Payment>()
             .HasOne(p => p.FiscalYear)
             .WithMany()
             .HasForeignKey(p => p.FiscalYearId)
             .OnDelete(DeleteBehavior.Cascade);
-
 
         // Payment -> ChandaType (One-to-Many)
         modelBuilder.Entity<Payment>()

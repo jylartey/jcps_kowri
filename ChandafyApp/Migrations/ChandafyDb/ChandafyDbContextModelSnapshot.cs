@@ -21,6 +21,78 @@ namespace ChandafyApp.Migrations.ChandafyDb
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("ChandafyApp.Data.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AIMS")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("JamaatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JamaatId");
+
+                    b.ToTable("ApplicationUser");
+                });
+
             modelBuilder.Entity("ChandafyApp.Models.AccountSummary", b =>
                 {
                     b.Property<int>("Id")
@@ -107,6 +179,9 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.Property<int>("Month")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
@@ -117,6 +192,8 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.HasIndex("FiscalYearId");
 
                     b.HasIndex("MemberId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Budgets");
                 });
@@ -313,6 +390,9 @@ namespace ChandafyApp.Migrations.ChandafyDb
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AIMS")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
@@ -323,9 +403,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .HasColumnType("int");
 
                     b.Property<int>("FiscalYearId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MemberId")
                         .HasColumnType("int");
 
                     b.Property<string>("Notes")
@@ -343,6 +420,10 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.Property<string>("TransactionReference")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Verified")
                         .HasColumnType("bit");
 
@@ -351,8 +432,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.HasIndex("ChandaTypeId");
 
                     b.HasIndex("FiscalYearId");
-
-                    b.HasIndex("MemberId");
 
                     b.HasIndex("PaymentMethodId");
 
@@ -468,56 +547,13 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.ToTable("Zones");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
+            modelBuilder.Entity("ChandafyApp.Data.ApplicationUser", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.HasOne("ChandafyApp.Models.Jamaat", "Jamaat")
+                        .WithMany()
+                        .HasForeignKey("JamaatId");
 
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("IdentityUser");
+                    b.Navigation("Jamaat");
                 });
 
             modelBuilder.Entity("ChandafyApp.Models.AccountSummary", b =>
@@ -562,11 +598,17 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ChandafyApp.Data.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("ChandaType");
 
                     b.Navigation("FiscalYear");
 
                     b.Navigation("Member");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ChandafyApp.Models.Circuit", b =>
@@ -615,7 +657,7 @@ namespace ChandafyApp.Migrations.ChandafyDb
 
             modelBuilder.Entity("ChandafyApp.Models.Member", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                    b.HasOne("ChandafyApp.Data.ApplicationUser", "IdentityUser")
                         .WithMany()
                         .HasForeignKey("IdentityUserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -645,12 +687,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ChandafyApp.Models.Member", "Member")
-                        .WithMany()
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ChandafyApp.Models.PaymentMethod", "PaymentMethod")
                         .WithMany()
                         .HasForeignKey("PaymentMethodId")
@@ -660,8 +696,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
                     b.Navigation("ChandaType");
 
                     b.Navigation("FiscalYear");
-
-                    b.Navigation("Member");
 
                     b.Navigation("PaymentMethod");
                 });

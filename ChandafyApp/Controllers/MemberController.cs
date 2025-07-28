@@ -1,4 +1,5 @@
-﻿using ChandafyApp.Models;
+﻿using ChandafyApp.Data;
+using ChandafyApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +11,9 @@ namespace ChandafyApp.Controllers
     public class MemberController : Controller
     {
         private readonly ChandafyDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public MemberController(ChandafyDbContext context, UserManager<IdentityUser> userManager)
+        public MemberController(ChandafyDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -42,7 +43,7 @@ namespace ChandafyApp.Controllers
                 return Json(new { success = false, errors });
             }
 
-            var user = new IdentityUser { UserName = member.AIMS, Email = $"{member.AIMS}@yourdomain.com" };
+            var user = new ApplicationUser { UserName = member.AIMS, Email = $"{member.AIMS}@yourdomain.com" };
             var result = await _userManager.CreateAsync(user, password);
 
             if (!result.Succeeded)

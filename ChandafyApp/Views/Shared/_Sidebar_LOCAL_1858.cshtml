@@ -1,0 +1,103 @@
+﻿<div class="bg-dark border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading text-white-50"><i class="bi bi-coin me-2"></i> ChandafyApp </div>
+    <div class="list-group list-group-flush">
+
+        <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Home" asp-action="Index">
+            <i class="bi bi-speedometer2 me-2"></i>Dashboard
+        </a>
+
+        @if (User.IsInRole("Member") || User.IsInRole("Collector") || User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
+        {
+            <a class="list-group-item list-group-item-action bg-dark text-white dropdown-toggle" href="#paymentsSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                <i class="bi bi-cash-coin me-2"></i>Payments
+            </a>
+            <div class="collapse" id="paymentsSubmenu">
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Payments" asp-action="MakePayment">
+                    <i class="bi bi-plus-circle me-2"></i>Make Payment
+                </a>
+
+                @if (User.IsInRole("Collector") || User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
+                {
+                    <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Payments" asp-action="BulkPayment">
+                        <i class="bi bi-collection me-2"></i>Bulk Payment
+                    </a>
+                }
+
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Payments" asp-action="Receipts">
+                    <i class="bi bi-receipt me-2"></i>Receipts
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Payments" asp-action="Statements">
+                    <i class="bi bi-file-earmark-text me-2"></i>Statements
+                </a>
+            </div>
+        }
+
+        @if (User.IsInRole("Member") || User.IsInRole("Collector") || User.IsInRole("ItAdmin"))
+        {
+            <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Budget" asp-action="Calculator">
+                <i class="bi bi-calculator me-2"></i>Chanda Calculator
+            </a>
+            <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Budget" asp-action="Index">
+                <i class="bi bi-wallet2 me-2"></i>My Budget
+            </a>
+        }
+
+        @if (User.IsInRole("Collector") || User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
+        {
+            <a class="list-group-item list-group-item-action bg-dark text-white dropdown-toggle" href="#ChandaCollectionSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                <i class="bi bi-clipboard-check me-2"></i>Chanda Collection
+            </a>
+            <div class="collapse" id="ChandaCollectionSubmenu">
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Circuit" asp-action="Collector">
+                    My Circuit <i class="bi bi-geo-alt-fill"></i>
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Jamaat" asp-action="Index">
+                    My Jamaat <i class="bi bi-geo-alt-fill"></i>
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Zone" asp-action="Index">
+                    My Zone <i class="bi bi-geo-alt-fill"></i>
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Region" asp-action="Index">
+                    My Region <i class="bi bi-geo-alt-fill"></i>
+                </a>
+            </div>
+        }
+
+        @if (User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin") )
+        {
+            <a class="list-group-item list-group-item-action bg-dark text-white dropdown-toggle" href="#managementSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                <i class="bi bi-people-fill me-2"></i>Management
+            </a>
+            <div class="collapse" id="managementSubmenu">
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Member" asp-action="Index">
+                    <i class="bi bi-person-lines-fill me-2"></i>Members
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Collector" asp-action="Index">
+                    <i class="bi bi-person-badge me-2"></i>Collectors
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Budget" asp-action="Upload">
+                    <i class="bi bi-upload me-2"></i>Upload Budgets
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Expense" asp-action="Index">
+                    <i class="bi bi-credit-card me-2"></i>Expenses
+                </a>
+
+                @if (User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
+                {
+                    <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="UserManagement" asp-action="Index">
+                        <i class="bi bi-person-plus me-2"></i>User Management
+                    </a>
+                }
+            </div>
+        }
+
+        @if (User.IsInRole("ItAdmin"))
+        {
+            <div class="list-group list-group-flush mt-auto">
+                <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Settings" asp-action="Index">
+                    <i class="bi bi-gear me-2"></i>Settings
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -70,8 +70,6 @@
             --success-light-bg: rgba(126, 211, 33, 0.1); /* Light green for success alert */
             --success-border: rgba(126, 211, 33, 0.3);
             --success-text: #4a8a0e;
-            --header-dark-bg-start: #2C3E50; /* Deep Navy Blue */
-            --header-dark-bg-end: #1F2C3A;
         }
 
         body {
@@ -91,7 +89,7 @@
             }
 
         .card-header {
-            background: linear-gradient(135deg, var(--header-dark-bg-start) 0%, var(--header-dark-bg-end) 100%); /* Use new darker gradient */
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
             color: var(--light-text);
             border-bottom: none;
             border-radius: 12px 12px 0 0 !important;
@@ -124,7 +122,7 @@
             }
 
         .btn-main {
-            background-color: var(--header-dark-bg-start);
+            background-color: var(--primary-color);
             border-color: var(--primary-color);
             color: var(--light-text);
             padding: 0.75rem 1.5rem;
@@ -135,8 +133,8 @@
         }
 
             .btn-main:hover {
-                background-color: var(--header-dark-bg-start);
-                border-color: var(--header-dark-bg-start);
+                background-color: var(--primary-dark);
+                border-color: var(--primary-dark);
                 transform: translateY(-2px);
                 box-shadow: 0 6px 15px rgba(var(--primary-color), 0.3);
             }

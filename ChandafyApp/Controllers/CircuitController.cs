@@ -1,4 +1,5 @@
-﻿using ChandafyApp.Models;
+﻿using ChandafyApp.Data;
+using ChandafyApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +14,7 @@ namespace ChandafyApp.Controllers
     public class CircuitController : Controller
     {
         private readonly ChandafyDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public class MemberViewModel
         {
@@ -23,7 +24,7 @@ namespace ChandafyApp.Controllers
         }
 
 
-        public CircuitController(ChandafyDbContext context, UserManager<IdentityUser> userManager)
+        public CircuitController(ChandafyDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
