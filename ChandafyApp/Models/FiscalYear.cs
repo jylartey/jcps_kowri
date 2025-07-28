@@ -16,7 +16,7 @@ namespace ChandafyApp.Models
         [Required]
         public DateTime EndDate { get; set; } // End Date of the Fiscal Year
 
-        public bool ?IsActive {  get; set; } // Set Fiscal Year Active
+        public bool? IsActive {  get; set; } // Set Fiscal Year Active
 
         // Navigation Properties
         public ICollection<AnnualNationalBudget> AnnualNationalBudgets { get; set; } // One-to-Many with AnnualNationalBudget

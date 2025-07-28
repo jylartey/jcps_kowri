@@ -18,26 +18,34 @@ namespace ChandafyApp.Controllers
         // GET: FiscalYear
         public async Task<IActionResult> Index()
         {
-            var fiscalYears = await _context.FiscalYears.OrderByDescending(x=>x.Year).ToListAsync();
+            var fiscalYears = await _context.FiscalYears.OrderByDescending(x => x.Year).ToListAsync();
             return View(fiscalYears);
         }
 
-        // GET: FiscalYear/Create
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(FiscalYear fiscalYear)
         {
             if (ModelState.IsValid)
             {
+                // Check if we're trying to set this as active
+                if (fiscalYear.IsActive == true)
+                {
+                    // Check if there's already an active fiscal year
+                    var activeYearExists = await _context.FiscalYears.AnyAsync(f => f.IsActive == true);
+                    if (activeYearExists)
+                    {
+                        return Json(new { success = false, message = "There is already an active fiscal year. Only one fiscal year can be active at a time." });
+                    }
+                }
+
                 _context.Add(fiscalYear);
                 await _context.SaveChangesAsync();
                 return Json(new { success = true });
             }
-            return Json(new { success = false });
+            return Json(new { success = false, message = "Invalid data submitted." });
         }
 
-        // GET: FiscalYear/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -58,6 +66,23 @@ namespace ChandafyApp.Controllers
             {
                 try
                 {
+                    // Check if we're trying to set this as active
+                    if (fiscalYear.IsActive == true)
+                    {
+                        // Check if there's already an active fiscal year that's not this one
+                        var activeYear = await _context.FiscalYears
+                            .FirstOrDefaultAsync(f => f.IsActive == true && f.Id != id);
+
+                        if (activeYear != null)
+                        {
+                            return Json(new
+                            {
+                                success = false,
+                                message = $"Cannot activate this fiscal year. {activeYear.Year} is already active."
+                            });
+                        }
+                    }
+
                     _context.Update(fiscalYear);
                     await _context.SaveChangesAsync();
                     return Json(new { success = true });
@@ -68,7 +93,7 @@ namespace ChandafyApp.Controllers
                     throw;
                 }
             }
-            return Json(new { success = false });
+            return Json(new { success = false, message = "Invalid data submitted." });
         }
 
         [HttpPost]
@@ -77,18 +102,82 @@ namespace ChandafyApp.Controllers
         {
             if (id == null) return NotFound();
 
-            var fiscalYear = await _context.FiscalYears
-                .FirstOrDefaultAsync(m => m.Id == id);
-
+            var fiscalYear = await _context.FiscalYears.FirstOrDefaultAsync(m => m.Id == id);
             if (fiscalYear == null) return NotFound();
+
+            // Prevent deletion of active fiscal year
+            if (fiscalYear.IsActive == true)
+            {
+                return Json(new
+                {
+                    success = false,
+                    message = "Cannot delete the active fiscal year. Please deactivate it first."
+                });
+            }
 
             _context.FiscalYears.Remove(fiscalYear);
             await _context.SaveChangesAsync();
             return Json(new { success = true });
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Activate(int id)
+        {
+            try
+            {
+                // Get the fiscal year to activate
+                var fiscalYearToActivate = await _context.FiscalYears.FindAsync(id);
+                if (fiscalYearToActivate == null)
+                {
+                    return Json(new { success = false, message = "Fiscal year not found" });
+                }
 
-        
+                // Deactivate all other fiscal years
+                var allFiscalYears = await _context.FiscalYears.ToListAsync();
+                foreach (var fy in allFiscalYears)
+                {
+                    fy.IsActive = (fy.Id == id);
+                }
 
+                await _context.SaveChangesAsync();
+
+                return Json(new
+                {
+                    success = true,
+                    message = $"Fiscal year {fiscalYearToActivate.Year} activated successfully.", 
+                    year = fiscalYearToActivate.Year,
+                    startDate = fiscalYearToActivate.StartDate.ToString("MMM d, yyyy"),
+                    endDate = fiscalYearToActivate.EndDate.ToString("MMM d, yyyy")
+                });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Deactivate(int id)
+        {
+            try
+            {
+                var fiscalYear = await _context.FiscalYears.FindAsync(id);
+                if (fiscalYear == null)
+                {
+                    return Json(new { success = false, message = "Fiscal year not found" });
+                }
+
+                fiscalYear.IsActive = false;
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, message = $"Fiscal year {fiscalYear.Year} deactivated successfully."  });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
         private bool FiscalYearExists(int id) => _context.FiscalYears.Any(e => e.Id == id);
     }
 }

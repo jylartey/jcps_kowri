@@ -26,12 +26,18 @@ namespace ChandafyApp.Controllers
         // GET: Expense
         public async Task<IActionResult> Index()
         {
+            var activeFiscalYear = await _context.GetActiveFiscalYearAsync();
+            if (activeFiscalYear == null)
+            {
+                return View(new List<Expense>());
+            }
             var expenses = await _context.Expenses
                 .Include(e => e.FiscalYear)
+                .Where(e => e.FiscalYearId == activeFiscalYear.Id)
                 .ToListAsync();
 
             // FIX: Populate ViewBag.FiscalYears in the Index action
-            ViewBag.FiscalYears = await _context.FiscalYears.ToListAsync();
+            ViewBag.FiscalYears = new List<FiscalYear> { activeFiscalYear };
 
             return View(expenses);
         }
@@ -43,6 +49,14 @@ namespace ChandafyApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Expense expense, IFormFile receiptImage)
         {
+            var activeFiscalYear = await _context.GetActiveFiscalYearAsync();
+            if (activeFiscalYear == null)
+            {
+                return Json(new { success = false, errors = new List<string> { "No active fiscal year found." } });
+            }
+
+            expense.FiscalYearId = activeFiscalYear.Id;
+
             if (ModelState.IsValid)
             {
                 if (receiptImage != null && receiptImage.Length > 0)
