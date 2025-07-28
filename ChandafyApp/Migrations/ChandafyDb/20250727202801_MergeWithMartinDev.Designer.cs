@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChandafyApp.Migrations.ChandafyDb
 {
     [DbContext(typeof(ChandafyDbContext))]
-    partial class ChandafyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250727202801_MergeWithMartinDev")]
+    partial class MergeWithMartinDev
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -207,9 +210,6 @@ namespace ChandafyApp.Migrations.ChandafyDb
 
                     b.Property<bool?>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Period")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
