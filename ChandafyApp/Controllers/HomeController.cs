@@ -43,7 +43,7 @@ namespace ChandafyApp.Controllers
 
             
            
-            var fiscalYears = await _context.FiscalYears.OrderByDescending(f => f.Year).ToListAsync();
+            var fiscalYears = await _context.FiscalYears.OrderByDescending(f => f.Period).ToListAsync();
             var viewModel = new DashboardViewModel
             {
                 CurrentFiscalYear = activeFiscalYear,

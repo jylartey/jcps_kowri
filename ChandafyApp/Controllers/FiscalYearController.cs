@@ -18,7 +18,7 @@ namespace ChandafyApp.Controllers
         // GET: FiscalYear
         public async Task<IActionResult> Index()
         {
-            var fiscalYears = await _context.FiscalYears.OrderByDescending(x => x.Year).ToListAsync();
+            var fiscalYears = await _context.FiscalYears.OrderByDescending(x => x.Period).ToListAsync();
             return View(fiscalYears);
         }
 
@@ -78,7 +78,7 @@ namespace ChandafyApp.Controllers
                             return Json(new
                             {
                                 success = false,
-                                message = $"Cannot activate this fiscal year. {activeYear.Year} is already active."
+                                message = $"Cannot activate this fiscal year. {activeYear.Period} is already active."
                             });
                         }
                     }
@@ -136,7 +136,11 @@ namespace ChandafyApp.Controllers
                 var allFiscalYears = await _context.FiscalYears.ToListAsync();
                 foreach (var fy in allFiscalYears)
                 {
-                    fy.IsActive = (fy.Id == id);
+                    fy.IsActive = (fy.Id != id);
+                    if (fy.IsActive == true)
+                    {
+                        fy.IsActive = false; // Ensure only one fiscal year is active
+                    }
                 }
 
                 await _context.SaveChangesAsync();
@@ -144,8 +148,8 @@ namespace ChandafyApp.Controllers
                 return Json(new
                 {
                     success = true,
-                    message = $"Fiscal year {fiscalYearToActivate.Year} activated successfully.", 
-                    year = fiscalYearToActivate.Year,
+                    message = $"Fiscal year {fiscalYearToActivate.Period} activated successfully.", 
+                    year = fiscalYearToActivate.Period,
                     startDate = fiscalYearToActivate.StartDate.ToString("MMM d, yyyy"),
                     endDate = fiscalYearToActivate.EndDate.ToString("MMM d, yyyy")
                 });
@@ -171,7 +175,7 @@ namespace ChandafyApp.Controllers
                 fiscalYear.IsActive = false;
                 await _context.SaveChangesAsync();
 
-                return Json(new { success = true, message = $"Fiscal year {fiscalYear.Year} deactivated successfully."  });
+                return Json(new { success = true, message = $"Fiscal year {fiscalYear.Period} deactivated successfully."  });
             }
             catch (Exception ex)
             {

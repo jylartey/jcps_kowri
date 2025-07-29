@@ -29,7 +29,7 @@ public class ChandafyDbContext : DbContext
     public async Task<FiscalYear> GetActiveFiscalYearAsync()
     {
         return await FiscalYears.FirstOrDefaultAsync(f => f.IsActive == true)
-               ?? await FiscalYears.OrderByDescending(f => f.Year).FirstOrDefaultAsync();
+               ?? await FiscalYears.OrderByDescending(f => f.Period).FirstOrDefaultAsync();
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

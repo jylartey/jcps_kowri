@@ -16,6 +16,8 @@ namespace ChandafyApp.Models
         [Required]
         public DateTime EndDate { get; set; } // End Date of the Fiscal Year
 
+        public string Period { get; set; } // Fiscal Year Period (e.g., "2025-2026")
+
         public bool? IsActive {  get; set; } // Set Fiscal Year Active
 
         // Navigation Properties

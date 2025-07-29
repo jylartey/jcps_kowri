@@ -4,7 +4,7 @@
     @* Added a specific ID for easier JS targeting *@
     @if (Model != null)
     {
-        <span class="fw-bold">@Model.Year</span>
+        <span class="fw-bold">@Model.Period</span>
         <span class="text-muted ms-1">(@Model.StartDate.ToString("MMM d")-@Model.EndDate.ToString("MMM d"))</span>
     }
     else
