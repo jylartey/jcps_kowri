@@ -29,7 +29,7 @@
                             <option value="">-- Select Fiscal Year --</option>
                             @foreach (var fiscalYear in (List<FiscalYear>)ViewBag.FiscalYears)
                             {
-                                <option value="@fiscalYear.Id">@fiscalYear.Year</option>
+                                <option value="@fiscalYear.Id">@fiscalYear.Period</option>
                             }
                         </select>
                     </div>

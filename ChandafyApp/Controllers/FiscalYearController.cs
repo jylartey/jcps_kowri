@@ -149,7 +149,7 @@ namespace ChandafyApp.Controllers
                 {
                     success = true,
                     message = $"Fiscal year {fiscalYearToActivate.Period} activated successfully.", 
-                    year = fiscalYearToActivate.Period,
+                    period = fiscalYearToActivate.Period,
                     startDate = fiscalYearToActivate.StartDate.ToString("MMM d, yyyy"),
                     endDate = fiscalYearToActivate.EndDate.ToString("MMM d, yyyy")
                 });

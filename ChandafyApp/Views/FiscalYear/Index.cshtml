@@ -20,7 +20,6 @@
                 <thead class="bg-primary text-white">
                     <tr>
                         <th>Fiscal Year Period</th>
-                        <th>Year</th>
                         <th>Start Date</th>
                         <th>End Date</th>
                         <th>Status</th>
@@ -32,7 +31,6 @@
                     {
                         <tr>
                             <td>@item.Period</td>
-                            <td>@item.Year</td>
                             <td>@item.StartDate.ToString("d")</td>
                             <td>@item.EndDate.ToString("d")</td>
                             <td>
@@ -89,9 +87,9 @@
             </div>
             <form asp-action="Create" id="createForm">
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="Year" class="control-label">Year</label>
-                        <input type="number" id="Year" name="Year" class="form-control" required />
+                    <div class="form-group" >
+                        <label for="Period" class="control-label">Fiscal Year Period</label>
+                        <input type="text" id="Period" name="Period" class="form-control" required />
                     </div>
                     <div class="form-group">
                         <label for="StartDate" class="control-label">Start Date</label>
@@ -101,10 +99,7 @@
                         <label for="EndDate" class="control-label">End Date</label>
                         <input type="date" id="EndDate" name="EndDate" class="form-control" required />
                     </div>
-                    <div class="form-group" hidden>
-                        <label for="Period" class="control-label">Fiscal Year Period</label>
-                        <input type="hidden" id="Period" name="Period" class="form-control" required />
-                    </div>
+                    
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="IsActive" name="IsActive" value="true">
                         <label class="form-check-label" for="IsActive">Set as active fiscal year</label>
@@ -132,8 +127,8 @@
                 <input type="hidden" id="editId" name="Id" />
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="editYear" class="control-label">Year</label>
-                        <input type="number" id="editYear" name="Year" class="form-control" required />
+                        <label for="editPeriod" class="control-label">Period</label>
+                        <input type="text" id="editPeriod" name="Period" class="form-control" required />
                     </div>
                     <div class="form-group">
                         <label for="editStartDate" class="control-label">Start Date</label>
@@ -143,7 +138,7 @@
                         <label for="editEndDate" class="control-label">End Date</label>
                         <input type="date" id="editEndDate" name="EndDate" class="form-control" required />
                     </div>
-                    <input type="hidden" id="editPeriod" name="Period" />
+                    @* <input type="hidden" id="editPeriod" name="Period" /> *@
 
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="editIsActive" name="IsActive" value="true">
@@ -462,7 +457,7 @@
                 var fiscalYearId = $(this).data('id');
                 $.get('@Url.Action("Edit", "FiscalYear")/' + fiscalYearId, function(data) {
                     $('#editId').val(data.id);
-                    $('#editYear').val(data.year);
+                    $('#editPeriod').val(data.period);
                     $('#editStartDate').val(data.startDate.split('T')[0]);
                     $('#editEndDate').val(data.endDate.split('T')[0]);
                     $('#editIsActive').prop('checked', data.isActive);

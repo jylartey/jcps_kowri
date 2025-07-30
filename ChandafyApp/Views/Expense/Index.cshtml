@@ -30,7 +30,7 @@
                             <td>@item.ExpenseType</td>
                             <td>@item.TotalExpectedAmount.ToString("C")</td> @* Format as currency *@
                             <td>@item.ExpenseDescription</td>
-                            <td>@item.FiscalYear?.Year</td> @* Changed to .Year from .Name *@
+                            <td>@item.FiscalYear?.Period</td> @* Changed to .Year from .Name *@
                             <td>
                                 @if (!string.IsNullOrEmpty(item.ExpenseReceiptImage))
                                 {
@@ -93,7 +93,7 @@
                                     <option value="">-- Select Fiscal Year --</option>
                                     @foreach (var fiscalYear in ViewBag.FiscalYears)
                                     {
-                                        <option value="@fiscalYear.Id">@fiscalYear.Year</option> @* Changed to .Year from .Name *@
+                                        <option value="@fiscalYear.Id">@fiscalYear.Period</option> @* Changed to .Year from .Name *@
                                     }
                                 </select>
                             </div>
@@ -145,19 +145,20 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-3">
-                                <label for="editExpenseDescription" class="control-label">Expense Description</label>
-                                <textarea id="editExpenseDescription" name="ExpenseDescription" class="form-control" rows="3" required></textarea> @* Changed to textarea for description *@
-                            </div>
-                            <div class="form-group mb-3">
                                 <label for="editFiscalYearId" class="control-label">Fiscal Year</label>
                                 <select id="editFiscalYearId" name="FiscalYearId" class="form-control" required>
                                     <option value="">-- Select Fiscal Year --</option>
                                     @foreach (var fiscalYear in ViewBag.FiscalYears)
                                     {
-                                        <option value="@fiscalYear.Id">@fiscalYear.Year</option> @* Changed to .Year from .Name *@
+                                        <option value="@fiscalYear.Id">@fiscalYear.Period</option> @* Changed to .Year from .Name *@
                                     }
                                 </select>
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="editExpenseDescription" class="control-label">Expense Description</label>
+                                <textarea id="editExpenseDescription" name="ExpenseDescription" class="form-control" rows="3" required></textarea> @* Changed to textarea for description *@
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="form-group mb-3">
@@ -205,10 +206,10 @@
 
 
 @section Styles {
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" / *@>
     @* <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.css" /> *@
 
 
@@ -444,8 +445,7 @@
 
 
 @section Scripts {
-    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="~/lib/datatables/js/dataTables.bootstrap5.min.js"></script>
+    
     <script>
         $(document).ready(function() {
             // Initialize DataTable
@@ -458,11 +458,11 @@
                 var expenseId = $(this).data('id');
                 $.get('@Url.Action("Edit", "Expense")/' + expenseId, function(data) {
                     $('#editExpenseId').val(data.id);
-                    $('#editDescription').val(data.description);
-                    $('#editAmount').val(data.amount);
-                    $('#editExpenseDate').val(data.expenseDate.split('T')[0]); // Format date for input type="date"
+                    // Corrected mappings:
+                    $('#editExpenseType').val(data.expenseType); // Corrected
+                    $('#editTotalExpectedAmount').val(data.totalExpectedAmount); // Corrected
+                    $('#editExpenseDescription').val(data.expenseDescription); // Corrected
                     $('#editFiscalYearId').val(data.fiscalYearId);
-                    $('#editExistingReceiptImage').val(data.expenseReceiptImage); // Store current image name
                     if (data.expenseReceiptImage) {
                         $('#currentReceiptDisplay').html('Current Receipt: <a href="/uploads/receipts/' + data.expenseReceiptImage + '" target="_blank">' + data.expenseReceiptImage + '</a>');
                     } else {

@@ -29,6 +29,7 @@ body {
 #wrapper {
     display: flex;
     min-height: 100vh; /* Ensure wrapper takes full viewport height */
+
 }
 
 /* Sidebar Styling */

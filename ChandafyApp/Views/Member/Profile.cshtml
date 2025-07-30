@@ -1,5 +1,5 @@
-﻿@model Member
-
+﻿@using ChandafyApp.ViewModels
+@model MemberProfileViewModel
 @{
     ViewData["Title"] = "My Profile";
 }
@@ -8,9 +8,9 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">My Profile</h6>
-            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-sm">
+            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProfileModal">
                 <i class="bi bi-pencil"></i> Edit Profile
-            </a>
+            </button>
         </div>
         <div class="card-body">
             <div class="row">
@@ -21,6 +21,24 @@
                         </div>
                         <h4 class="mt-3">@Model.FirstName @Model.LastName</h4>
                         <p class="text-muted">@Model.AIMS</p>
+
+                        <!-- Added Roles Display -->
+                        <div class="mt-3">
+                            <h6>Roles</h6>
+                            @if (Model.Roles != null && Model.Roles.Any())
+                            {
+                                <div class="d-flex flex-wrap gap-1 justify-content-center">
+                                    @foreach (var role in Model.Roles)
+                                    {
+                                        <span class="badge bg-primary">@role</span>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted">No roles assigned</p>
+                            }
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -38,8 +56,12 @@
                                         <span class="info-value">@Model.LastName</span>
                                     </div>
                                     <div class="info-item">
+                                        <span class="info-label">Email:</span>
+                                        <span class="info-value">@Model.Email</span>
+                                    </div>
+                                    <div class="info-item">
                                         <span class="info-label">Date of Birth:</span>
-                                        <span class="info-value">@Model.DateOfBirth.ToString("d")</span>
+                                        <span class="info-value">@Model.DateOfBirth?.ToString("d")</span>
                                     </div>
                                     <div class="info-item">
                                         <span class="info-label">Contact:</span>
@@ -54,19 +76,19 @@
                                 <div class="info-card-body">
                                     <div class="info-item">
                                         <span class="info-label">Jamaat:</span>
-                                        <span class="info-value">@Model.Jamaat?.Name</span>
+                                        <span class="info-value">@Model.JamaatName</span>
                                     </div>
                                     <div class="info-item">
                                         <span class="info-label">Circuit:</span>
-                                        <span class="info-value">@Model.Jamaat?.Circuit?.Name</span>
+                                        <span class="info-value">@Model.CircuitName</span>
                                     </div>
                                     <div class="info-item">
                                         <span class="info-label">Zone:</span>
-                                        <span class="info-value">@Model.Jamaat?.Circuit?.Zone?.Name</span>
+                                        <span class="info-value">@Model.ZoneName</span>
                                     </div>
                                     <div class="info-item">
                                         <span class="info-label">Region:</span>
-                                        <span class="info-value">@Model.Jamaat?.Circuit?.Zone?.Region?.Name</span>
+                                        <span class="info-value">@Model.RegionName</span>
                                     </div>
                                 </div>
                             </div>
@@ -74,6 +96,69 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-main text-white">
+                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editProfileForm" asp-action="Edit" asp-controller="Member" method="post">
+                <input type="hidden" id="editProfileId" name="Id" value="@Model.Id" />
+                <div class="modal-body">
+                    <div class="alert alert-danger d-none" id="editProfileErrorAlert"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="editProfileAIMS" class="control-label">AIMS Number</label>
+                                <input id="editProfileAIMS" name="AIMS" class="form-control" value="@Model.AIMS" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="editProfileFirstName" class="control-label">First Name</label>
+                                <input id="editProfileFirstName" name="FirstName" class="form-control" value="@Model.FirstName" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="editProfileLastName" class="control-label">Last Name</label>
+                                <input id="editProfileLastName" name="LastName" class="form-control" value="@Model.LastName" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="editProfileEmail" class="control-label">Email</label>
+                                <input type="email" id="editProfileEmail" name="Email" class="form-control" value="@Model.Email" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="editProfileContactNumber" class="control-label">Contact Number</label>
+                                <input id="editProfileContactNumber" name="ContactNumber" class="form-control" value="@Model.ContactNumber" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="editProfileDateOfBirth" class="control-label">Date of Birth</label>
+                                <input type="date" id="editProfileDateOfBirth" name="DateOfBirth" class="form-control"
+                                       value="@(Model.DateOfBirth?.ToString("yyyy-MM-dd"))" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="editProfileJamaatId" class="control-label">Jamaat</label>
+                        <select id="editProfileJamaatId" name="JamaatId" class="form-control">
+                            <option value="">-- Select Jamaat --</option>
+                            @foreach (var jamaat in ViewBag.Jamaats)
+                            {
+                                <option value="@jamaat.Id" selected="@(jamaat.Id == Model.JamaatId)">@jamaat.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-main">Save Changes</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -129,5 +214,58 @@
         .info-value {
             color: #212529;
         }
+
+        /* Added for role badges */
+        .badge {
+            font-size: 0.85em;
+            padding: 0.35em 0.65em;
+        }
     </style>
+}
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Edit Profile form submission
+            $('#editProfileForm').submit(function(e) {
+                e.preventDefault();
+                var $form = $(this);
+                var $modal = $('#editProfileModal');
+                var $errorAlert = $('#editProfileErrorAlert');
+
+                $errorAlert.addClass('d-none').html('');
+
+                $.ajax({
+                    url: $form.attr('action'),
+                    type: 'POST',
+                    data: $form.serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            $modal.modal('hide');
+                            window.location.reload(); // Refresh to show changes
+                        } else {
+                            var errorHtml = '';
+                            if (response.message) {
+                                errorHtml += response.message;
+                            }
+                            if (response.errors && response.errors.length > 0) {
+                                errorHtml += '<ul>';
+                                response.errors.forEach(function(error) {
+                                    errorHtml += '<li>' + error + '</li>';
+                                });
+                                errorHtml += '</ul>';
+                            }
+                            $errorAlert.removeClass('d-none').html(errorHtml);
+                        }
+                    },
+                    error: function(xhr) {
+                        var errorMessage = 'An error occurred while updating your profile.';
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            errorMessage = xhr.responseJSON.message;
+                        }
+                        $errorAlert.removeClass('d-none').html(errorMessage);
+                    }
+                });
+            });
+        });
+    </script>
 }

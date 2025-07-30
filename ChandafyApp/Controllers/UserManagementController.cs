@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChandafyApp.Controllers
 {
-    [Authorize(Roles = "ItAdmin,Admin,Muhtamim")]
+    [Authorize]
     public class UserManagementController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;

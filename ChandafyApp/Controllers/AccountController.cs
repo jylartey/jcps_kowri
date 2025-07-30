@@ -49,21 +49,6 @@ namespace ChandafyApp.Controllers
 
             if (result.Succeeded)
             {
-                // Find the IdentityUser
-                var user = await _userManager.FindByEmailAsync(email);
-                if (user != null)
-                {
-                    // Find the associated Member
-                    var member = await _dbContext.Members
-                        .FirstOrDefaultAsync(m => m.IdentityUserId == user.Id);
-
-                    if (member != null)
-                    {
-                        // You can store member info in session or ViewData as needed
-                        // Example: TempData["MemberId"] = member.Id;
-                    }
-                }
-
                 return RedirectToAction("Index", "Home");
             }
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Member>
+﻿@model IEnumerable<ChandafyApp.ViewModels.MemberViewModel>
 @{
     ViewData["Title"] = "Members";
 }
@@ -16,9 +16,11 @@
                 <thead class="bg-main text-white">
                     <tr>
                         <th>AIMS No</th>
+                        <th>UserName</th>
                         <th>Name</th>
                         <th>Contact</th>
                         <th>Jamaat</th>
+                        <th>Roles</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -27,14 +29,34 @@
                     {
                         <tr>
                             <td>@item.AIMS</td>
+                            <td>@item.Email</td>
                             <td>@item.FirstName @item.LastName</td>
                             <td>@item.ContactNumber</td>
-                            <td>@item.Jamaat?.Name</td>
+                            <td>@item.JamaatName</td>
+                            <td>
+                                @if (item.Roles != null && item.Roles.Any())
+                                {
+                                    <div class="d-flex flex-wrap gap-1">
+                                        @foreach (var role in item.Roles)
+                                        {
+                                            <span class="badge bg-primary">@role</span>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">No roles</span>
+                                }
+                            </td>
                             <td>
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn btn-outline-info btn-sm edit-btn"
                                             data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#editModal">
                                         <i class="bi bi-pencil"></i> Edit
+                                    </button>
+                                    <button type="button" class="btn btn-outline-warning btn-sm reset-password-btn"
+                                            data-id="@item.Id" data-email="@item.Email" data-bs-toggle="modal" data-bs-target="#resetPasswordModal">
+                                        <i class="bi bi-key"></i> Reset Password
                                     </button>
                                     <button type="button" class="btn btn-outline-danger btn-sm delete-btn"
                                             data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#deleteModal">
@@ -59,6 +81,7 @@
             </div>
             <form id="createForm" asp-action="Create" method="post">
                 <div class="modal-body">
+                    <div class="alert alert-danger d-none" id="createErrorAlert"></div>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="col-md-6">
@@ -73,6 +96,10 @@
                             <div class="form-group mb-3">
                                 <label for="LastName" class="control-label">Last Name</label>
                                 <input id="LastName" name="LastName" class="form-control" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="Email" class="control-label">Email</label>
+                                <input type="email" id="Email" name="Email" class="form-control" required />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -95,11 +122,41 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="Password" class="control-label">Password</label>
+                                    <input type="password" id="Password" name="Password" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="ConfirmPassword" class="control-label">Confirm Password</label>
+                                    <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="control-label">Roles</label>
+                            <div class="row">
+                                @foreach (var role in ViewBag.AllRoles)
+                                {
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="SelectedRoles" value="@role"
+                                                   class="form-check-input" id="createRole_@role" />
+                                            <label class="form-check-label" for="createRole_@role">@role</label>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group mb-3">
+                    @* <div class="form-group mb-3">
                         <label for="password" class="control-label">Password</label>
                         <input type="password" id="password" name="password" class="form-control" required />
-                    </div>
+                    </div> *@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -120,6 +177,7 @@
             <form id="editForm" asp-action="Edit" method="post">
                 <input type="hidden" id="editId" name="Id" />
                 <div class="modal-body">
+                    <div class="alert alert-danger d-none" id="editErrorAlert"></div>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="col-md-6">
@@ -138,6 +196,10 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-3">
+                                <label for="editEmail" class="control-label">Email</label>
+                                <input type="email" id="editEmail" name="Email" class="form-control" required />
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="editContactNumber" class="control-label">Contact Number</label>
                                 <input id="editContactNumber" name="ContactNumber" class="form-control" required />
                             </div>
@@ -145,15 +207,31 @@
                                 <label for="editDateOfBirth" class="control-label">Date of Birth</label>
                                 <input type="date" id="editDateOfBirth" name="DateOfBirth" class="form-control" required />
                             </div>
-                            <div class="form-group mb-3">
-                                <label for="editJamaatId" class="control-label">Jamaat</label>
-                                <select id="editJamaatId" name="JamaatId" class="form-control" required>
-                                    <option value="">-- Select Jamaat --</option>
-                                    @foreach (var jamaat in ViewBag.Jamaats)
-                                    {
-                                        <option value="@jamaat.Id">@jamaat.Name</option>
-                                    }
-                                </select>
+
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="editJamaatId" class="control-label">Jamaat</label>
+                            <select id="editJamaatId" name="JamaatId" class="form-control" required>
+                                <option value="">-- Select Jamaat --</option>
+                                @foreach (var jamaat in ViewBag.Jamaats)
+                                {
+                                    <option value="@jamaat.Id">@jamaat.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="control-label">Roles</label>
+                            <div class="row" id="editRolesContainer">
+                                @foreach (var role in ViewBag.AllRoles)
+                                {
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="SelectedRoles" value="@role"
+                                                   class="form-check-input edit-role-checkbox" id="editRole_@role" />
+                                            <label class="form-check-label" for="editRole_@role">@role</label>
+                                        </div>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>
@@ -166,7 +244,41 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="resetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title" id="resetPasswordModalLabel">Reset Password</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="resetPasswordForm" asp-action="ResetPassword" method="post">
+                <input type="hidden" id="resetPasswordId" name="Id" />
+                <div class="modal-body">
+                    <div class="alert alert-danger d-none" id="resetPasswordErrorAlert"></div>
 
+                    <div class="form-group mb-3">
+                        <label for="resetPasswordEmail" class="control-label">Email</label>
+                        <input type="email" id="resetPasswordEmail" class="form-control" readonly />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="NewPassword" class="control-label">New Password</label>
+                        <input type="password" id="NewPassword" name="NewPassword" class="form-control" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="ConfirmPassword" class="control-label">Confirm Password</label>
+                        <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-warning">Reset Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -419,45 +531,80 @@
 }
 
 @section Scripts {
-    
+
     <script>
         $(document).ready(function() {
             // Initialize DataTable
-            $('#dataTable').DataTable({
-                
-            });
+            $('#dataTable').DataTable();
 
             // Edit button click handler
             $(document).on('click', '.edit-btn', function() {
-                var memberId = $(this).data('id');
-                $.get('@Url.Action("Edit", "Member")/' + memberId, function(data) {
-                    $('#editId').val(data.id);
-                    $('#editAIMS').val(data.aims);
-                    $('#editFirstName').val(data.firstName);
-                    $('#editLastName').val(data.lastName);
-                    $('#editContactNumber').val(data.contactNumber);
-                    $('#editDateOfBirth').val(data.dateOfBirth.split('T')[0]);
-                    $('#editJamaatId').val(data.jamaatId);
+                var userId = $(this).data('id');
+                $.get('@Url.Action("Edit", "Member")/' + userId, function(data) {
+                    if (data.success) {
+                        $('#editId').val(data.data.id);
+                        $('#editAIMS').val(data.data.aims);
+                        $('#editFirstName').val(data.data.firstName);
+                        $('#editLastName').val(data.data.lastName);
+                        $('#editEmail').val(data.data.email);
+                        $('#editContactNumber').val(data.data.contactNumber);
+                        if (data.data.dateOfBirth) {
+                            var dob = new Date(data.data.dateOfBirth);
+                            var formattedDob = dob.toISOString().split('T')[0];
+                            $('#editDateOfBirth').val(formattedDob);
+                        }
+                        $('#editJamaatId').val(data.data.jamaatId);
+                        // Clear all role checkboxes
+                        $('.edit-role-checkbox').prop('checked', false);
+
+                        // Check the roles the user has
+                        if (data.data.selectedRoles && data.data.selectedRoles.length > 0) {
+                            data.data.selectedRoles.forEach(function(role) {
+                                $('#editRole_' + role).prop('checked', true);
+                            });
+                        }
+                        else{
+
+                        }
+                    }
+                    else {
+                        $('#editErrorAlert').removeClass('d-none').html(data.error || 'Error loading member data');
+                    }
                 }).fail(function() {
                     alert('Error loading member data');
                 });
             });
 
+            $(document).on('click', '.reset-password-btn', function() {
+                var userId = $(this).data('id');
+                var userEmail = $(this).data('email');
+
+                $('#resetPasswordId').val(userId);
+                $('#resetPasswordEmail').val(userEmail);
+                $('#NewPassword').val('');
+                $('#ConfirmPassword').val('');
+                $('#resetPasswordErrorAlert').addClass('d-none').html('');
+            });
             // Delete button click handler
             $(document).on('click', '.delete-btn', function() {
-                var memberId = $(this).data('id');
-                $('#deleteId').val(memberId);
+                var userId = $(this).data('id');
+                $('#deleteId').val(userId);
             });
 
             // Form submission handlers
             $('#createForm').submit(function(e) {
                 e.preventDefault();
-                submitForm(this, '#createModal');
+                submitForm(this, '#createModal', '#createErrorAlert');
             });
 
             $('#editForm').submit(function(e) {
                 e.preventDefault();
-                submitForm(this, '#editModal');
+                submitForm(this, '#editModal', '#editErrorAlert');
+            });
+
+            $('#resetPasswordForm').submit(function(e) {
+                e.preventDefault();
+                submitForm(this, '#resetPasswordModal', '#resetPasswordErrorAlert');
             });
 
             $('#deleteForm').submit(function(e) {
@@ -465,32 +612,46 @@
                 submitForm(this, '#deleteModal');
             });
 
-            function submitForm(form, modalId) {
+            function submitForm(form, modalId, errorAlertId) {
+                var $form = $(form);
+                var $modal = $(modalId);
+
+                if (errorAlertId) {
+                    $(errorAlertId).addClass('d-none').html('');
+                }
                 $.ajax({
-                    url: $(form).attr('action'),
+                    url: $form.attr('action'),
                     type: 'POST',
-                    data: $(form).serialize(),
+                    data: $form.serialize(),
                     success: function(response) {
                         if (response.success) {
                             $(modalId).modal('hide');
                             window.location.reload();
                         } else {
-                            // Handle validation errors or other server-side errors
-                            // You might want to update a specific div with validation messages
-                            if (response.errors) {
-                                let errorHtml = '<ul>';
-                                for (let i = 0; i < response.errors.length; i++) {
-                                    errorHtml += '<li>' + response.errors[i] + '</li>';
+                            if (errorAlertId) {
+                                var errorHtml = '';
+                                if (response.message) {
+                                    errorHtml += response.message;
                                 }
-                                errorHtml += '</ul>';
-                                $(modalId + ' .text-danger').html(errorHtml); // Display errors in the validation summary
-                            } else {
-                                alert('An error occurred during submission.');
+                                if (response.errors && response.errors.length > 0) {
+                                    errorHtml += '<ul>';
+                                    response.errors.forEach(function(error) {
+                                        errorHtml += '<li>' + error + '</li>';
+                                    });
+                                    errorHtml += '</ul>';
+                                }
+                                $(errorAlertId).removeClass('d-none').html(errorHtml);
                             }
                         }
                     },
-                    error: function() {
-                        alert('An unexpected error occurred. Please try again.');
+                    error: function(xhr) {
+                        if (errorAlertId) {
+                            var errorMessage = 'An error occurred while processing your request.';
+                            if (xhr.responseJSON && xhr.responseJSON.message) {
+                                errorMessage = xhr.responseJSON.message;
+                            }
+                            $(errorAlertId).removeClass('d-none').html(errorMessage);
+                        }
                     }
                 });
             }

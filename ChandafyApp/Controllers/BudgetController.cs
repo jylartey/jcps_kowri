@@ -29,34 +29,32 @@ namespace ChandafyApp.Controllers
                 return View(new List<Budget>());
             }
             var user = await _userManager.GetUserAsync(User);
-           
-            var member = await _context.Members.FirstOrDefaultAsync(m => m.IdentityUserId == user.Id);
-            if (member == null)
+            if (user == null)
             {
                 ViewBag.ActiveFiscalYear = activeFiscalYear;
                 ViewBag.ChandaTypes = await _context.ChandaTypes.ToListAsync();
-                ViewBag.FiscalYears = await _context.FiscalYears.Where(x => x.IsActive == true).OrderByDescending(fy => fy.Year).ToListAsync();
-                ViewBag.Members = await _context.Members.ToListAsync();
-                return View(new List<Budget>()); // or redirect to an error page
+                ViewBag.FiscalYears = await _context.FiscalYears.Where(x => x.IsActive == true).OrderByDescending(fy => fy.StartDate.Year).ToListAsync();
+                return View(new List<Budget>());
             }
+
             var budgets = await _context.Budgets
                 .Include(b => b.ChandaType)
                 .Include(b => b.FiscalYear)
-                .Where(b => b.MemberId == member.Id && b.FiscalYearId == activeFiscalYear.Id)
-                .OrderBy(b => b.FiscalYear.Year)
+                .Where(b => b.FiscalYearId == activeFiscalYear.Id)
+                .OrderBy(b => b.FiscalYear.StartDate.Year)
                 .ThenBy(b => b.Month)
                 .ToListAsync();
 
             ViewBag.ActiveFiscalYear = activeFiscalYear;
             ViewBag.ChandaTypes = await _context.ChandaTypes.ToListAsync();
-            ViewBag.FiscalYears = await _context.FiscalYears.Where(x => x.IsActive == true).OrderByDescending(fy => fy.Year).ToListAsync();
-            ViewBag.Members = await _context.Members.ToListAsync();
+            ViewBag.FiscalYears = await _context.FiscalYears.Where(x => x.IsActive == true).OrderByDescending(fy => fy.StartDate.Year).ToListAsync();
+            ViewBag.Members = await _userManager.Users.ToListAsync();
 
             return View(budgets);
         }
 
         // GET: Budget/Upload
-        [Authorize(Roles = "ItAdmin,Admin,Regional,Muhtamim")]
+        [Authorize(Roles = "ItAdmin,LocalAdmin,Collector,NationalAdmin")]
         public async Task<IActionResult> Upload()
         {
             var activeFiscalYear = await _context.GetActiveFiscalYearAsync();
@@ -67,7 +65,7 @@ namespace ChandafyApp.Controllers
 
         // POST: Budget/Upload
         [HttpPost]
-        [Authorize(Roles = "ItAdmin,Admin,Regional,Muhtamim")]
+        [Authorize(Roles = "ItAdmin,LocalAdmin,Collector,NationalAdmin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Upload(IFormFile file, int chandaTypeId)
         {
@@ -88,6 +86,7 @@ namespace ChandafyApp.Controllers
 
             try
             {
+
                 using (var stream = new MemoryStream())
                 {
                     await file.CopyToAsync(stream);
@@ -104,11 +103,11 @@ namespace ChandafyApp.Controllers
                             var month = int.Parse(worksheet.Cells[row, 2].Value?.ToString());
                             var amount = decimal.Parse(worksheet.Cells[row, 3].Value?.ToString());
 
-                            var member = await _context.Members.FirstOrDefaultAsync(m => m.AIMS == memberAIMS);
+                            var member = await _userManager.Users.FirstOrDefaultAsync(m => m.AIMS == memberAIMS);
                             if (member != null)
                             {
                                 var existingBudget = await _context.Budgets
-                                    .FirstOrDefaultAsync(b => b.MemberId == member.Id &&
+                                    .FirstOrDefaultAsync(b => b.UserId == member.Id &&
                                                            b.FiscalYearId == activeFiscalYear.Id &&
                                                            b.Month == month &&
                                                            b.ChandaTypeId == chandaTypeId);
@@ -121,7 +120,7 @@ namespace ChandafyApp.Controllers
                                 {
                                     var budget = new Budget
                                     {
-                                        MemberId = member.Id,
+                                        UserId = member.Id,
                                         FiscalYearId = activeFiscalYear.Id,
                                         ChandaTypeId = chandaTypeId,
                                         Month = month,
@@ -184,9 +183,14 @@ namespace ChandafyApp.Controllers
         [HttpPost]
         //[Authorize(Roles = "ItAdmin,Admin,Regional,Muhtamim")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( Budget budget)
+        public async Task<IActionResult> Create(Budget budget)
         {
-            // Set AmountPaid to 0 for a new budget entry
+            var user = await _userManager.FindByIdAsync(budget.UserId);
+            if (user == null)
+            {
+                return Json(new { success = false, message = "Invalid user selected." });
+            }
+
             budget.AmountPaid = 0;
 
             // Get the active fiscal year if not provided, or validate it
@@ -196,7 +200,7 @@ namespace ChandafyApp.Controllers
                 if (activeFy != null)
                 {
                     budget.FiscalYearId = activeFy.Id;
-                    budget.Year = activeFy.Year;
+                    budget.Year = activeFy.StartDate.Year;
                 }
                 else
                 {
@@ -211,12 +215,12 @@ namespace ChandafyApp.Controllers
                 {
                     return Json(new { success = false, message = "Invalid Fiscal Year selected." });
                 }
-                budget.Year = selectedFy.Year;
+                budget.Year = selectedFy.StartDate.Year;
             }
 
             // Check for duplicate entry based on MemberId, ChandaTypeId, FiscalYearId, Month
             var existingBudget = await _context.Budgets
-                .AnyAsync(b => b.MemberId == budget.MemberId &&
+                .AnyAsync(b => b.UserId == budget.UserId &&
                                b.ChandaTypeId == budget.ChandaTypeId &&
                                b.FiscalYearId == budget.FiscalYearId &&
                                b.Month == budget.Month);
@@ -229,7 +233,7 @@ namespace ChandafyApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Add(budget);
+                _context.Budgets.Add(budget);
                 await _context.SaveChangesAsync();
                 return Json(new { success = true, message = "Budget entry created successfully." });
             }
@@ -256,10 +260,10 @@ namespace ChandafyApp.Controllers
 
             // Pass necessary data for dropdowns in the modal
             ViewBag.ChandaTypes = await _context.ChandaTypes.ToListAsync();
-            ViewBag.FiscalYears = await _context.FiscalYears.Where(x=>x.IsActive == true).OrderByDescending(fy => fy.Year).ToListAsync();
-            ViewBag.Members = await _context.Members.ToListAsync();
+            ViewBag.FiscalYears = await _context.FiscalYears.Where(x => x.IsActive == true).OrderByDescending(fy => fy.Period).ToListAsync();
+            ViewBag.Members = await _userManager.Users.ToListAsync();
 
-            return Json(budget); 
+            return Json(budget);
         }
 
         // POST: Budget/Edit/5
@@ -279,7 +283,7 @@ namespace ChandafyApp.Controllers
             {
                 return Json(new { success = false, message = "Invalid Fiscal Year selected." });
             }
-            budget.Year = selectedFy.Year;
+            budget.Year = selectedFy.StartDate.Year;
 
 
             if (ModelState.IsValid)
@@ -288,7 +292,7 @@ namespace ChandafyApp.Controllers
                 {
                     // Check for duplicate entry for a different Id
                     var existingBudget = await _context.Budgets
-                        .AnyAsync(b => b.MemberId == budget.MemberId &&
+                        .AnyAsync(b => b.UserId == budget.UserId &&
                                        b.ChandaTypeId == budget.ChandaTypeId &&
                                        b.FiscalYearId == budget.FiscalYearId &&
                                        b.Month == budget.Month &&

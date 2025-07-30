@@ -19,10 +19,10 @@ public class Member
     public int JamaatId { get; set; }
 
     // Foreign Key to IdentityUser
-    public string IdentityUserId { get; set; }
+    //public string IdentityUserId { get; set; }
 
     // Navigation Properties
-    public ApplicationUser IdentityUser { get; set; }
-    public Jamaat Jamaat { get; set; }
+    //public ApplicationUser IdentityUser { get; set; }
+    //public Jamaat Jamaat { get; set; }
 }
 

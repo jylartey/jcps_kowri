@@ -32,14 +32,22 @@
             </div>
         }
 
-        @if (User.IsInRole("Member") || User.IsInRole("Collector") || User.IsInRole("ItAdmin"))
+        @if (User.IsInRole("Member") || User.IsInRole("Collector") || User.IsInRole("ItAdmin") || User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin"))
         {
             <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Budget" asp-action="Calculator">
                 <i class="bi bi-calculator me-2"></i>Chanda Calculator
             </a>
-            <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Budget" asp-action="Index">
-                <i class="bi bi-wallet2 me-2"></i>My Budget
+            <a class="list-group-item list-group-item-action bg-dark text-white dropdown-toggle" href="#budgetSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                <i class="bi bi-piggy-bank-fill me-2"></i>Budgets
             </a>
+            <div class="collapse" id="budgetSubmenu">
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Budget" asp-action="Index">
+                    <i class="bi bi-wallet2 me-2"></i>My Budget
+                </a>
+                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Budget" asp-action="Upload">
+                    <i class="bi bi-upload me-2"></i>Upload Budgets
+                </a>
+            </div>
         }
 
         @if (User.IsInRole("Collector") || User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
@@ -63,35 +71,30 @@
             </div>
         }
 
-        @if (User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin") )
+        @if (User.IsInRole("LocalAdmin") || User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
         {
             <a class="list-group-item list-group-item-action bg-dark text-white dropdown-toggle" href="#managementSubmenu" data-bs-toggle="collapse" aria-expanded="false">
                 <i class="bi bi-people-fill me-2"></i>Management
             </a>
             <div class="collapse" id="managementSubmenu">
-                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Member" asp-action="Index">
-                    <i class="bi bi-person-lines-fill me-2"></i>Members
-                </a>
+                @if (User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
+                {
+                    <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Member" asp-action="Index">
+                        <i class="bi bi-person-lines-fill me-2"></i>Members
+                    </a>
+                }
                 <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Collector" asp-action="Index">
                     <i class="bi bi-person-badge me-2"></i>Collectors
                 </a>
-                <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Budget" asp-action="Upload">
-                    <i class="bi bi-upload me-2"></i>Upload Budgets
-                </a>
+               
                 <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="Expense" asp-action="Index">
                     <i class="bi bi-credit-card me-2"></i>Expenses
                 </a>
 
-                @if (User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
-                {
-                    <a class="list-group-item list-group-item-action bg-dark text-white ps-5" asp-controller="UserManagement" asp-action="Index">
-                        <i class="bi bi-person-plus me-2"></i>User Management
-                    </a>
-                }
             </div>
         }
 
-        @if (User.IsInRole("ItAdmin"))
+        @if (User.IsInRole("ItAdmin") || User.IsInRole("NationalAdmin"))
         {
             <div class="list-group list-group-flush mt-auto">
                 <a class="list-group-item list-group-item-action bg-dark text-white" asp-controller="Settings" asp-action="Index">

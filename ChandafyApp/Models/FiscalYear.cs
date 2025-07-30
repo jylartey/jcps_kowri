@@ -7,8 +7,8 @@ namespace ChandafyApp.Models
         [Key]
         public int Id { get; set; } // Primary Key
 
-        [Required]
-        public int Year { get; set; } // Fiscal Year (e.g., 2025)
+        //[Required]
+        //public int Year { get; set; } // Fiscal Year (e.g., 2025)
 
         [Required]
         public DateTime StartDate { get; set; } // Start Date of the Fiscal Year

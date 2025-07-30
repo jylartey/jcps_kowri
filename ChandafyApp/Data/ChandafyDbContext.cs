@@ -1,14 +1,15 @@
-﻿using ChandafyApp.Models;
+﻿using ChandafyApp.Data;
+using ChandafyApp.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-public class ChandafyDbContext : DbContext
+public class ChandafyDbContext : IdentityDbContext<ApplicationUser>
 {
     public DbSet<Region> Regions { get; set; }
     public DbSet<Zone> Zones { get; set; }
     public DbSet<Circuit> Circuits { get; set; }
     public DbSet<Jamaat> Jamaats { get; set; }
-    public DbSet<Member> Members { get; set; }
+    //public DbSet<Member> Members { get; set; }
     public DbSet<Budget> Budgets { get; set; }
     public DbSet<ChandaType> ChandaTypes { get; set; }
     public DbSet<FiscalYear> FiscalYears { get; set; }
@@ -35,6 +36,7 @@ public class ChandafyDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        
         // Region -> Zone (One-to-Many)
         modelBuilder.Entity<Zone>()
             .HasOne(z => z.Region)
@@ -57,25 +59,25 @@ public class ChandafyDbContext : DbContext
             .OnDelete(DeleteBehavior.Cascade);
 
         // Jamaat -> Member (One-to-Many)
-        modelBuilder.Entity<Member>()
-            .HasOne(m => m.Jamaat)
-            .WithMany(j => j.Members)
-            .HasForeignKey(m => m.JamaatId)
-            .OnDelete(DeleteBehavior.Cascade);
+        //modelBuilder.Entity<Member>()
+        //    .HasOne(m => m.Jamaat)
+        //    .WithMany(j => j.Members)
+        //    .HasForeignKey(m => m.JamaatId)
+        //    .OnDelete(DeleteBehavior.Cascade);
 
-        // Member -> IdentityUser (One-to-One)
-        modelBuilder.Entity<Member>()
-            .HasOne(m => m.IdentityUser)
-            .WithMany()
-            .HasForeignKey(m => m.IdentityUserId)
-            .OnDelete(DeleteBehavior.Cascade);
+        //// Member -> IdentityUser (One-to-One)
+        //modelBuilder.Entity<Member>()
+        //    .HasOne(m => m.IdentityUser)
+        //    .WithMany()
+        //    .HasForeignKey(m => m.IdentityUserId)
+        //    .OnDelete(DeleteBehavior.Cascade);
 
         // Member -> Budget (One-to-Many)
-        modelBuilder.Entity<Budget>()
-            .HasOne(b => b.Member)
-            .WithMany()
-            .HasForeignKey(b => b.MemberId)
-            .OnDelete(DeleteBehavior.Cascade);
+        //modelBuilder.Entity<Budget>()
+        //    .HasOne()
+        //    .WithMany(c=> c.Budgets)
+        //    .HasForeignKey(b => b.UserId)
+        //    .OnDelete(DeleteBehavior.Cascade);
 
         // Budget -> ChandaType (One-to-Many)
         modelBuilder.Entity<Budget>()
@@ -120,16 +122,16 @@ public class ChandafyDbContext : DbContext
             .OnDelete(DeleteBehavior.Cascade);
 
         // ReceiptRequest -> Member (RequestBy and ApprovedBy)
-        modelBuilder.Entity<ReceiptRequest>()
-            .HasOne(r => r.RequestBy)
-            .WithMany()
-            .HasForeignKey(r => r.RequestById)
-            .OnDelete(DeleteBehavior.Restrict);
+        //modelBuilder.Entity<ReceiptRequest>()
+        //    .HasOne(r => r.RequestBy)
+        //    .WithMany()
+        //    .HasForeignKey(r => r.RequestById)
+        //    .OnDelete(DeleteBehavior.Restrict);
 
-        modelBuilder.Entity<ReceiptRequest>()
-            .HasOne(r => r.ApprovedBy)
-            .WithMany()
-            .HasForeignKey(r => r.ApprovedById)
-            .OnDelete(DeleteBehavior.Restrict);
+        //modelBuilder.Entity<ReceiptRequest>()
+        //    .HasOne(r => r.ApprovedBy)
+        //    .WithMany()
+        //    .HasForeignKey(r => r.ApprovedById)
+        //    .OnDelete(DeleteBehavior.Restrict);
     }
 }

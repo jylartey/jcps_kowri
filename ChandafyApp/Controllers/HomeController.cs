@@ -66,9 +66,18 @@ namespace ChandafyApp.Controllers
             else if (User.IsInRole("Collector") || User.IsInRole("LocalAdmin"))
             {
                 // Collector/LocalAdmin can see their circuit/zone data
-                if (currentUser?.Jamaat?.CircuitId != null)
+                if (currentUser?.Jamaat != null)
                 {
                     viewModel = await GetCircuitDashboardData(currentUser.Jamaat.CircuitId, activeFiscalYear.Id);
+                }
+                else
+                {
+                    // Return empty dashboard if no Jamaat assigned
+                    viewModel.AccountSummary = new AccountSummary();
+                    viewModel.RecentPayments = new List<Payment>();
+                    viewModel.ChandaTypePayments = new Dictionary<string, decimal>();
+                    viewModel.MonthlyBudget = new List<decimal>(new decimal[12]);
+                    viewModel.MonthlyPayments = new List<decimal>(new decimal[12]);
                 }
             }
             else if (User.IsInRole("NationalAdmin") || User.IsInRole("ItAdmin"))
@@ -80,21 +89,21 @@ namespace ChandafyApp.Controllers
             return View(viewModel);
         }
 
-        private async Task<DashboardViewModel> GetMemberDashboardData(int memberId, int fiscalYearId)
-        {
-            var currentUser = await _userManager.GetUserAsync(User);
-            return new DashboardViewModel
-            {
-                AccountSummary = await GetAccountSummary(currentUser.Id, fiscalYearId),
-                RecentPayments = await GetRecentPayments(currentUser.Id),
-                ChandaTypePayments = await GetChandaTypePayments(currentUser.Id, fiscalYearId),
-                MonthlyBudget = (await GetMonthlyData(currentUser.Id, fiscalYearId)).Item1,
-                MonthlyPayments = (await GetMonthlyData(currentUser.Id, fiscalYearId)).Item2
-            };
-        }
+        //private async Task<DashboardViewModel> GetMemberDashboardData(int memberId, int fiscalYearId)
+        //{
+        //    var currentUser = await _userManager.GetUserAsync(User);
+        //    return new DashboardViewModel
+        //    {
+        //        AccountSummary = await GetAccountSummary(currentUser.Id, fiscalYearId),
+        //        RecentPayments = await GetRecentPayments(currentUser.Id),
+        //        ChandaTypePayments = await GetChandaTypePayments(currentUser.Id, fiscalYearId),
+        //        MonthlyBudget = (await GetMonthlyData(currentUser.Id, fiscalYearId)).Item1,
+        //        MonthlyPayments = (await GetMonthlyData(currentUser.Id, fiscalYearId)).Item2
+        //    };
+        //}
         private async Task<DashboardViewModel> GetCircuitDashboardData(int circuitId, int fiscalYearId)
         {
-            var circuitMembers = await _context.Members
+            var circuitMembers = await _userManager.Users
                 .Where(m => m.Jamaat.CircuitId == circuitId)
                 .Select(m => m.Id)
                 .ToListAsync();
@@ -122,6 +131,9 @@ namespace ChandafyApp.Controllers
         }
         private async Task<AccountSummary> GetCircuitAccountSummary(int circuitId, int fiscalYearId)
         {
+            var fiscalYear = await _context.FiscalYears.FindAsync(fiscalYearId);
+            if (fiscalYear == null)
+                return new AccountSummary();
             var currentUser = await _userManager.GetUserAsync(User);
 
             var totalPayments = await _context.Payments
@@ -131,7 +143,7 @@ namespace ChandafyApp.Controllers
                 .SumAsync(p => p.Amount);
 
             var totalExpectedBudget = await _context.Budgets
-                .Where(b => b.Member.Jamaat.CircuitId == circuitId && b.FiscalYearId == fiscalYearId)
+                .Where(b => currentUser.Jamaat.CircuitId == circuitId && b.FiscalYearId == fiscalYearId)
                 .SumAsync(b => b.Amount);
 
             return new AccountSummary
@@ -181,7 +193,7 @@ namespace ChandafyApp.Controllers
 
             // Get monthly budget for circuit
             var monthlyBudget = await _context.Budgets
-                .Where(b => b.Member.Jamaat.CircuitId == circuitId &&
+                .Where(b => currentUser.Jamaat.CircuitId == circuitId &&
                            b.FiscalYearId == fiscalYearId)
                 .GroupBy(b => b.Month)
                 .OrderBy(g => g.Key)
@@ -198,7 +210,7 @@ namespace ChandafyApp.Controllers
             var monthlyPayments = new List<decimal>();
             for (int month = 1; month <= 12; month++)
             {
-                var startDate = new DateTime(fiscalYear.Year, month, 1);
+                var startDate = new DateTime(fiscalYear.StartDate.Year, month, 1);
                 var endDate = startDate.AddMonths(1).AddDays(-1);
 
                 var total = await _context.Payments
@@ -280,7 +292,7 @@ namespace ChandafyApp.Controllers
             var monthlyPayments = new List<decimal>();
             for (int month = 1; month <= 12; month++)
             {
-                var startDate = new DateTime(fiscalYear.Year, month, 1);
+                var startDate = new DateTime(fiscalYear.StartDate.Year, month, 1);
                 var endDate = startDate.AddMonths(1).AddDays(-1);
 
                 var total = await _context.Payments
@@ -362,7 +374,7 @@ namespace ChandafyApp.Controllers
             var monthlyPayments = new List<decimal>();
             for (int month = 1; month <= 12; month++)
             {
-                var startDate = new DateTime(fiscalYear.Year, month, 1);
+                var startDate = new DateTime(fiscalYear.StartDate.Year, month, 1);
                 var endDate = startDate.AddMonths(1).AddDays(-1);
 
                 var total = await _context.Payments

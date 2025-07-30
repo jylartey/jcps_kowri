@@ -11,7 +11,7 @@ using ChandafyApp.Models; // Assuming your Expense and FiscalYear models are her
 
 namespace ChandafyApp.Controllers
 {
-    [Authorize(Roles = "ItAdmin,Admin,Regional,Muhtamim")]
+    [Authorize(Roles = "ItAdmin,Admin")]
     public class ExpenseController : Controller
     {
         private readonly ChandafyDbContext _context;

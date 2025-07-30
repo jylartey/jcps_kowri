@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Identity for AuthConnection
-builder.Services.AddDbContext<ChandafyApp.Data.AuthDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection")));
+//builder.Services.AddDbContext<ChandafyApp.Data.AuthDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection")));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
 })
-.AddEntityFrameworkStores<ChandafyApp.Data.AuthDbContext>()
+.AddEntityFrameworkStores<ChandafyDbContext>()
 .AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(options =>

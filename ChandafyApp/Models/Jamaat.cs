@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ChandafyApp.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace ChandafyApp.Models;
 public class Jamaat
@@ -10,6 +11,6 @@ public class Jamaat
 
     // Navigation Properties
     public Circuit Circuit { get; set; }
-    public ICollection<Member> Members { get; set; }
+    public ICollection<ApplicationUser> Users { get; set; }
 }
 
